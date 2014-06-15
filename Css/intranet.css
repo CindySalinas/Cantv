@@ -1,0 +1,15 @@
+html{
+	width: auto;
+	height: 100%;
+}
+
+body{
+	background-image: url(../Img/Otras/Fondo2.png);
+	z-index: 0;
+}
+
+header{
+	background-image: url(../Img/Otras/Header.jpg);
+	background-size: 100% 100%;
+	height: 150px;
+}

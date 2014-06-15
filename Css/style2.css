@@ -7,13 +7,14 @@ body
 {
 	background-image: url(../Img/Otras/Fondo2.png);
 	background-size: 100% 100%; 
+	background-attachment: fixed;
 }
 body footer
 {
 	background-color: #373037;
 	bottom: 0;
 	height: 25px;
-	position: absolute;
+	position: relative;
 	width: 100%;
 }
 body header
@@ -40,10 +41,18 @@ nav ul
 nav ul li
 {
 	padding: 0;
-	margin-left: 20px;
+	width: 180px;
+	margin-left:auto;
 	display: inline-block;
 	vertical-align: top;
+	text-align: center;
 }
+a{
+	text-decoration: none;
+	color:black;
+	font-weight: bold;
+}
+/* Sub menu*/
 #barra
 {
 	background-color: #e7e7e7;
@@ -52,6 +61,20 @@ nav ul li
 	margin-top: -5px;
 	height: 35px;
 }
+#barra a:hover{
+	padding: 2%;
+	border-radius: 4px;
+	background: #fcfff4; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+/*Contenedor Derecho */ 
 #otroDiv
 {
 	background-color: #6b6b6b;
@@ -61,7 +84,8 @@ nav ul li
 	line-height: 35px;
 	text-align: center;
 	font-weight: bold;display: inline-block;
-vertical-align: top;
+	vertical-align: top;
+	color: white;
 }
 #izquierdoPerfil
 {
@@ -74,4 +98,147 @@ vertical-align: top;
 	bottom: 0;
 	height: 500px;
 	width: 20%;
+}
+
+/* Foto de Perfil*/
+.fotoPerfil{
+	border: 1px solid black;
+	width: 40%;
+	margin: 20px auto;
+}
+.fotoPerfil img{
+	width: 100%;
+	padding: 1%;
+}
+
+/* Lista de Opciones de Perfil*/
+.lista2{
+	display: block;
+	text-align: center;
+	list-style: none;
+}
+
+/* Lista de Mi perfil , edicion, Salir*/
+.lista3{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	top: 79%;
+}
+.lista3 li{
+	width: 100%;
+	background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f7f7f7 0%, #dbdbdb 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f7f7f7), color-stop(100%,#dbdbdb)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f7f7f7 0%,#dbdbdb 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f7f7f7 0%,#dbdbdb 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f7f7f7 0%,#dbdbdb 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f7f7f7 0%,#dbdbdb 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
+}
+
+/* Contenedor Derecho*/ 
+#derechoContenedor{
+	display: inline-block;
+	position: relative;
+	width:79.3%;
+	height: 500px;
+	bottom: 0;
+	left: 0;
+}
+.titulo, .titulo2{
+	margin-top: 10px;
+	margin-left: 2%;
+}
+/* contenedor fallas pagina 1*/
+.contenedorFallas{
+	margin: 0 auto;
+	width: 100%;
+	height: 380px;
+	background-color: #e5e5e5;
+}
+.contenedorFallas p{
+	font-weight: bold;
+	margin-left: 2.2%;
+}
+.graficaFallas{
+	background-color: #6b6b6b;
+	margin: 0 auto;
+	width: 95%;
+	height: 310px;
+}
+
+/* Contenedoro seguimiento de fallas */
+.textoBuscar{
+	width: 50%;
+	padding: 0.5%;
+	margin: 0 auto;
+	margin-left: 2%;
+	border: 0;
+	border-radius: 8px;
+	text-indent: justify;
+}
+.btnBuscar{
+	color: white;
+	width: 10%;
+	padding: 0.5%;
+	margin: 0 auto;
+	border: 0;
+	border-radius: 8px;
+	background-color: #6b6b6b;
+
+}
+.menuFallas{
+	margin-top: 10px;
+	margin-left: 2%;
+	background-color: #6b6b6b;
+	opacity: 0.76;
+}
+.menuFallas li{
+	width: 150px;	
+}
+.menuFallas a{
+	color:white;
+}
+.contenedorSeguimiento{
+	width: 57.4%;
+	height: 300px;
+	overflow: auto;
+	padding: 1%;
+	margin-top: 10px;
+	margin-left: 2%;
+	background-color: #e5e5e5;
+}
+.tabla{
+	width: 85%;
+	margin: 0 auto;
+	border: 1px solid white;
+	background-color: #6b6b6b;
+	color: white;
+}
+.tabla tr{
+	text-align: center;
+	border: 1px solid white;
+}
+.tabla td,th{
+	border: 1px solid white;
+	margin-top: 20px;
+}
+
+/* Contenedor del Mapa*/
+.contenedorMapa{
+	display: inline-block;
+	padding: 0.5%;
+	position: absolute;
+	border: 2px solid white;
+	width: 30%;
+	left: 65%;
+	top: 35%;
+}
+.mapa {
+	width: 80%;
+	margin: 0 auto;
+	height: 200px;
+	background-color: #6b6b6b;
+	margin-bottom: 10px;
 }

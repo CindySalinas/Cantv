@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Fallas</title>
+		<title>Seguimiento de Fallas</title>
 		<link rel="stylesheet" href="Css/normalize.css" />
 		<link rel="stylesheet" href="Css/style2.css" />
 		<script src="Js/jquery.js"></script>
@@ -12,7 +12,6 @@
     	</script>
     	-->
 		<script src="Js/codigo.js"></script>
-
 	</head>
 	<body>
 		<header>
@@ -62,14 +61,58 @@
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
 			<div class="titulo">
-				<h1 >Fallas Actuales</h1>
+				<h1>Seguimiento de Fallas</h1>
 			</div>
-			<div class="contenedorFallas">
-				&nbsp;
-				<div class="graficaFallas">
-					&nbsp;
+			<!--Contenedor buscador -->
+			<div class="buscador">
+				<input type="search" class="textoBuscar" name="buscar" placeholder="Buscador de Fallas">
+				<input type="submit" class="btnBuscar" value="Buscar">
+			</div>
+			<!--Contenedor Menu interno -->
+			<div>
+				<nav class="menuFallas">
+					<ul>
+						<li><a href="#">Todas Las Fallas</a></li>
+						<li><a href="#">Nuevas Fallas</a></li>
+						<li><a href="#">Fallas Sin Corregir</a></li>
+						<li><a href="#">Fallas Corregidas</a></li>
+					</ul>
+				</nav>
+			</div>
+			<!--Contenedor tabla de fallas -->
+			<div class="contenedorSeguimiento">
+			<!--tabla de fallas-->
+				<div>
+					<table class="tabla">
+						<thead>
+							<tr>
+								<th>Falla Nº</th>
+								<th>Numero de Enlace</th>
+								<th>Usuario</th>
+								<th>Cargo</th>
+								<th>Estodo de la Falla</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>1</td>
+								<td>E0012345</td>
+								<td>Keily</td>
+								<td>analista</td>
+								<td>Por corregir</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
-				<p>leyenda:</p>
+			&nbsp;
+			</div>
+			<!--Mapa-->
+			<div class="contenedorMapa">
+				<h3 class="">Ubicacion</h3>
+				<div class="mapa">
+						Mapa
+				</div>
+					
 			</div>
 		</section>	
 

@@ -7,5 +7,142 @@ body{
 	
 	background-image: url(../Img/Inicio/Fondo.jpg);
 	background-size: 100% 100%;    
+}
+
+.calle img{
+	width: 100%;
+	position: absolute;
+	top: 60%;
+	z-index: initial;
+}
+
+.carro img{
+	width: 35%;
+	position: absolute;
+	top: 58%;
+/*	Animacion del carro
+	animation-name: moverCarro;
+	animation-duration: 5s;
+    animation-timing-function: linear;
+  	animation-play-state:running;*/
+ 	left: 30%;
+ 	z-index: 1;
+}
+
+/* Animacion del carro 
+@keyframes moverCarro{
+	0% {left: 0%;}
+	25% {left: 25%;}
+	50% {left: 50%; }
+	75% {left: 75%;}
+	100% {left: 100%; display: none;}
+	
+}*/
+
+.login_container{
+	margin: 5% auto;
+	/*background-color: #F7D358;
+	background-image: url(../Img/Inicio/trans.gif);*/
+	border: 1px solid #F7D358;
+	width: 30%;
+	z-index: auto;
+}
+
+.login_form{
+	padding: 1%;
+}
+.log_img{
+	margin-left: 39%;
+	margin-top: 10px;
+}
+.log_img img{
+	width: 80px;
+	opacity: 0.5;
+}
+.titulo{
+	color: white;
+	margin-top:0;
+	margin-left:38%; 
+	
+}
+.usuarios{
+	display: block;
+	margin: 5px auto;
+	padding: 2%;
+	border: 0;
+	background-color: 0;
+	text-align: center;
+	color: black;
+	opacity: 0.6;
+	font-weight:bold;
+}
+
+.btn_login{
+	width: 50%;
+	display: block;
+	text-align: center;
+	margin: 8px auto;
+	padding: 2%;
+	border: 0;
+	background-color: #424242;
+	color: white;
+	font-weight:bold;
+}
+
+@media (max-width: 700px){
+
+	.calle img{
+		margin-top: 25%;
+		height: 100px;
+	}
+
+	.carro img{
+		width: 50%;
+		top: 72%;
+	}
+
+	.login_container{
+		width: 100%;
+	}	
+
+	.btn_login{
+		width: 45%;
+	}
+
+	.titulo{
+		margin-left:38%; 
+	}
+
+	.log_img {
+		margin-left: 32%;
+	}
+}
+
+@media (max-width: 702px){
+	.calle img{
+		margin-top: 30%;
+		height: 100px;
+	}
+
+	.carro img{
+		width: 50%;
+		top: 72%;
+	}
+
+	.login_container{
+		width: 100%;
+	}	
+
+	.btn_login{
+		width: 50%;
+	}
+
+	.titulo{
+		margin-left:38%; 
+	}
+
+	.log_img{
+		margin-left: 40%;
+	}
 
 }

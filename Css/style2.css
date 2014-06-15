@@ -1,0 +1,77 @@
+
+html { 
+	height: 100%;
+	width: 100%;
+}
+body
+{
+	background-image: url(../Img/Otras/Fondo2.png);
+	background-size: 100% 100%; 
+}
+body footer
+{
+	background-color: #373037;
+	bottom: 0;
+	height: 25px;
+	position: absolute;
+	width: 100%;
+}
+body header
+{
+	
+}
+body header img
+{
+	width: 100%;
+}
+nav
+{
+	display: inline-block;
+	padding: 0;
+	vertical-align: top;
+}
+nav ul
+{
+	line-height: 35px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav ul li
+{
+	padding: 0;
+	margin-left: 20px;
+	display: inline-block;
+	vertical-align: top;
+}
+#barra
+{
+	background-color: #e7e7e7;
+	border: #757776 solid 1px;
+	border-top: #757776 solid 2px;
+	margin-top: -5px;
+	height: 35px;
+}
+#otroDiv
+{
+	background-color: #6b6b6b;
+	border-right: #757776 solid 1px;
+	height: 35px;
+	width: 20%;
+	line-height: 35px;
+	text-align: center;
+	font-weight: bold;display: inline-block;
+vertical-align: top;
+}
+#izquierdoPerfil
+{
+	border-bottom: 2px solid #797b76;
+	border-right: 2px solid #797b76;
+	display: inline-block;
+	vertical-align: top;
+	background-color: #e5e5e5;
+	position: relative;
+	bottom: 0;
+	height: 500px;
+	width: 20%;
+}

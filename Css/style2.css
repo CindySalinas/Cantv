@@ -97,6 +97,7 @@ a{
 	bottom: 0;
 	height: 500px;
 	width: 20%;
+	margin-bottom: 25px
 }
 
 /* Foto de Perfil*/
@@ -121,7 +122,7 @@ a{
 .lista3{
 	width: 100%;
 	text-align: center;
-	margin-top: 165px;
+	margin-top: 146px;
 }
 .lista3 li{
 	width: 100%;

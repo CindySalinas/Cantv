@@ -14,7 +14,7 @@ body footer
 	background-color: #373037;
 	bottom: 0;
 	height: 25px;
-	position: relative;
+	position: fixed;
 	width: 100%;
 }
 body header
@@ -94,7 +94,6 @@ a{
 	display: inline-block;
 	vertical-align: top;
 	background-color: #e5e5e5;
-	position: relative;
 	bottom: 0;
 	height: 500px;
 	width: 20%;
@@ -122,8 +121,7 @@ a{
 .lista3{
 	width: 100%;
 	text-align: center;
-	position: absolute;
-	top: 79%;
+	margin-top: 165px;
 }
 .lista3 li{
 	width: 100%;

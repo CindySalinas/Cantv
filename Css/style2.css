@@ -30,7 +30,7 @@ nav
 	margin: 0;margin-left: -4px;
 	vertical-align: top;
 }
-nav ul ,#lista2 ,#lista3,#menuFallas
+nav ul ,#lista2 ,#lista3,#menuFallas, #tabs
 {
 	line-height: 36px;
 	list-style: none;
@@ -176,7 +176,7 @@ nav ul li:hover
 }
 
 /* Contenedoro seguimiento de fallas */
-.textoBuscar{
+.textoBuscar,#textoAgregar{
 	width: 50%;
 	padding: 0.5%;
 	margin: 0 auto;
@@ -185,7 +185,7 @@ nav ul li:hover
 	border-radius: 8px;
 	text-indent: justify;
 }
-.btnBuscar{
+.btnBuscar,#btnAgregar{
 	color: white;
 	width: 10%;
 	padding: 0.5%;
@@ -255,4 +255,155 @@ nav ul li:hover
 	height: 200px;
 	background-color: #6b6b6b;
 	margin-bottom: 10px;
+}
+
+/* Contenedor perfil de usuario*/
+#contenedorPerfil{
+	width: 57.4%;
+	height: 350px;
+	padding: 1%;
+	margin-top: 10px;
+	margin-left: 2%;
+	background-color: #6b6b6b;
+	display: inline-block
+} 
+
+/*pestañas */
+#tabs{
+	
+	vertical-align: middle;
+}
+#tabs li{
+	display: inline-block;
+	text-align: center;
+	width: 189px;
+	padding: 2px;
+	margin-left: 50px;
+	background-color: #272622;
+}
+
+#tabs li:hover{
+	background-color: #8b898a;
+}
+#tabs a{
+	color: white;
+}
+
+/* contenido en las pestañas */
+.tabCont{
+	border: 1px solid black;
+	background-color: #ececec;
+	width: 90%;
+	height: 310px;
+	margin: 0 auto;
+}
+/* Foto en edicion de perfil*/
+#perfilGrande{
+	border: 1px solid #686868;
+	width: 180px;
+	display: inline-block;
+	margin-right: 6px;
+}
+
+#perfilGrande img{
+	vertical-align: middle;
+	width: 100%;
+	padding: 1%;
+}
+#perfilGrande > a{
+	margin-left: 25%
+}
+
+#tablaPerfil{
+	display: inline-block;
+	width: 50%;
+	padding: 1%;
+	/*line-height: 21px;*/
+}
+.bold{
+	font-weight: bold;
+	text-align: left;
+}
+.noBold{
+	text-align: center;
+}
+
+#textoAgregar{
+	margin-top: 20px;
+	width: 70%;
+	padding: 1%;
+	text-align: justify;
+}
+#btnAgregar{
+	margin-left: 10px;
+	width: 90px;
+	padding: 1%;
+}
+/*Actividad y descripcion de la actividad */
+#contActividades{
+	display: inline-block;
+	width: auto;
+	height: 250px;
+	padding: 1%;
+	overflow: auto;
+}
+.imgActv{
+	border: 1px solid black;
+	width: 45px;
+	height: 45px;
+	background-color: grey;
+	display: inline-block;
+	margin: 0 auto;
+}
+.imgActv{
+	padding: 1%;
+}
+.descrip{
+	display: inline-block;
+	width: auto;
+	padding: 5px;
+}
+#tabs2{
+	display: none;
+}
+/* Lista de tareas*/
+#tareas{
+	display: inline-block;
+	padding: 0.5%;
+	position: absolute;
+	width: 30%;
+	left: 65%;
+	top: 15%;
+}
+fieldset{
+	text-align: center;
+	border: 2px solid white;
+	font-weight: bold;
+	height: 180px;
+}
+legend{
+	background-color: #e3e3e3;
+	padding: 3px;
+}
+#listaTareas{
+	background-color: #e3e3e3;
+	border: 2px solid white;
+	list-style: none;
+	text-align: justify;
+	padding: 1%;
+	width: auto;
+	overflow: auto;
+	height: 130px;
+
+}
+
+/*Calendario */
+#calendario{
+	padding: 0.5%;
+	border: 2px solid #FFF;
+	display: inline-block;
+	margin: 0px auto;
+	width: 30%;
+	margin-left: 3.9%;
+
 }

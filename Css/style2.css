@@ -30,14 +30,14 @@ nav
 	margin: 0;margin-left: -4px;
 	vertical-align: top;
 }
-nav ul
+nav ul ,#lista2 ,#lista3,#menuFallas
 {
 	line-height: 36px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-nav ul li
+nav ul li, #lista2
 {
 	padding: 0;
 	padding-left: 1.3em;
@@ -63,11 +63,11 @@ a{
 	height: 35px;
 }
 
-nav ul li:hover{
+nav ul li:hover, #lista2 li:hover{
 	background-color: #e7b752;
 	
 }
-nav ul li a:hover
+nav ul li a:hover, #lista2 li a:hover, #lista3 li a:hover
 {
 	color: white;
 }
@@ -105,30 +105,31 @@ nav ul li:hover
 }
 
 /* Foto de Perfil*/
-.fotoPerfil{
+#fotoPerfil{
 	border: 1px solid black;
 	width: 40%;
 	margin: 20px auto;
 }
-.fotoPerfil img{
+#fotoPerfil img{
 	width: 100%;
 	padding: 1%;
 }
 
 /* Lista de Opciones de Perfil*/
-.lista2{
+#lista2{
 	display: block;
 	text-align: center;
 	list-style: none;
 }
 
 /* Lista de Mi perfil , edicion, Salir*/
-.lista3{
+#lista3{
 	width: 100%;
 	text-align: center;
-	margin-top: 146px;
+	margin-top: 136px;
+	margin-left: 0;
 }
-.lista3 li{
+#lista3 li{
 	width: 100%;
 	background: #f7f7f7; /* Old browsers */
 	background: -moz-linear-gradient(top,  #f7f7f7 0%, #dbdbdb 100%); /* FF3.6+ */
@@ -140,6 +141,9 @@ nav ul li:hover
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#dbdbdb',GradientType=0 ); /* IE6-9 */
 }
 
+#lista3 li:hover{
+	background-color: #6b6b6b;
+}
 /* Contenedor Derecho*/ 
 #derechoContenedor{
 	display: inline-block;
@@ -154,13 +158,13 @@ nav ul li:hover
 	margin-left: 2%;
 }
 /* contenedor fallas pagina 1*/
-.contenedorFallas{
+#contenedorFallas{
 	margin: 0 auto;
 	width: 100%;
 	height: 380px;
 	background-color: #e5e5e5;
 }
-.contenedorFallas p{
+#contenedorFallas p{
 	font-weight: bold;
 	margin-left: 2.2%;
 }
@@ -191,19 +195,26 @@ nav ul li:hover
 	background-color: #6b6b6b;
 
 }
-.menuFallas{
+#menuFallas{
+	width: 614px;
 	margin-top: 10px;
-	margin-left: 2%;
+	margin-left:10px;
 	background-color: #6b6b6b;
 	opacity: 0.76;
 }
-.menuFallas li{
+#menuFallas li{
+	display: inline-block;
 	width: 150px;	
+	text-align: center;
 }
-.menuFallas a{
+#menuFallas li:hover,#menuFallas a:hover{
+	background-color: #e7e7e7;
+	color:black;
+}
+#menuFallas a{
 	color:white;
 }
-.contenedorSeguimiento{
+#contenedorSeguimiento{
 	width: 57.4%;
 	height: 300px;
 	overflow: auto;
@@ -212,24 +223,24 @@ nav ul li:hover
 	margin-left: 2%;
 	background-color: #e5e5e5;
 }
-.tabla{
+#tabla{
 	width: 85%;
 	margin: 0 auto;
 	border: 1px solid white;
 	background-color: #6b6b6b;
 	color: white;
 }
-.tabla tr{
+#tabla tr{
 	text-align: center;
 	border: 1px solid white;
 }
-.tabla td,th{
+#tabla td,th{
 	border: 1px solid white;
 	margin-top: 20px;
 }
 
 /* Contenedor del Mapa*/
-.contenedorMapa{
+#contenedorMapa{
 	display: inline-block;
 	padding: 0.5%;
 	position: absolute;

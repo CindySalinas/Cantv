@@ -341,7 +341,7 @@ nav ul li:hover
 }
 /*Actividad y descripcion de la actividad */
 #contActividades{
-	display: inline-block;
+	
 	width: auto;
 	height: 250px;
 	padding: 1%;

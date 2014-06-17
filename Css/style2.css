@@ -1,5 +1,6 @@
 
-html { 
+html 
+{ 
 	height: 100%;
 	width: 100%;
 }
@@ -8,18 +9,15 @@ body
 	background-image: url(../Img/Otras/Fondo2.png);
 	background-size: 100% 100%; 
 	background-attachment: fixed;
+	font-size: 16px;
 }
-body footer
+footer
 {
 	background-color: #373037;
 	bottom: 0;
 	height: 25px;
 	position: fixed;
 	width: 100%;
-}
-body header
-{
-	
 }
 body header img
 {
@@ -29,11 +27,12 @@ nav
 {
 	display: inline-block;
 	padding: 0;
+	margin: 0;margin-left: -4px;
 	vertical-align: top;
 }
 nav ul
 {
-	line-height: 35px;
+	line-height: 36px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -41,8 +40,10 @@ nav ul
 nav ul li
 {
 	padding: 0;
-	width: 180px;
-	margin-left:auto;
+	padding-left: 1.3em;
+	padding-right: 1.3em;
+	margin: 0;
+	
 	display: inline-block;
 	vertical-align: top;
 	text-align: center;
@@ -61,25 +62,28 @@ a{
 	margin-top: -5px;
 	height: 35px;
 }
-#barra a:hover{
-	padding: 2%;
-	border-radius: 4px;
-	background: #fcfff4; /* Old browsers */
-	background: -moz-radial-gradient(center, ellipse cover,  #fcfff4 0%, #dfe5d7 40%, #b3bead 100%); /* FF3.6+ */
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fcfff4), color-stop(40%,#dfe5d7), color-stop(100%,#b3bead)); /* Chrome,Safari4+ */
-	background: -webkit-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* Opera 12+ */
-	background: -ms-radial-gradient(center, ellipse cover,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* IE10+ */
-	background: radial-gradient(ellipse at center,  #fcfff4 0%,#dfe5d7 40%,#b3bead 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
 
+nav ul li:hover{
+	background-color: #e7b752;
+	
+}
+nav ul li a:hover
+{
+	color: white;
+}
+nav ul li:hover
+{
+	/*border-left: 1px solid #ab6800; 
+	border-right: 1px solid #ab6800;*/ 
+	/*box-shadow: inset 0px 0px 40px #ab6800,
+                      0px 0px 40px #e7b752;*/
+}
 /*Contenedor Derecho */ 
 #otroDiv
 {
 	background-color: #6b6b6b;
 	border-right: #757776 solid 1px;
-	height: 35px;
+	height: 34px;
 	width: 20%;
 	line-height: 35px;
 	text-align: center;

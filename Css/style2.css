@@ -32,7 +32,7 @@ nav
 }
 nav ul ,#lista2 ,#lista3,#menuFallas, #tabs
 {
-	line-height: 36px;
+	line-height: 35px;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -65,6 +65,7 @@ a{
 
 nav ul li:hover, #lista2 li:hover{
 	background-color: #e7b752;
+	border-bottom: 1px solid #e09509;
 	
 }
 nav ul li a:hover, #lista2 li a:hover, #lista3 li a:hover
@@ -126,7 +127,7 @@ nav ul li:hover
 #lista3{
 	width: 100%;
 	text-align: center;
-	margin-top: 136px;
+	margin-top: 160px;
 	margin-left: 0;
 }
 #lista3 li{

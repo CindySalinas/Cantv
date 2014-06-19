@@ -82,6 +82,27 @@ body
 	width: 50%;
 }
 
+/*Animacion del Carro */
+.moverCarro{
+	animation: carro 5s linear infinite  running;
+	-webkit-animation: carro 5s linear infinite  running;
+}
+@keyframes carro{
+	0% {left: 0%;}
+	25% {left: 25%;}
+	50% {left: 50%; }
+	75% {left: 75%;}
+	100% {display: none;}
+}
+/* Opera, Chrome */
+@-webkit-keyframes carro{
+	0% {left: 0%;}
+	25% {left: 25%;}
+	50% {left: 50%; }
+	75% {left: 75%;}
+	100% {display: none;}
+}
+
 /*///////////////////////////////////////////////////*/
 /*--------------------RESPONSIVE---------------------*/
 /*///////////////////////////////////////////////////*/

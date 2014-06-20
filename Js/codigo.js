@@ -27,13 +27,14 @@ function hideAndShow (ocultar,mostrar) {
 
 function moverCarro(){
 	/*var btn = $('#btn_login');*/
-	var urls = "http://127.0.0.1/Venezuela90/JsonVenezuela90/iniciarSesion.php?jsoncallback=?";
-	//var urls = "http://facebook.com"
+	//var urls = "http://127.0.0.1/Venezuela90/JsonVenezuela90/iniciarSesion.php?jsoncallback=?";
+	var urls = "http://facebook.com"
 	$('.carro').addClass("moverCarro");
 	 $.ajax({
 	    url:urls, 
 	    type:'POST', 
 	    beforeSend: function(){
+	    	$('.carro').css({'text-align':'left'});
 			$('.carro').addClass("moverCarro");
 		},
 		success: function(){

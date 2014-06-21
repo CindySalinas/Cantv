@@ -3,9 +3,9 @@ $(document).on("ready",inicio);
 function inicio ()
 {
 	tabsPerfil();
-	$('.btn_login').on("click",moverCarro);
+	$('.btn_login').on("click",doLogin);
+	escucharEnter();
 }
-
 
 function tabsPerfil(){
 	$('#tab1').on("click",function(){
@@ -24,31 +24,38 @@ function hideAndShow (ocultar,mostrar) {
 	$('#'+mostrar).show("slide");
 }
 
-
-function moverCarro(){
-	/*var btn = $('#btn_login');*/
-	var urls = "http://127.0.0.1/Venezuela90/JsonVenezuela90/iniciarSesion.php?jsoncallback=?";
-//	var urls = "http://facebook.com"
-	$('.carro').addClass("moverCarro");
-	 $.ajax({
-	    url:urls, 
-	    type:'POST', 
-	    beforeSend: function(){
-	    	$('.carro').css({'text-align':'left'});
-			$('.carro').addClass("moverCarro");
-			
-		},
-		success:function(){
-			setTimeout(send,4000);
-			//$('.login_form').submit();
-		},
-		error: function(){
-			$('.carro').removeClass("moverCarro");
-			alert("Error de Login");
-		}
-	});	
+function doLogin(){
+	$('.carro').css({'text-align':'left'});
+	$('.carro').attr('id','moverCarro');	
+	setTimeout(login, 4000);	
 }
 
-function send(){
-	$('.login_form').submit();
+function login(){
+	var values = $('.login_form').serialize();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/access.php?jsoncallback=?";
+	
+	$.getJSON(url,values).done(function(datos) {
+		if(datos.validacion > 0 && datos.T== 1){       
+            /// Si La Validacion Es Correcta, Muestra La Página Principal de Administracion 
+           location.href='pagina1.html';
+        }
+    	else
+         {	
+         	$('.carro').css({'text-align':'center'});
+			$('.carro').removeAttr('id');
+            $('.usuarios').css({"border":"2px solid rgb(242,20,20)"});
+            $('#usr').val("").attr("placeholder","usuario incorrector");
+            $('#pwd').val("").attr("placeholder","password incorrector");
+         }
+	});
+
+}
+
+function escucharEnter(){
+    $(document).keypress(function(e) {
+    if(e.which == 13) {
+       // alert('You pressed enter!');
+       doLogin();
+    }
+});
 }

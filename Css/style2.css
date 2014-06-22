@@ -397,7 +397,6 @@ legend{
 	height: 130px;
 
 }
-
 /*Calendario */
 #calendario{
 	padding: 0.5%;
@@ -407,4 +406,16 @@ legend{
 	width: 30%;
 	margin-left: 3.9%;
 
+}
+
+/* Mapas*/
+
+#map {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+#map {
+    background: #58B;
 }

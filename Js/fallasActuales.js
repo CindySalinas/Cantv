@@ -4,6 +4,7 @@ function inicio ()
 {
 	 cargarPerfil();
 	 doMap();
+	 marcarMapa();
 }	
 
 /* Carga el perfil si no existe, devuelve al login*/
@@ -58,3 +59,18 @@ function doMap(){
 	})
 
 }
+/*
+function marcarMapa(){
+	var data = [];
+	var lats, lngs;
+	var latlng;
+	$('#map').on('click',function(e){
+		Gmaps.geocode({
+			
+			lats: e.geometry.location.lat(),
+			lngs :e.geometry.location.lng()
+		})
+		console.log(lats,lng);
+	})
+	
+}*/

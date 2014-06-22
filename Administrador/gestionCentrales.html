@@ -6,12 +6,13 @@
 		<title>Crear Central</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/style3.css" />
 		<script src="../Js/jquery.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
     	</script>
     	<script src="../Js/gmaps.js"></script>
     	<script src="../Js/cookie.js"></script>
-		<script src="../Js/fallasActualesAd.js"></script>
+		<script src="../Js/agregarCentral.js"></script>
 
 	</head>
 	<body>
@@ -58,10 +59,34 @@
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
 			<div class="titulo">
-				<h1>Titulo</h1>
+				<h1>Gestionar Centrales</h1>
 			</div>
-			<div class="contenedorFallas">
-				
+			<!--Contenedor del mapa -->
+			<div id="mapCont">
+				<div id="map">
+	
+				</div>
+			</div>
+
+			<!--Contenedor Formulario -->
+			<div id="formFallas">
+				<form id="cont">
+					<label for="nomb" class="datos_Mapa">Nombre Central</label>
+					<input type="text" name="nomb" class="datos_Mapa" id="nomb" placeholder="Nombre de la Central">
+					
+					<label for="dir" class="datos_Mapa">Direccion Central</label>
+					<input type="text" name="dir" class="datos_Mapa" id="dir" placeholder="Direccion de la Central">
+					
+					<label class="datos_Mapa">Seleccione Ubicacion en el Mapa</label>
+					<input type="text"  class="datos_Mapa" id="latid" disabled="disabled" placeholder="Latitud de la Central">
+					<input type="text"   class="datos_Mapa"id="longs" disabled="disabled" placeholder="Longitud de la Central">
+
+					<div id="btn_datos">
+						<input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar">
+						<input type="button" class="btn_datos_mapa" id="quitarMarca" value="Reiniciar">
+					</div>
+					
+				</form>
 			</div>
 		</section>	
 

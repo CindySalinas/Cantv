@@ -22,6 +22,11 @@ if($cantidad>0 && $resultados["T"] == 1){
 	setcookie("adminSis",$nom,time()+36000,"/");
 	$resultados["mensaje"] = "Bienvenido Admin $nom";
 }
+else
+if($cantidad>0 && $resultados["T"] == 2 ){
+	setcookie("tecSis",$nom,time()+36000,"/");
+	$resultados["mensaje"] = "Bienvenido Tecnico $nom";
+}
 else{
 	$resultados["mensaje"] = "Usuario o Password Incorrectos";
 }

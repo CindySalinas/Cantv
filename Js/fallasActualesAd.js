@@ -4,7 +4,7 @@ function inicio ()
 {
 	 cargarPerfil();
 	 doMap();
-	 marcarMapa();
+	// marcarMapa();
 	 var map;
 }	
 
@@ -14,13 +14,13 @@ function cargarPerfil(){
 	var ckie = $.cookie('adminSis');
 	var url = "http://127.0.0.1/Cantv/jsonCantv/perfil.php?jsoncallback=?";
 	if(ckie == undefined){
-		location.href = "index.html";
+		location.href = "../index.html";
 	}
 	else{
 		$.getJSON(url,{namePerf:ckie}).done(function(data){
 			if(data.num != 0){
 				$.each(data,function(i,item){
-					$('#fotoPerfil').append("<img src='"+item.ftPerfil+"'>");
+					$('#fotoPerfil').append("<img src='../"+item.ftPerfil+"'>");
 				});
 			}
 			else{
@@ -61,7 +61,7 @@ function doMap(){
 
 
 }
-
+/*
 
 function marcarMapa(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/guardarCentral.php?jsoncallback=?";
@@ -88,6 +88,6 @@ function marcarMapa(){
 	        content : content
 	      }
 	    });
-		console.log(lats,lngs);*/
+		console.log(lats,lngs);
  	 });
-}
+}*/

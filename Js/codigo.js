@@ -5,6 +5,8 @@ function inicio ()
 	tabsPerfil();
 	$('.btn_login').on("click",doLogin);
 	escucharEnter();
+	$.removeCookie('adminSis', { path: '/' });
+	$.removeCookie('tecSis', { path: '/' });
 }
 
 function tabsPerfil(){
@@ -37,8 +39,12 @@ function login(){
 	$.getJSON(url,values).done(function(datos) {
 		if(datos.validacion > 0 && datos.T== 1){       
             /// Si La Validacion Es Correcta, Muestra La Página Principal de Administracion 
-           location.href='pagina1.html';
+           location.href='Administrador/admin.html';
         }
+        else
+        	if(datos.validacion > 0 && datos.T== 2){
+        		 location.href='Tecnico/tecnico.html';
+        	}
     	else
          {	
          	$('.carro').css({'text-align':'center'});

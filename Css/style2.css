@@ -127,7 +127,7 @@ nav ul li:hover
 #lista3{
 	width: 100%;
 	text-align: center;
-	margin-top: 160px;
+	margin-top: 125px;
 	margin-left: 0;
 }
 #lista3 li{
@@ -161,7 +161,7 @@ nav ul li:hover
 /* contenedor fallas pagina 1*/
 #contenedorFallas{
 	margin: 0 auto;
-	width: 100%;
+	width: 70%;
 	height: 380px;
 	background-color: #e5e5e5;
 }

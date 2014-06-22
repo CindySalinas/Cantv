@@ -50,8 +50,8 @@ function login(){
          	$('.carro').css({'text-align':'center'});
 			$('.carro').removeAttr('id');
             $('.usuarios').css({"border":"2px solid rgb(242,20,20)"});
-            $('#usr').val("").attr("placeholder","usuario incorrector");
-            $('#pwd').val("").attr("placeholder","password incorrector");
+            $('#usr').val("").attr("placeholder","usuario incorrecto");
+            $('#pwd').val("").attr("placeholder","password incorrecto");
          }
 	});
 

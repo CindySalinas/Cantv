@@ -47,7 +47,10 @@ function doMap(){
 				markers_data.push({
 		            lat : item.latCtrl,
 		            lng : item.longCtrl,
-		            title : item.nomCtrl
+		            title : item.nomCtrl,
+		            infoWindow: {
+				    content : item.dirCtrl
+			   		 }
 		        })
 			});
 		// añade los marcadores

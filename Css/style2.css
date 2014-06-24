@@ -420,14 +420,30 @@ legend{
     background: #58B;
 }
 
+#formFallas
+{
+	background-color: black;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+	width: 30%;
+	margin: 0 15px;
+	background-color: #E5E5E5;
+}
+#cont
+{
+	background-color: blue;
+	padding: 10px;
+	background-color: #6B6B6B;
+}
+/*
 #formFallas{
 	position: absolute;
 	background-color: #E5E5E5;
 	display: inline-block;
 	width: 35%;
 	margin-left: 10px;
-	
-}
+}*/
 /* Agregar Centrales*/
 #mapCont{
 	clear: both;
@@ -437,7 +453,7 @@ legend{
 	width: 60%;
 }
 
-#cont{
+/*#cont{
 	display: inline-block;
 	background-color: #6B6B6B;
 	margin: 20px auto;
@@ -445,17 +461,20 @@ legend{
 	padding: 10px;
 	width: 80%;
 	left: 25px;
-}
+}*/
 .datos_Mapa{
 	text-align: center;
 	display: block;
-	margin: 5px auto;
+	margin: 0 auto;
 	padding: 5px;
 	font-weight: bold;
 	border: 0;
 	border-radius: 5px;
 }
-
+#longs,#btn_datos2 
+{
+	margin-top: 10px;
+}
 label{
 	color: white;
 }
@@ -474,6 +493,10 @@ label{
 	background-color: #e7b752;
 	color: white;
 	font-weight: bold;
+}
+#btn_datos2
+{
+	text-align: center;
 }
 .btn_datos_mapa:hover{
 	background-color: #E5E5E5;

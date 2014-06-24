@@ -484,7 +484,6 @@ label{
 	margin-left:60px;
 }
 .btn_datos_mapa{
-	display: inline-block;
 	width: 90px;
 	padding: 5px;
 	border:0;
@@ -521,4 +520,51 @@ label{
 #error
 {
 	background-color: rgb(226,0,26);
+}
+
+
+/* Asignar Salas*/
+#contendorSalas{
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 90%;
+	height: 400px;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	padding: 15px;
+} 
+
+#ingresoSalas{
+	display: inline-block;
+	width: 40%;
+	height: 380px;
+	padding: 10px;
+	background-color: #6B6B6B;
+	border-radius: 5px;
+	
+}
+
+#ingresoSalas label{
+	text-align: justify;
+}
+
+#ingresoSalas textarea{
+	resize:none;
+	width: 300px;
+	height: 140px;
+	text-align: justify;
+}
+/* Mapa de salas*/
+#contMapaSalas{
+	display: inline-block;
+	width: 50%;
+	margin-left: 10px;
+}
+#contMapaSalas > .btn_datos_mapa{
+	margin:5px auto;
+}
+
+#contMapaSalas > .btn_datos_mapa:hover{
+	background-color: #6B6B6B;
+	color: white;
 }

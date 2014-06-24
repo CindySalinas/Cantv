@@ -3,15 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Seguimiento de Fallas</title>
+		<title></title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
 		<script src="../Js/jquery.js"></script>
-		<script src="../Js/cookie.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
     	</script>
-    	<script src="../Js/gmaps.js"></script>
-		<script src="../Js/fallasActualesAd.js"></script>
+    	<script src="../Js/gmaps.js"></script>    	
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/nuevaFalla.js"></script>
+
 	</head>
 	<body>
 		<header>
@@ -24,7 +25,7 @@
 				Perfil
 			</div>
 			<!-- sub-menu -->
-			<nav>
+			<nav id="submenu">
 				<ul>
 					<li><a href="#">Clientes</a></li>
 					<li><a href="#">Control De Usuarios</a></li>
@@ -42,67 +43,45 @@
 			</figure>
 			<!-- Segunda lista - Menu de Fallas -->
 			<ul id="lista2">
-				<li><a href="#"> Mis Fallas</a></li>
+				<li><a href="fallasActuales.html"> Mis Fallas</a></li>
 				<li><a href="#"> Fallas Resueltas</a></li>
 				<li><a href="#"> Fallas Sin Corregir</a></li>
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
-					<li><a href="#"> Mi Perfil</a></li>
-					<li><a href="#"> Editar</a></li>
-					<li><a href="#"> Salir</a></li>
+				<li><a href="#"> Mi Perfil</a></li>
+				<li><a href="#"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
 			</ul>
 		</section>
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
 			<div class="titulo">
-				<h1>Seguimiento de Fallas</h1>
+				<h1>Ingresar Sala</h1>
 			</div>
-			<!--Contenedor buscador -->
-			<div id="buscador">
-				<input type="search" class="textoBuscar" name="buscar" placeholder="Buscador de Fallas">
-				<input type="submit" class="btnBuscar" value="Buscar">
-			</div>
-			<!--Contenedor Menu interno -->
-			<div>
-				<ul id="menuFallas">
-					<li><a href="#">Todas Las Fallas</a></li>
-					<li><a href="#">Asignar Fallas</a></li>
-					<li><a href="#">Fallas Sin Corregir</a></li>
-					<li><a href="#">Fallas Corregidas</a></li>
-				</ul>
-			</div>
-			<!--Contenedor tabla de fallas -->
-			<div id="contenedorSeguimiento">
-			<!--tabla de fallas-->
-				<div>
-					<table id="tabla">
-						<thead>
-							<tr>
-								<th>Falla Nº</th>
-								<th>Numero de Enlace</th>
-								<th>Usuario</th>
-								<th>Cargo</th>
-								<th>Estodo de la Falla</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>1</td>
-								<td>E0012345</td>
-								<td>Keily</td>
-								<td>analista</td>
-								<td>Por corregir</td>
-							</tr>
-						</tbody>
-					</table>
+			<div class="contenedorFallas">
+				<div id="contendorSalas">
+					<form id="ingresoSalas">
+						<label class="datos_Mapa" for="nomb">Nombre </label>
+						<input class="datos_Mapa" type="text" name="nomb" id="nomb" placeholder="Nombre de Sala">
+						<label class="datos_Mapa" for="textA">Descripcion </label>
+						<textarea class="datos_Mapa" name="textA" id="textA"></textarea>
+						<label class="datos_Mapa" for="piso">Piso </label>
+						<input class="datos_Mapa" type="text" name="piso" id="piso" placeholder="Piso">
+						<label class="datos_Mapa" for="slCentral">Seleccione Central </label>
+						<select class="datos_Mapa" name="slCentral" id="slCentral">
+							
+						</select>
+
+					</form>
+					<div id="contMapaSalas">
+						<div id="map"></div>
+						<input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar">
+					</div>		
 				</div>
-			&nbsp;
-			</div>
-			<!--Mapa-->
-			<div id="contenedorMapa">
-				<div id="map"></div>		
+				
+				<!--input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar"-->
 			</div>
 		</section>	
 

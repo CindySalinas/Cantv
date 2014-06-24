@@ -5,6 +5,7 @@ function inicio ()
 	 cargarPerfil();
 	 doMap();
 	 var map;
+	 $('#map').css({'height': '300px'})
 }	
 
 /* Carga el perfil si no existe, devuelve al login*/

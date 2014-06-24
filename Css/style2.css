@@ -568,3 +568,48 @@ label{
 	background-color: #6B6B6B;
 	color: white;
 }
+/*Equipos - Parte del estilo se encuentra en Salas (ContenedorSalas)*/
+#contEquipos{
+	height:380px;
+}
+
+#ingresoEquipo > .btn_datos_mapa{
+	width: 120px;
+	margin: 5px auto;
+}
+
+/* titulo 2*/
+.titulo2{
+	text-align: center;
+	color: green;
+	margin: 5px auto;
+	height: 50px;
+}
+.titulo2 h1{
+	padding: 3px;
+}
+#contEquipos{
+	margin-top: 10px;
+	padding: 5px;
+	background-color: #e5e5e5;
+	height: 480px;
+	border-radius: 5px;
+}
+#ingresoEquipo{
+	display: inline-block;
+	width: 45%;
+	background-color: #6B6B6B;
+	border-radius: 5px;
+	padding: 5px;
+
+}
+.datos_equipo{
+	width: 80%;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	border: 0;
+	border-radius: 5px;
+	vertical-align: middle;
+	margin:0 auto;
+}

@@ -3,15 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Fallas Actuales</title>
+		<title>Crear Central</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
+
 		<script src="../Js/jquery.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+		<!-- /*<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
     	</script>
-    	<script src="../Js/gmaps.js"></script>
+    	<script src="../Js/gmaps.js"></script>*/ -->
     	<script src="../Js/cookie.js"></script>
-   		<script src="../Js/fallasActualesAd.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
 
 	</head>
 	<body>
@@ -25,7 +26,7 @@
 				Perfil
 			</div>
 			<!-- sub-menu -->
-			<nav>
+			<nav id="submenu">
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
@@ -52,25 +53,18 @@
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
-				<li><a href="#"> Mi Perfil</a></li>
+				<li><a href="perfil.html"> Mi Perfil</a></li>
 				<li><a href="#"> Editar</a></li>
 				<li><a href="#"> Salir</a></li>
 			</ul>
-			
 		</section>
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
 			<div class="titulo">
-				<h1 >Centrales CANTV</h1>
+				<h1>Titulo</h1>
 			</div>
-			<div id="contenedorFallas">
-				&nbsp;
-				<!--div id="graficaFallas">
-					&nbsp;
-				</div-->
-				<div id="map"></div>
-			</div>
+			
 		</section>	
 
 		<!-- Footer -->

@@ -20,7 +20,7 @@ function cargarPerfil(){
 		$.getJSON(url,{namePerf:ckie}).done(function(data){
 			if(data.num != 0){
 				$.each(data,function(i,item){
-					$('#fotoPerfil').append("<img src='../"+item.ftPerfil+"'>");
+					$('#fotoPerfil').append("<a href='perfil.html'><img src='../"+item.ftPerfil+"'></a>");
 				});
 			}
 			else{

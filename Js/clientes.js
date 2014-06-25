@@ -9,6 +9,8 @@ function inicio ()
 	$('#textoBusqueda2').on('change',consultarClientes2);
 	$('#modificarClientes').on('click',modificar);
 	$('#eliminarClientes').on('click',eliminar);
+	llenarClientes();
+	llenarClientes2();
 }
 
 
@@ -72,6 +74,23 @@ function consultarClientes(){
 		}
 	})
 }
+function llenarClientes(){
+	var tabla = $('#tablaConsultarDatos');
+
+	$('.newTr').remove();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarClientes.php?jsoncallback=?";
+	$.getJSON(url).done(function(data){
+		if(data.num !=0){
+			$.each(data,function(i,item){
+				tabla.css({'display':'inline-table','margin':'10px auto'});
+				tabla.append('<tr class="newTr"><td id='+item.idCtl+'>'+item.nomCtl+'</td><td>'+item.dirCtl+'</td></tr>')
+			});
+		}
+		else{
+			alert(data.mensaje);
+		}
+	})
+}
 function consultarClientes2(){
 	var tabla = $('#tablaConsultarDatos2');
 	var busc = $('#textoBusqueda2').val();
@@ -92,7 +111,26 @@ function consultarClientes2(){
 		}
 	})
 }
-
+function llenarClientes2(){
+	var tabla = $('#tablaConsultarDatos2');
+	var busc = $('#textoBusqueda2').val();
+	$('.newTr').remove();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarClientes.php?jsoncallback=?";
+	$.getJSON(url).done(function(data){
+		if(data.num !=0){
+			$.each(data,function(i,item){
+				tabla.css({'display':'inline-table','margin':'10px auto'});
+				tabla.append('<tr class="newTr"><td> <a href="#" id='+item.idCtl+'>'+item.nomCtl+' </a> </td> <td> <a id='+item.idCtl+'>'+item.dirCtl+'</a></td></tr>')
+				$('.newTr').on('click','a',function(data){
+					llenarMod($(this).attr('id'));
+				});
+			});
+		}
+		else{
+			alert(data.mensaje);
+		}
+	})
+}
 function llenarMod(id){
 	$('#formIngresarClientes2').css({'display':'inline-table','margin':'10px auto'});
 	var url = "http://127.0.0.1/Cantv/jsonCantv/buscarClientesId.php?jsoncallback=?";

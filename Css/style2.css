@@ -842,11 +842,11 @@ label{
 	margin:0 auto;
 }
 
-<<<<<<< HEAD
+
 /* Ocultar Panales en clientes */
 #consClientes,#ingClientes,#mdClientes,#tablaConsultarDatos,#tablaConsultarDatos2,#formIngresarClientes2{
 	display: none;
-=======
+}
 /*-----------------------EQUIPOS------------------------------*/
 
 #divConsultarEquipoIz, #divConsultarEquipoDer
@@ -932,5 +932,4 @@ label{
 #linkNuevoTipoEquipo, #linkSeleccionarTipoEquipo, #linkNuevaMarca, #linkSeleccionarMarca
 {
 	font-size: 13px;
->>>>>>> origin/master
 }

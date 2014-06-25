@@ -43,7 +43,6 @@ function inicio ()
 
 function ocultar()
 {
-	resetear();
 	$('.menuConsultar').hide();	
 	$('.menuModificar').hide();
 	$('.menuIngresar').hide();

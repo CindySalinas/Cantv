@@ -61,22 +61,22 @@
 		</section>
 
 		<!--Contenedor Derecho -->
-		<section id="derechoContenedor">
-			<div id="contenedorMenuClientes">
+		<section id="derechoContenedor" >
+			<div id="contenedorMenuClientes" class="menuFallas">
 				<div id="divMenuIconos">
 					<div class="titulo" id="tituloCliente">
 						<h1>Fallas</h1>
 					</div>
 					<hr>
 					<ul id="ulMenuIconos">
-						<li><a href="#" class="consultarIcono" ></a><a href="#" class="textoAbajo">Consultar</a></li>
-						<li><a href="#" class="ingresarIcono" ></a><a href="#" class="textoAbajo">Ingresar</a></li>
-						<li><a href="#" class="modificarIcono" ></a><a href="#" class="textoAbajo">Modificar</a></li>
+						<li><a class="consultarIcono" ></a><a class="textoAbajo linkAbajoConsultar">Consultar</a></li>
+						<li><a class="ingresarIcono" ></a><a class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
+						<li><a href="#" class="modificarIcono" ></a><a class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
 					</ul>		
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuConsultarFallas">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Fallas</h2>
 					<hr>
@@ -103,7 +103,7 @@
 								<td>05:10pm</td>
 								<td>Carlos Andres</td>
 								<td>Sin Resolver</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="equipoConsultarMas" ></a></td>
 							</tr>
 							<tr>
 								<td>133345</td>
@@ -112,83 +112,82 @@
 								<td>05:10pm</td>
 								<td>Carlos Andres</td>
 								<td>Resuelta</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="equipoConsultarMas" ></a></td>
 							</tr>
 						</tbody>
 					</table>
-
-					<table class="tablaEstilo">
-						<caption>Observaciones De La Falla En El Enlace: <span>143245</span></caption> 
-						<thead>
-							<th>Observación</th>
-							<th>Usuario</th>
-							<th>Fecha</th>
-							<th>Hora</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Observación 1</td>
-								<td>Manuel Abrante</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-							</tr>
-							<tr>
-								<td>Observación 1</td>
-								<td>Cindy Salinas</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<div id="contenidoEquipos">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos">
+					<div class="contenidoExtraConsultarEnlace">
+						<table class="tablaEstilo">
+							<caption>Observaciones De La Falla En El Enlace: <span>143245</span></caption> 
+							<thead>
+								<th>Observación</th>
+								<th>Usuario</th>
+								<th>Fecha</th>
+								<th>Hora</th>
+							</thead>
+							<tbody>
 								<tr>
-									<td class="leftTabla">Central:</td>
-									<td class="rightTabla">Michelena</td>
-									<td class="leftTabla">Sala:</td>
-									<td class="rightTabla">Transmisión Principal</td>
-									<td >Piso:</td>
-									<td >Primer Piso</td>
+									<td>Observación 1</td>
+									<td>Manuel Abrante</td>
+									<td>10/03/2014</td>
+									<td>05:10pm</td>
 								</tr>
-							</table>
-						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map2"></div>
-						</div>
-					</div>
+								<tr>
+									<td>Observación 1</td>
+									<td>Cindy Salinas</td>
+									<td>10/03/2014</td>
+									<td>05:10pm</td>
+								</tr>
+							</tbody>
+						</table>
 
-					<table class="tablaEstilo" id="tablaresuelta">
-						<tr>
-							<td class="left">Falla Resuelta Por: </td>
-							<td class="right">
-								<span>Manuel Abrante</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="left">Fecha: </td>
-							<td class="right">
-								<span>22/06/2014</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="left">Hora: </td>
-							<td class="right">
-								<span>4:00pm</span>
-							</td>
-						</tr>
-					</table>
+						<div id="contenidoEquipos">
+							<div id="divConsultarEquipoIz">
+								<table id="tablaConsultarEquipos">
+									<tr>
+										<td class="leftTabla">Central:</td>
+										<td class="rightTabla">Michelena</td>
+										<td class="leftTabla">Sala:</td>
+										<td class="rightTabla">Transmisión Principal</td>
+										<td >Piso:</td>
+										<td >Primer Piso</td>
+									</tr>
+								</table>
+							</div>
+							<div id="divConsultarEquipoDer">
+								<div id="map2"></div>
+							</div>
+						</div>
+
+						<table class="tablaEstilo" id="tablaresuelta">
+							<tr>
+								<td class="left">Falla Resuelta Por: </td>
+								<td class="right">
+									<span>Manuel Abrante</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">Fecha: </td>
+								<td class="right">
+									<span>22/06/2014</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">Hora: </td>
+								<td class="right">
+									<span>4:00pm</span>
+								</td>
+							</tr>
+						</table>
+					</div>
 					
 					<div id="tamaClien" class="atras" class="atras">
-						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
-
-				</div>
-				
+				</div>				
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuEliminarFallas">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Cambiar o Eliminar Falla</h2>
 					<hr>
@@ -215,7 +214,7 @@
 								<td>05:10pm</td>
 								<td>Carlos Andres</td>
 								<td>Sin Resolver</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="linkEditarEquipos"></a></td>
 							</tr>
 							<tr>
 								<td>133345</td>
@@ -224,86 +223,87 @@
 								<td>05:10pm</td>
 								<td>Carlos Andres</td>
 								<td>Resuelta</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="linkEditarEquipos"></a></td>
 							</tr>
 						</tbody>
 					</table>
-
-					<table class="tablaEstilo">
-						<caption>Observaciones De La Falla En El Enlace: <span>143245</span></caption> 
-						<thead>
-							<th>Observación</th>
-							<th>Usuario</th>
-							<th>Fecha</th>
-							<th>Hora</th>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Observación 1</td>
-								<td>Manuel Abrante</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-							</tr>
-							<tr>
-								<td>Observación 1</td>
-								<td>Cindy Salinas</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-							</tr>
-						</tbody>
-					</table>
-
-					<div id="contenidoEquipos">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos">
+					<div class="contenidoExtraEliminarFalla">
+						<table class="tablaEstilo">
+							<caption>Observaciones De La Falla En El Enlace: <span>143245</span></caption> 
+							<thead>
+								<th>Observación</th>
+								<th>Usuario</th>
+								<th>Fecha</th>
+								<th>Hora</th>
+							</thead>
+							<tbody>
 								<tr>
-									<td class="leftTabla">Central:</td>
-									<td class="rightTabla">Michelena</td>
-									<td class="leftTabla">Sala:</td>
-									<td class="rightTabla">Transmisión Principal</td>
-									<td >Piso:</td>
-									<td >Primer Piso</td>
+									<td>Observación 1</td>
+									<td>Manuel Abrante</td>
+									<td>10/03/2014</td>
+									<td>05:10pm</td>
 								</tr>
-							</table>
-						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map3"></div>
-						</div>
-					</div>
+								<tr>
+									<td>Observación 1</td>
+									<td>Cindy Salinas</td>
+									<td>10/03/2014</td>
+									<td>05:10pm</td>
+								</tr>
+							</tbody>
+						</table>
 
-					<table class="tablaEstilo" id="tablaresuelta">
-						<tr>
-							<td class="left">Falla Resuelta Por: </td>
-							<td class="right">
-								<span>Manuel Abrante</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="left">Fecha: </td>
-							<td class="right">
-								<span>22/06/2014</span>
-							</td>
-						</tr>
-						<tr>
-							<td class="left">Hora: </td>
-							<td class="right">
-								<span>4:00pm</span>
-							</td>
-						</tr>
-					</table>
-					<div class="displayInline2">
-						<button class="botonEnlace">Cambiar Estatus</button>
-					</div>
-					<div class="displayInline2 espacioLeft">
-						<button class="botonEnlace">Eliminar</button>
+						<div id="contenidoEquipos">
+							<div id="divConsultarEquipoIz">
+								<table id="tablaConsultarEquipos">
+									<tr>
+										<td class="leftTabla">Central:</td>
+										<td class="rightTabla">Michelena</td>
+										<td class="leftTabla">Sala:</td>
+										<td class="rightTabla">Transmisión Principal</td>
+										<td >Piso:</td>
+										<td >Primer Piso</td>
+									</tr>
+								</table>
+							</div>
+							<div id="divConsultarEquipoDer">
+								<div id="map3"></div>
+							</div>
+						</div>
+
+						<table class="tablaEstilo" id="tablaresuelta">
+							<tr>
+								<td class="left">Falla Resuelta Por: </td>
+								<td class="right">
+									<span>Manuel Abrante</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">Fecha: </td>
+								<td class="right">
+									<span>22/06/2014</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="left">Hora: </td>
+								<td class="right">
+									<span>4:00pm</span>
+								</td>
+							</tr>
+						</table>
+						<div class="displayInline2">
+							<button class="botonEnlace">Cambiar Estatus</button>
+						</div>
+						<div class="displayInline2 espacioLeft">
+							<button class="botonEnlace">Eliminar</button>
+						</div>
 					</div>
 					<div id="tamaClien" class="atras" class="atras">
-						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes linkAtrasEliminar"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>				
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuIngresarFallas">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Falla</h2>
 					<hr>
@@ -326,7 +326,7 @@
 						<button class="botonEnlace">Ingresar</button>
 					</form>
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes linkAtrasIngresar"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 			</div>

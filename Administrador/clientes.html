@@ -28,12 +28,13 @@
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
-					<li><a href="admin.html" id="inicioAdmin">Inicio</a></li>
-					<li><a href="#">Clientes</a></li>
-					<li><a href="#">Control De Usuarios</a></li>
-					<li><a href="#">Estadisticas</a></li>
-					<li><a href="#">Reportes</a></li>
-					<li><a href="#">Seguimiento De Fallas</a></li>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="#" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="#" id="navSalasAdmin">Salas</a></li>
+					<li><a href="#" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -45,10 +46,10 @@
 			</figure>
 			<!-- Segunda lista - Menu de Fallas -->
 			<ul id="lista2">
-				<li><a href="gestionCentrales.html"> Centrales</a></li>
-				<li><a href="#"> Asignar Tareas</a></li>
-				<li><a href="#"> Mis Fallas</a></li>
-				<li><a href="gestionFallas.html"> Reportar Falla</a></li>
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
@@ -59,11 +60,145 @@
 		</section>
 
 		<!--Contenedor Derecho -->
-		<section id="derechoContenedor">
-			<div class="titulo">
-				<h1>Clientes</h1>
-			</div>
+		<section id="derechoContenedor" class="derechoContCliente">
 			
+			<div id="contenedorMenuClientes">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Clientes</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a href="#" id="consultarCliente" ></a><a href="#" class="textoAbajo">Consultar</a></li>
+						<li><a href="#" id="modificarCliente" ></a><a href="#" class="textoAbajo">Ingresar</a></li>
+						<li><a href="#" id="ingresarCliente" ></a><a href="#" class="textoAbajo">Modificar</a></li>
+					</ul>		
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Clientes</h2>
+					<hr>
+					<form id="formConsultarClientes">
+						<label id="labelBuscarClientes">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nombre Del Cliente</th>
+							<th>Descripción</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Movistar</td>
+								<td>Proveedor de servicios de red</td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+							</tr>
+						</tbody>
+					</table>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Clientes</h2>
+					<hr>
+					<form id="formIngresarClientes">
+						<table id="tablaIngresarClientes">
+							<tr>
+								<td>
+									<label id="laberIngresarClienteNombre">Nombre Del Cliente</label>
+								</td>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label id="laberIngresarClienteDescripcion">Descripción Del Cliente</label>
+								</td>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+						</table>
+						<button id="ingresarClientes">Guardar</button>
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>					
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Clientes</h2>
+					<hr>
+					<form id="formConsultarClientes">
+						<label id="labelBuscarClientes">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nombre Del Cliente</th>
+							<th>Descripción</th>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Movistar</td>
+								<td>Proveedor de servicios de red</td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+							</tr>
+						</tbody>
+					</table>
+					<form id="formIngresarClientes">
+						<table id="tablaIngresarClientes">
+							<tr>
+								<td>
+									<label id="laberIngresarClienteNombre">Nombre Del Cliente</label>
+								</td>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label id="laberIngresarClienteDescripcion">Descripción Del Cliente</label>
+								</td>
+								<td>
+									<input type="text">
+								</td>
+							</tr>
+						</table>
+						<button id="modificarClientes">Modificar</button>
+						<button id="eliminarClientes">Eliminar</button>
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
 		</section>	
 
 		<!-- Footer -->

@@ -1,4 +1,15 @@
 
+@font-face {
+	font-family: 'icomoon';
+	src:url('../Fonts/icomoon.eot');
+	src:url('../Fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../Fonts/icomoon.woff') format('woff'),
+		url('../Fonts/icomoon.ttf') format('truetype'),
+		url('../Fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 html 
 { 
 	height: 100%;
@@ -521,4 +532,213 @@ label{
 #error
 {
 	background-color: rgb(226,0,26);
+}
+
+/*------------------Pagina Clientes-------------------*/
+
+#consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes
+{
+	display: block;
+	margin-bottom: 8px;
+	font-family: 'icomoon';
+	font-size: 50px;
+	font-weight: normal;
+}
+#dibujoConsultar
+{
+	font-family: 'icomoon';
+	font-size: 22px;
+	font-weight: normal;
+}
+.spanAtrasClientes:before
+{
+	content: "\e61f";
+}
+#dibujoConsultar:before 
+{
+	content: "\e60c";
+}
+#consultarCliente:before 
+{
+	content: "\e60d";
+}
+#modificarCliente:before
+{
+	content: "\f044";
+}
+#ingresarCliente:before 
+{
+	content: "\e60f";
+}
+#eliminarCliente:before
+{
+	content: "\e608";
+}
+
+#ulMenuIconos
+{
+	list-style: none;
+	text-align: center;
+}
+#ulMenuIconos a
+{	
+	color: #ab6800;
+}
+#ulMenuIconos li
+{
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 1em;
+	padding: 0.5em;
+	width: 20%;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+}
+.textoAbajo
+{
+	font-weight: bold;
+	color: #ab6800;
+}
+#ulMenuIconos li:hover
+{
+	transform: scale(1.08);
+	-webkit-transform: scale(1.08);
+	-moz-transition: all 0.5s ease;
+}
+ .spanAtrasClientes:hover
+ {
+ 	transform: scale(1.08) rotate(20deg);
+	-webkit-transform: scale(1.08) rotate(20deg);
+	-moz-transition: all 0.5s ease;
+ }
+ .spanAtrasClientes
+ {
+ 		margin: 0 auto;
+	font-size: 30px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+ }
+.contenedorAfuera, .contenedorAdentro, #divMenuIconos
+{
+	background-color: #e3e3e3;
+	border-radius: 5px;
+	padding: 1em;
+}
+#tituloCliente
+{
+	text-align: center;
+	color: #265710;
+}
+#ulMenuIconos
+{
+	margin: 0;
+}
+/*#contenedorMenuClientes
+{
+	display: none;
+}*/
+#contenedorMenuClientes, .contenedorAfuera
+{
+	background-color: #6b6b6b;
+	border-radius: 5px;
+	padding: 20px 25px;
+	margin: 1em;
+}
+.contenedorAfuera
+{
+	color: black;
+	text-align: center;
+}
+#labelBuscarClientes
+{
+	color: black;
+	font-weight: bold;
+}
+.h2Clientes
+{
+	margin-top: 10px;
+	color: #ab6800;
+}
+#formConsultarClientes
+{
+	margin-top: 1.5em;
+}
+#tablaConsultarDatos
+{
+	margin: 1.5em auto 0 auto;
+	width: 80%;
+}
+#tablaConsultarDatos thead
+{
+	background-color: #E7B752;
+}
+#tablaConsultarDatos thead th
+{
+		padding: 5px 10px;
+}
+#tablaConsultarDatos
+{
+	border: 1px solid #fff;
+	background-color: #ededed;
+}
+#tablaConsultarDatos tr td
+{
+	border: 1px solid #fff;
+	padding: 5px;
+}
+.linkAtrasConsultarCliente
+{
+	color: #356710;
+}
+.contenedorAfuera a
+{
+	color: #356710;
+}
+.contenedorAfuera label
+{
+	color: black;
+	font-weight: bold;
+} 
+#formIngresarClientes
+{
+
+	display: inline-block;
+	padding: 10px;
+	position: relative;
+}
+#tamaClien
+{
+	margin: 1em auto 0 auto;
+	width: 70px;
+}
+#tablaIngresarClientes
+{
+	background-color: #e7b752;
+	border: 2px solid white;
+	padding: 5px;
+}
+#tablaIngresarClientes td
+{
+
+	padding: 15px;
+}
+#ingresarClientes, #modificarClientes, #eliminarClientes
+{
+	background-color: #fff;
+	color: #572404;
+	border: 2px solid #ab6800;
+	font-weight: bold;
+	padding: 7px 15px;
+	margin-top: 1em;
+}
+#ingresarClientes:hover, #modificarClientes:hover, #eliminarClientes:hover
+{
+	background-color: #784900;
+	color: #ededed;
+}
+#eliminarClientes
+{
+	margin-left: 15px;
 }

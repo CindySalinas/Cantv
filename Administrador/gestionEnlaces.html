@@ -287,21 +287,21 @@
 					<h2 class="h2Clientes">Modificar Enlace</h2>
 					<hr>
 					<form>
-						<table id="tablaModificarEquipo">
+						<table class="tablaModificarEnlace">
 							<tr>
-								<td id="leftModificarEquipo">Número De Enlace: </td>
+								<td class="leftModificarEnlace">Número De Enlace: </td>
 								<td id="rightModifiarEquipo">
 									<input type="text" value="356523">
 								</td>
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Ruta: </td>
+								<td class="leftModificarEnlace">Ruta: </td>
 								<td id="rightModifiarEquipo">
 									<input type="text" value="Michelena-Naguanagua	">
 								</td>
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Central: </td>
+								<td class="leftModificarEnlace">Central: </td>
 								<td id="rightModifiarEquipo">
 									<select>
 										<option>Michelena</option>
@@ -310,7 +310,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Sala: </td>
+								<td class="leftModificarEnlace">Sala: </td>
 								<td id="rightModifiarEquipo">
 									<select>
 										<option>Transmisión Principal</option>
@@ -319,7 +319,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Equipo: </td>
+								<td class="leftModificarEnlace">Equipo: </td>
 								<td id="rightModifiarEquipo">
 									<select>
 										<option>Armario Bastidor OSN 6800 Optix</option>
@@ -328,13 +328,13 @@
 								</td>
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Ubicación: </td>
+								<td class="leftModificarEnlace">Ubicación: </td>
 								<td id="rightModifiarEquipo">
 									<input type="text" value="Fila Nro 1">
 								</td>								
 							</tr>
 							<tr>
-								<td id="leftModificarEquipo">Cliente: </td>
+								<td class="leftModificarEnlace">Cliente: </td>
 								<td id="rightModifiarEquipo">
 									<select>
 										<option>Movistar</option>
@@ -427,6 +427,102 @@
 					<div id="tamaClien">
 						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Enlace</h2>
+					<hr>
+					<form>
+						<table class="tablaModificarEnlace">
+							<tr>
+								<td class="leftModificarEnlace">Número De Enlace: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" placeholder="Ingrese Número De Enlace">
+								</td>
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Ruta: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" placeholder="Ingrese Ruta">
+								</td>
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Central: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Michelena</option>
+										<option>Paseo Las Industrias</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Sala: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Transmisión Principal</option>
+										<option>Transmisión Secundaria</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Equipo: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Armario Bastidor OSN 6800 Optix</option>
+										<option>ODF</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Ubicación: </td>
+								<td id="rightModifiarEquipo">
+									<input class="noEditar" type="text" value="Fila Nro 1" readonly>
+								</td>								
+							</tr>
+							<tr>
+								<td class="leftModificarEnlace">Cliente: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Movistar</option>
+										<option>Vodaphone</option>
+									</select>
+								</td>
+							</tr>
+						</table>	
+
+						<div>
+							<div id="consultarTransitos">
+								<fieldset>
+									<legend>Transitos</legend>
+										<ul id="listaTareas">
+											<li><span class="tar">Transito 1</span></li>
+										</ul>
+								</fieldset>	
+							</div>
+							<div id="consultarPosiciones">
+								<fieldset>
+									<legend>Posiciones</legend>
+										<ul id="listaTareas">
+											<li><span class="tar">Posicion 1</span></li>
+											<li><span class="tar">Posicion 1</span></li>
+										</ul>
+								</fieldset>	
+							</div>
+						</div>
+						<div class="displayInline">
+							<button class="botonEnlace">Agregar Transito</button>
+						</div>	
+						<div class="displayInline">
+							<button class="botonEnlace ">Agregar Posición</button>
+						</div>
+						<button class="botonEnlace espacioArriba">Agregar Enlace</button>
+						
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>					
 				</div>
 			</div>
 		</section>	

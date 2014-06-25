@@ -533,7 +533,7 @@ label{
 	background-color: rgb(226,0,26);
 }
 
-<<<<<<< HEAD
+
 /*------------------Pagina Clientes-------------------*/
 
 #consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes
@@ -742,7 +742,6 @@ label{
 {
 	margin-left: 15px;
 }
-=======
 
 /* Asignar Salas*/
 #contendorSalas{
@@ -834,4 +833,3 @@ label{
 	vertical-align: middle;
 	margin:0 auto;
 }
->>>>>>> origin/master

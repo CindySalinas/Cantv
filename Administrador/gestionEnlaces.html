@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Crear Central</title>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+ 		<script src="../Js/enlace.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="perfil.html"> Mi Perfil</a></li>
+				<li><a href="#"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div id="contenedorMenuClientes">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Enlaces</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a href="#" id="consultarEnlaces" ></a><a href="#" class="textoAbajo">Consultar</a></li>
+						<li><a href="#" id="modificarEnlaces" ></a><a href="#" class="textoAbajo">Ingresar</a></li>
+						<li><a href="#" id="ingresarEnlaces" ></a><a href="#" class="textoAbajo">Modificar</a></li>
+					</ul>		
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Enlaces</h2>
+					<hr>
+					<form class="formConsultarEquipos">
+						<label id="labelBuscarEquipos">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Número De Enlace</th>
+							<th>Ruta</th>
+							<th>Cliente</th>
+							<th>Equipo</th>
+							<th></th>
+						</thead> 
+						<tbody>
+							<tr>
+								<td>356523</td>
+								<td>Michelena-Naguanagua</td>
+								<td>Movistar</td>
+								<td>Armario Bastidor OSN 6800 Optix</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="contenidoEquipos">
+						<div id="divConsultarEquipoIz">
+							<table id="tablaConsultarEquipos">
+								<tr>
+									<td class="leftTabla">Central:</td>
+									<td class="rightTabla">Michelena</td>
+									<td class="leftTabla">Sala:</td>
+									<td class="rightTabla">Transmisión Principal</td>
+									<td >Piso:</td>
+									<td >Primer Piso</td>
+								</tr>
+							</table>
+						</div>
+						<div id="divConsultarEquipoDer">
+							<div id="map2"></div>
+						</div>
+					</div>
+					<div id="consultarTransitos">
+						<fieldset>
+							<legend>Transitos</legend>
+								<ul id="listaTareas">
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+								</ul>
+						</fieldset>	
+					</div>
+					<div id="consultarPosiciones">
+						<fieldset>
+							<legend>Posiciones</legend>
+								<ul id="listaTareas">
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+								</ul>
+						</fieldset>	
+					</div>
+
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+			
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Enlaces</h2>
+					<hr>
+					<form class="formConsultarEquipos">
+						<label id="labelBuscarEquipos">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Número De Enlace</th>
+							<th>Ruta</th>
+							<th>Cliente</th>
+							<th>Equipo</th>
+							<th></th>
+						</thead> 
+						<tbody>
+							<tr>
+								<td>356523</td>
+								<td>Michelena-Naguanagua</td>
+								<td>Movistar</td>
+								<td>Armario Bastidor OSN 6800 Optix</td>
+								<td><a class="linkEditarEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td><a class="linkEditarEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+								<td><a class="linkEditarEquipos" href="#"></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="contenidoEquipos">
+						<div id="divConsultarEquipoIz">
+							<table id="tablaConsultarEquipos">
+								<tr>
+									<td class="leftTabla">Central:</td>
+									<td class="rightTabla">Michelena</td>
+									<td class="leftTabla">Sala:</td>
+									<td class="rightTabla">Transmisión Principal</td>
+									<td >Piso:</td>
+									<td >Primer Piso</td>
+								</tr>
+							</table>
+						</div>
+						<div id="divConsultarEquipoDer">
+							<div id="map3"></div>
+						</div>
+					</div>
+					<div id="consultarTransitos">
+						<fieldset>
+							<legend>Transitos</legend>
+								<ul id="listaTareas">
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+									<li><span class="tar">Transito 1</span></li>
+								</ul>
+						</fieldset>	
+					</div>
+					<div id="consultarPosiciones">
+						<fieldset>
+							<legend>Posiciones</legend>
+								<ul id="listaTareas">
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+									<li><span class="tar">Posicion 1</span></li>
+								</ul>
+						</fieldset>	
+					</div>
+					<div>
+						<button class="modificarEnlace1">Modificar Transitos</button>						
+						<button class="modificarEnlace1">Modificar Posiciones</button>
+					</div>
+					<button class="modificarEnlace2">Modificar Enlace</button>
+					
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Enlace</h2>
+					<hr>
+					<form>
+						<table id="tablaModificarEquipo">
+							<tr>
+								<td id="leftModificarEquipo">Número De Enlace: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="356523">
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Ruta: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Michelena-Naguanagua	">
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Central: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Michelena</option>
+										<option>Paseo Las Industrias</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Sala: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Transmisión Principal</option>
+										<option>Transmisión Secundaria</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Equipo: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Armario Bastidor OSN 6800 Optix</option>
+										<option>ODF</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Ubicación: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Fila Nro 1">
+								</td>								
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Cliente: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Movistar</option>
+										<option>Vodaphone</option>
+									</select>
+								</td>
+							</tr>
+						</table>		
+						<button id="modificarEquipo2">Modificar</button>	
+						<button id="eliminarEquipo1"> Eliminar</button>
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Transitos</h2>
+					<hr>
+					<form>
+						<div class="espacioArribaModificar2">
+							<label>Transito Seleccionado</label>
+							<input type="text" placeholder="No Ha Seleccionado Ningún Transito">
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Transito 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Transito 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Transito 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize"/>
+							<label>Transito 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize"/>
+							<label>Transito 1</label>
+						</div>
+						
+					</form>
+					<button class="modificarEnlace2">Modificar</button>
+					<button class="modificarEnlace2">Eliminar</button>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Posiciones</h2>
+					<hr>
+					<form>
+						<div class="espacioArribaModificar2">
+							<label>Posición Seleccionada</label>
+							<input type="text" placeholder="No Ha Seleccionado Ninguna Posición">
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Posición 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Posición 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize" />
+							<label>Posición 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize"/>
+							<label>Posición 1</label>
+						</div>
+						<div class="espacioArribaModificar">
+							<input type = "radio" name = "radSize"/>
+							<label>Posición 1</label>
+						</div>
+						
+					</form>
+					<button class="modificarEnlace2">Modificar</button>
+					<button class="modificarEnlace2">Eliminar</button>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

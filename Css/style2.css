@@ -536,7 +536,7 @@ label{
 
 /*------------------Pagina Clientes-------------------*/
 
-#consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes, #consultarEquipos, #modificarEquipos, #ingresarEquipos
+#consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes, #consultarEquipos, #modificarEquipos, #ingresarEquipos, #consultarEnlaces, #modificarEnlaces, #ingresarEnlaces
 {
 	display: block;
 	margin-bottom: 8px;
@@ -544,13 +544,13 @@ label{
 	font-size: 50px;
 	font-weight: normal;
 }
-#dibujoConsultar, #linkEquipos, #linkEditarEquipos
+#dibujoConsultar, #linkEquipos, #linkEditarEquipos, .linkEditarEquipos
 {
 	font-family: 'icomoon';
 	font-size: 22px;
 	font-weight: normal;
 }
-#linkEditarEquipos:before
+#linkEditarEquipos:before, .linkEditarEquipos:before
 {
 	content: "\f040";
 }
@@ -566,15 +566,15 @@ label{
 {
 	content: "\e60c";
 }
-#consultarCliente:before, #consultarEquipos:before
+#consultarCliente:before, #consultarEquipos:before, #consultarEnlaces:before
 {
 	content: "\e60d";
 }
-#modificarCliente:before, #modificarEquipos:before
+#modificarCliente:before, #modificarEquipos:before, #modificarEnlaces:before
 {
 	content: "\f044";
 }
-#ingresarCliente:before, #ingresarEquipos:before
+#ingresarCliente:before, #ingresarEquipos:before, #ingresarEnlaces:before
 {
 	content: "\e60f";
 }
@@ -897,9 +897,14 @@ label{
 	margin-top: 1em;
 	padding: 5px 10px;
 }
-#modificarEquipo2, #aceptarEquipo, #eliminarEquipo1
+#modificarEquipo2, #aceptarEquipo, #eliminarEquipo1, .modificarEnlace1
 {
 	margin-top: 0.3em;
+	padding: 5px 10px;
+}
+.modificarEnlace2
+{
+	margin-top: 1em;
 	padding: 5px 10px;
 }
 #tablaModificarEquipo
@@ -932,4 +937,33 @@ label{
 #linkNuevoTipoEquipo, #linkSeleccionarTipoEquipo, #linkNuevaMarca, #linkSeleccionarMarca
 {
 	font-size: 13px;
+}
+#consultarTransitos, #consultarPosiciones
+{
+	margin-top: 1em;
+	width: 40%;
+	display: inline-block;
+}
+#consultarTransitos fieldset, #consultarPosiciones fieldset
+{
+	background-color: #e7b752;
+}
+#consultarTransitos fieldset legend, #consultarPosiciones fieldset legend
+{
+	background-color: #e7b752;
+	color: #000;
+	border: 2px solid #fff;
+	width: 60%;
+}
+.espacioArribaModificar
+{
+	margin-top: 0.5em;
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+}
+.espacioArribaModificar2
+{
+	margin-top: 1.5em;
+	margin-bottom: 1em;
 }

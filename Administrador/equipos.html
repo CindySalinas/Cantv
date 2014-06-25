@@ -28,12 +28,13 @@
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
-					<li><a href="admin.html" id="inicioAdmin">Inicio</a></li>
-					<li><a href="#">Clientes</a></li>
-					<li><a href="#">Control De Usuarios</a></li>
-					<li><a href="#">Estadisticas</a></li>
-					<li><a href="#">Reportes</a></li>
-					<li><a href="#">Seguimiento De Fallas</a></li>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="#" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -45,10 +46,10 @@
 			</figure>
 			<!-- Segunda lista - Menu de Fallas -->
 			<ul id="lista2">
-				<li><a href="gestionCentrales.html"> Centrales</a></li>
-				<li><a href="#"> Asignar Tareas</a></li>
-				<li><a href="#"> Mis Fallas</a></li>
-				<li><a href="gestionFallas.html"> Reportar Falla</a></li>
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
@@ -60,8 +61,336 @@
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
+			<div id="contenedorMenuClientes">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Equipos</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a href="#" id="consultarEquipos" ></a><a href="#" class="textoAbajo">Consultar</a></li>
+						<li><a href="#" id="modificarEquipos" ></a><a href="#" class="textoAbajo">Ingresar</a></li>
+						<li><a href="#" id="ingresarEquipos" ></a><a href="#" class="textoAbajo">Modificar</a></li>
+					</ul>		
+				</div>
+			</div>
 			
-			<div id="contEquipos">
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Equipos</h2>
+					<hr>
+					<form class="formConsultarEquipos">
+						<label id="labelBuscarEquipos">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nombre Del Equipo</th>
+							<th>Marca</th>
+							<th>Funcion Principal</th>
+							<th>Ubicación</th>
+							<th>Condición</th>
+							<th></th>
+						</thead> 
+						<tbody>
+							<tr>
+								<td>Armario Bastidor OSN 6800 Optix </td>
+								<td>Huawei</td>
+								<td>Proyecto Red de Integración Internacional</td>
+								<td>Fila Nº 1</td>
+								<td>En Servicio</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Fuera De Servicio</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+								<td>Proveedor</td>
+								<td><a id="linkEquipos" href="#"></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="contenidoEquipos">
+						<div id="divConsultarEquipoIz">
+							<table id="tablaConsultarEquipos">
+								<tr>
+									<td class="leftTabla">Central:</td>
+									<td class="rightTabla">Michelena</td>
+									<td class="leftTabla">Sala:</td>
+									<td class="rightTabla">Transmisión Principal</td>
+									<td >Piso:</td>
+									<td >Primer Piso</td>
+								</tr>
+							</table>
+						</div>
+						<div id="divConsultarEquipoDer">
+							<div id="map2"></div>
+						</div>
+					</div>
+
+
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Equipos</h2>
+					<hr>
+					<form class="formConsultarEquipos">
+						<label id="labelBuscarEquipos">Buscar</label>
+						<input type="text">
+						<span id="dibujoConsultar"></span>
+					</form>
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nombre Del Equipo</th>
+							<th>Marca</th>
+							<th>Funcion Principal</th>
+							<th>Ubicación</th>
+							<th>Condición</th>
+							<th></th>
+						</thead> 
+						<tbody>
+							<tr>
+								<td>Armario Bastidor OSN 6800 Optix </td>
+								<td>Huawei</td>
+								<td>Proyecto Red de Integración Internacional</td>
+								<td>Fila Nº 1</td>
+								<td>En Servicio</td>
+								<td><a id="linkEditarEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Movilnet</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Proveedor de servicios</td>
+								<td>Fuera De Servicio</td>
+								<td><a id="linkEditarEquipos" href="#"></a></td>
+							</tr>
+							<tr>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Vodaphone</td>
+								<td>Proveedor</td>
+								<td>Proveedor</td>
+								<td><a id="linkEditarEquipos" href="#"></a></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="contenidoEquipos">
+						<div id="divConsultarEquipoIz">
+							<table id="tablaConsultarEquipos">
+								<tr>
+									<td class="leftTabla">Central:</td>
+									<td class="rightTabla">Michelena</td>
+									<td class="leftTabla">Sala:</td>
+									<td class="rightTabla">Transmisión Principal</td>
+									<td >Piso:</td>
+									<td >Primer Piso</td>
+								</tr>
+							</table>
+						</div>
+						<div id="divConsultarEquipoDer">
+							<div id="map3"></div>
+						</div>
+					</div>
+					<button id="modificarEquipo1"> Modificar</button>
+
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Equipos</h2>
+					<hr>
+					<form>
+						<table id="tablaModificarEquipo">
+							<tr>
+								<td id="leftModificarEquipo">Tipo De Equipo: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Armario Bastidor OSN 6800 Optix</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Marca: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Huawei</option>
+										<option>Ericsson</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Función Principal: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Proyecto Red de Integración Internacional">
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Ubicación: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Fila Nro 1">	
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Condición: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>En Servicio</option>
+										<option>Fuera De Servicio</option>
+									</select>
+								</td>								
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Central: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Michelena</option>
+										<option>Paseo Industrial</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Sala: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Transmision Principal</option>
+										<option>Transmisión Secundaria</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Piso: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Fila Nro 1">
+								</td>
+							</tr>
+						</table>		
+						<button id="modificarEquipo2">Modificar</button>	
+						<button id="eliminarEquipo1"> Eliminar</button>
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="contenedorAfuera">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Equipo</h2>
+					<hr>
+					<form>
+						<table id="tablaModificarEquipo">
+							<tr>
+								<td id="leftModificarEquipo">Tipo De Equipo: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Armario Bastidor OSN 6800 Optix</option>
+									</select>
+									<a href="#" id="linkNuevoTipoEquipo">Nuevo</a>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Tipo De Equipo: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text">
+									<a href="#" id="linkSeleccionarTipoEquipo">Seleccionar</a>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Marca: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Huawei</option>
+										<option>Ericsson</option>
+									</select>
+									<a href="#" id="linkNuevaMarca">Nuevo</a>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Marca: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text">
+									<a href="#" id="linkSeleccionarMarca">Seleccionar</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td id="leftModificarEquipo">Función Principal: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Proyecto Red de Integración Internacional">
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Ubicación: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text" value="Fila Nro 1">	
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Condición: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>En Servicio</option>
+										<option>Fuera De Servicio</option>
+									</select>
+								</td>								
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Central: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Michelena</option>
+										<option>Paseo Industrial</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Sala: </td>
+								<td id="rightModifiarEquipo">
+									<select>
+										<option>Transmision Principal</option>
+										<option>Transmisión Secundaria</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td id="leftModificarEquipo">Piso: </td>
+								<td id="rightModifiarEquipo">
+									<input type="text">
+								</td>
+							</tr>
+						</table>		
+						<button id="aceptarEquipo">Ingresar</button>				
+					</form>
+					<div id="tamaClien">
+						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div id="contEquipos">
 				<div class="titulo2">
 					<h1>Equipos</h1>
 					
@@ -77,7 +406,7 @@
 							<option value="1">Marca 1</option>
 							<option value="2">Marca 2</option>
 						</select>	
-						<!--input class="datos_equipo" type="text" name="marca2" id="marca2" placeholder="Marca"-->
+						input class="datos_equipo" type="text" name="marca2" id="marca2" placeholder="Marca"
 						
 						<label class="datos_equipo" for="condi">Condiciones </label>
 						<select class="datos_equipo" name="condi" id="condi">
@@ -94,7 +423,7 @@
 						<div id="map"></div>
 						<input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar">
 					</div>	
-			</div>
+			</div> -->
 			
 		</section>	
 

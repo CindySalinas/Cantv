@@ -674,16 +674,16 @@ label{
 {
 	margin-top: 1.5em;
 }
-<<<<<<< HEAD
-#tablaConsultarDatos,#tablaConsultarDatos1,  #tablaConsultarDatos2
-=======
+
+/*#tablaConsultarDatos,#tablaConsultarDatos1,  #tablaConsultarDatos2*/
+
 #tablaConsultarDatos, #tablaConsultarDatos2, .tablaEstilo
->>>>>>> origin/master
+
 {
 	margin: 1.5em auto 0 auto;
 	width: 80%;
 }
-<<<<<<< HEAD
+
 #tablaConsultarDatos thead ,#tablaConsultarDatos1 thead, #tablaConsultarDatos2 thead
 {
 	background-color: #E7B752;
@@ -692,8 +692,8 @@ label{
 {
 		padding: 5px 10px;
 }
-#tablaConsultarDatos ,#tablaConsultarDatos1,#tablaConsultarDatos2
-=======
+/*#tablaConsultarDatos ,#tablaConsultarDatos1,#tablaConsultarDatos2*/
+
 #tablaConsultarDatos thead ,#tablaConsultarDatos2 thead, .tablaEstilo thead
 {
 	background-color: #E7B752;
@@ -703,16 +703,13 @@ label{
 		padding: 5px 10px;
 }
 #tablaConsultarDatos ,#tablaConsultarDatos2, .tablaEstilo
->>>>>>> origin/master
 {
 	border: 1px solid #fff;
 	background-color: #ededed;
 }
-<<<<<<< HEAD
-#tablaConsultarDatos tr td ,#tablaConsultarDatos1 tr td,#tablaConsultarDatos2 tr td
-=======
-#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td, .tablaEstilo tr td
->>>>>>> origin/master
+
+#tablaConsultarDatos tr td ,#tablaConsultarDatos1 tr td,#tablaConsultarDatos2 tr td ,#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td, .tablaEstilo tr td
+
 {
 	border: 1px solid #fff;
 	padding: 5px;

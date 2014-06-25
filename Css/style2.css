@@ -495,7 +495,6 @@ label{
 	margin-left:60px;
 }
 .btn_datos_mapa{
-	display: inline-block;
 	width: 90px;
 	padding: 5px;
 	border:0;
@@ -534,6 +533,7 @@ label{
 	background-color: rgb(226,0,26);
 }
 
+<<<<<<< HEAD
 /*------------------Pagina Clientes-------------------*/
 
 #consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes
@@ -742,3 +742,96 @@ label{
 {
 	margin-left: 15px;
 }
+=======
+
+/* Asignar Salas*/
+#contendorSalas{
+	vertical-align: middle;
+	margin: 0 auto;
+	width: 90%;
+	height: 400px;
+	background-color: #e5e5e5;
+	border-radius: 5px;
+	padding: 15px;
+} 
+
+#ingresoSalas{
+	display: inline-block;
+	width: 40%;
+	height: 380px;
+	padding: 10px;
+	background-color: #6B6B6B;
+	border-radius: 5px;
+	
+}
+
+#ingresoSalas label{
+	text-align: justify;
+}
+
+#ingresoSalas textarea{
+	resize:none;
+	width: 300px;
+	height: 140px;
+	text-align: justify;
+}
+/* Mapa de salas*/
+#contMapaSalas{
+	display: inline-block;
+	width: 50%;
+	margin-left: 10px;
+}
+#contMapaSalas > .btn_datos_mapa{
+	margin:5px auto;
+}
+
+#contMapaSalas > .btn_datos_mapa:hover{
+	background-color: #6B6B6B;
+	color: white;
+}
+/*Equipos - Parte del estilo se encuentra en Salas (ContenedorSalas)*/
+#contEquipos{
+	height:380px;
+}
+
+#ingresoEquipo > .btn_datos_mapa{
+	width: 120px;
+	margin: 5px auto;
+}
+
+/* titulo 2*/
+.titulo2{
+	text-align: center;
+	color: green;
+	margin: 5px auto;
+	height: 50px;
+}
+.titulo2 h1{
+	padding: 3px;
+}
+#contEquipos{
+	margin-top: 10px;
+	padding: 5px;
+	background-color: #e5e5e5;
+	height: 480px;
+	border-radius: 5px;
+}
+#ingresoEquipo{
+	display: inline-block;
+	width: 45%;
+	background-color: #6B6B6B;
+	border-radius: 5px;
+	padding: 5px;
+
+}
+.datos_equipo{
+	width: 80%;
+	display: block;
+	padding: 5px;
+	font-weight: bold;
+	border: 0;
+	border-radius: 5px;
+	vertical-align: middle;
+	margin:0 auto;
+}
+>>>>>>> origin/master

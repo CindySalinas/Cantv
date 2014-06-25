@@ -7,11 +7,11 @@
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
 		<script src="../Js/jquery.js"></script>
-		<!--
+		<script src="../Js/cookie.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
     	</script>
-    	-->
-		<script src="../Js/codigo.js"></script>
+    	<script src="../Js/gmaps.js"></script>
+		<script src="../Js/fallasActualesAd.js"></script>
 	</head>
 	<body>
 		<header>
@@ -68,7 +68,7 @@
 			<div>
 				<ul id="menuFallas">
 					<li><a href="#">Todas Las Fallas</a></li>
-					<li><a href="#">Nuevas Fallas</a></li>
+					<li><a href="#">Asignar Fallas</a></li>
 					<li><a href="#">Fallas Sin Corregir</a></li>
 					<li><a href="#">Fallas Corregidas</a></li>
 				</ul>
@@ -102,11 +102,7 @@
 			</div>
 			<!--Mapa-->
 			<div id="contenedorMapa">
-				<h3>Ubicacion</h3>
-				<div class="mapa">
-						Mapa
-				</div>
-					
+				<div id="map"></div>		
 			</div>
 		</section>	
 

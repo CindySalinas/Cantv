@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title></title>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+		<script src="../Js/jquery.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>    	
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/nuevaSala.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="#">Clientes</a></li>
+					<li><a href="#">Control De Usuarios</a></li>
+					<li><a href="#">Estadisticas</a></li>
+					<li><a href="#">Reportes</a></li>
+					<li><a href="#">Seguimiento De Fallas</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="fallasActuales.html"> Mis Fallas</a></li>
+				<li><a href="#"> Fallas Resueltas</a></li>
+				<li><a href="#"> Fallas Sin Corregir</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="#"> Mi Perfil</a></li>
+				<li><a href="#"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div class="titulo2">
+				<h1>Ingresar Sala</h1>
+			</div>
+			<div class="contenedorFallas">
+				<div id="contendorSalas">
+					<form id="ingresoSalas">
+						<label class="datos_Mapa" for="nomb">Nombre </label>
+						<input class="datos_Mapa" type="text" name="nomb" id="nomb" placeholder="Nombre de Sala">
+						<label class="datos_Mapa" for="textA">Descripcion </label>
+						<textarea class="datos_Mapa" name="textA" id="textA"></textarea>
+						<label class="datos_Mapa" for="piso">Piso </label>
+						<input class="datos_Mapa" type="text" name="piso" id="piso" placeholder="Piso">
+						<label class="datos_Mapa" for="slCentral">Seleccione Central </label>
+						<select class="datos_Mapa" name="slCentral" id="slCentral">
+							
+						</select>
+
+					</form>
+					<div id="contMapaSalas">
+						<div id="map"></div>
+						<input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar">
+					</div>		
+				</div>
+				
+				<!--input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar"-->
+			</div>
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

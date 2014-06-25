@@ -673,25 +673,25 @@ label{
 {
 	margin-top: 1.5em;
 }
-#tablaConsultarDatos, #tablaConsultarDatos2
+#tablaConsultarDatos,#tablaConsultarDatos1,  #tablaConsultarDatos2
 {
 	margin: 1.5em auto 0 auto;
 	width: 80%;
 }
-#tablaConsultarDatos thead ,#tablaConsultarDatos2 thead
+#tablaConsultarDatos thead ,#tablaConsultarDatos1 thead, #tablaConsultarDatos2 thead
 {
 	background-color: #E7B752;
 }
-#tablaConsultarDatos thead th, #tablaConsultarDatos2 thead th
+#tablaConsultarDatos thead th,#tablaConsultarDatos1 thead th,  #tablaConsultarDatos2 thead th
 {
 		padding: 5px 10px;
 }
-#tablaConsultarDatos ,#tablaConsultarDatos2
+#tablaConsultarDatos ,#tablaConsultarDatos1,#tablaConsultarDatos2
 {
 	border: 1px solid #fff;
 	background-color: #ededed;
 }
-#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td
+#tablaConsultarDatos tr td ,#tablaConsultarDatos1 tr td,#tablaConsultarDatos2 tr td
 {
 	border: 1px solid #fff;
 	padding: 5px;
@@ -853,7 +853,7 @@ label{
 {
 	
 }
-#contenidoEquipos
+.contenidoEquipos
 {
 	margin-top: 1.5em;
 }
@@ -876,14 +876,14 @@ label{
     height: 170px;
     
 }
-#tablaConsultarEquipos
+#tablaConsultarEquipos,#tablaConsultarEquipos2
 {
 	margin: 0 auto 0.8em auto;
 	text-align: center;
 	background-color: #e7b752;
 
 }
-#tablaConsultarEquipos td
+#tablaConsultarEquipos td,#tablaConsultarEquipos2 td
 {
 	border-bottom: 1px solid #ab6800;
 	padding: 5px;

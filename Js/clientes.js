@@ -27,10 +27,7 @@ function menuPrin(){
 		resets();
 	})
 }
-/*
-consClientes
-ingClientes
-mdClientes*/
+
 function hideAndShow (mostrar,ocultar) {
 	$('#'+ocultar).hide("slow");
 	$('#'+mostrar).show("slide");
@@ -74,7 +71,6 @@ function consultarClientes(){
 			alert(data.mensaje);
 		}
 	})
-	//tablaConsultarDatos2
 }
 function consultarClientes2(){
 	var tabla = $('#tablaConsultarDatos2');
@@ -99,7 +95,6 @@ function consultarClientes2(){
 
 function llenarMod(id){
 	$('#formIngresarClientes2').css({'display':'inline-table','margin':'10px auto'});
-	//var id = $('.newTr a').attr('id');
 	var url = "http://127.0.0.1/Cantv/jsonCantv/buscarClientesId.php?jsoncallback=?";
 	$.getJSON(url,{id:id}).done(function(data){
 		if(data!=0){
@@ -141,5 +136,3 @@ function eliminar(){
 		resets();
 	});
 }
-/* modificarClientes
-eliminarClientes*/

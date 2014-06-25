@@ -13,6 +13,7 @@
     	<script src="../Js/gmaps.js"></script>*/ -->
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/clientes.js"></script>
 
 	</head>
 	<body>
@@ -69,20 +70,20 @@
 					</div>
 					<hr>
 					<ul id="ulMenuIconos">
-						<li><a href="#" id="consultarCliente" ></a><a href="#" class="textoAbajo">Consultar</a></li>
-						<li><a href="#" id="modificarCliente" ></a><a href="#" class="textoAbajo">Ingresar</a></li>
-						<li><a href="#" id="ingresarCliente" ></a><a href="#" class="textoAbajo">Modificar</a></li>
+						<li><a  id="consultarCliente" ></a><a id="consultarCliente2" class="textoAbajo">Consultar</a></li>
+						<li><a  id="modificarCliente" ></a><a id="modificarCliente2" class="textoAbajo">Modificar</a></li>
+						<li><a  id="ingresarCliente" ></a><a  id="ingresarCliente2"class="textoAbajo">Ingresar</a></li>
 					</ul>		
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera" id="consClientes">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Clientes</h2>
 					<hr>
 					<form id="formConsultarClientes">
 						<label id="labelBuscarClientes">Buscar</label>
-						<input type="text">
+						<input type="text" id="textoBusqueda1">
 						<span id="dibujoConsultar"></span>
 					</form>
 					<table id="tablaConsultarDatos">
@@ -91,7 +92,7 @@
 							<th>Descripción</th>
 						</thead>
 						<tbody>
-							<tr>
+							<!--tr>
 								<td>Movistar</td>
 								<td>Proveedor de servicios de red</td>
 							</tr>
@@ -102,16 +103,16 @@
 							<tr>
 								<td>Vodaphone</td>
 								<td>Proveedor</td>
-							</tr>
+							</tr-->
 						</tbody>
 					</table>
-					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 
 			</div>
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera" id="ingClientes">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Clientes</h2>
 					<hr>
@@ -122,7 +123,7 @@
 									<label id="laberIngresarClienteNombre">Nombre Del Cliente</label>
 								</td>
 								<td>
-									<input type="text">
+									<input type="text" id="nomClient">
 								</td>
 							</tr>
 							<tr>
@@ -130,34 +131,35 @@
 									<label id="laberIngresarClienteDescripcion">Descripción Del Cliente</label>
 								</td>
 								<td>
-									<input type="text">
+									<input type="text" id="descClient">
 								</td>
 							</tr>
 						</table>
-						<button id="ingresarClientes">Guardar</button>
+						<input type="button"  value="Guardar" id="ingresarClientes">
+						<!--button id="ingresarClientes">Guardar</button-->
 					</form>
-					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					<div id="tamaClien" class="atras">
+						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>					
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera" id="mdClientes">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Clientes</h2>
 					<hr>
 					<form id="formConsultarClientes">
 						<label id="labelBuscarClientes">Buscar</label>
-						<input type="text">
+						<input type="text" id="textoBusqueda2">
 						<span id="dibujoConsultar"></span>
 					</form>
-					<table id="tablaConsultarDatos">
+					<table id="tablaConsultarDatos2">
 						<thead>
 							<th>Nombre Del Cliente</th>
 							<th>Descripción</th>
 						</thead>
 						<tbody>
-							<tr>
+							<!--tr>
 								<td>Movistar</td>
 								<td>Proveedor de servicios de red</td>
 							</tr>
@@ -168,17 +170,18 @@
 							<tr>
 								<td>Vodaphone</td>
 								<td>Proveedor</td>
-							</tr>
+							</tr-->
 						</tbody>
 					</table>
-					<form id="formIngresarClientes">
+					<form id="formIngresarClientes2">
 						<table id="tablaIngresarClientes">
 							<tr>
 								<td>
 									<label id="laberIngresarClienteNombre">Nombre Del Cliente</label>
 								</td>
 								<td>
-									<input type="text">
+									<input type="text" id="nomCl2">
+									<input type="hidden"  id="idHide">
 								</td>
 							</tr>
 							<tr>
@@ -186,15 +189,17 @@
 									<label id="laberIngresarClienteDescripcion">Descripción Del Cliente</label>
 								</td>
 								<td>
-									<input type="text">
+									<input type="text" id="dirCl2">
 								</td>
 							</tr>
 						</table>
-						<button id="modificarClientes">Modificar</button>
-						<button id="eliminarClientes">Eliminar</button>
+						<input type="button" id="modificarClientes" value="Modificar">
+						<input type="button" id="eliminarClientes" value="Eliminar">
+						<!--button id="modificarClientes">Modificar</button>
+						<button id="eliminarClientes">Eliminar</button-->
 					</form>
-					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+					<div id="tamaClien" class="atras">
+						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 

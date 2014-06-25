@@ -665,25 +665,25 @@ label{
 {
 	margin-top: 1.5em;
 }
-#tablaConsultarDatos
+#tablaConsultarDatos, #tablaConsultarDatos2
 {
 	margin: 1.5em auto 0 auto;
 	width: 80%;
 }
-#tablaConsultarDatos thead
+#tablaConsultarDatos thead ,#tablaConsultarDatos2 thead
 {
 	background-color: #E7B752;
 }
-#tablaConsultarDatos thead th
+#tablaConsultarDatos thead th, #tablaConsultarDatos2 thead th
 {
 		padding: 5px 10px;
 }
-#tablaConsultarDatos
+#tablaConsultarDatos ,#tablaConsultarDatos2
 {
 	border: 1px solid #fff;
 	background-color: #ededed;
 }
-#tablaConsultarDatos tr td
+#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td
 {
 	border: 1px solid #fff;
 	padding: 5px;
@@ -701,7 +701,7 @@ label{
 	color: black;
 	font-weight: bold;
 } 
-#formIngresarClientes
+#formIngresarClientes, #formIngresarClientes2
 {
 
 	display: inline-block;
@@ -832,4 +832,9 @@ label{
 	border-radius: 5px;
 	vertical-align: middle;
 	margin:0 auto;
+}
+
+/* Ocultar Panales en clientes */
+#consClientes,#ingClientes,#mdClientes,#tablaConsultarDatos,#tablaConsultarDatos2,#formIngresarClientes2{
+	display: none;
 }

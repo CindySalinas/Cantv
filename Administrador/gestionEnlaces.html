@@ -62,21 +62,21 @@
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuEnlaces">
 				<div class="contenedorAdentro">
 					<div class="titulo" id="tituloCliente">
 						<h1>Enlaces</h1>
 					</div>
 					<hr>
 					<ul id="ulMenuIconos">
-						<li><a href="#" class="consultarIcono"></a><a href="#" class="textoAbajo">Consultar</a></li>
-						<li><a href="#" class="ingresarIcono"></a><a href="#" class="textoAbajo">Ingresar</a></li>
-						<li><a href="#" class="modificarIcono"></a><a href="#" class="textoAbajo">Modificar</a></li>
+						<li><a class="consultarIcono"></a><a class="textoAbajo linkAbajoConsultar">Consultar</a></li>
+						<li><a class="ingresarIcono"></a><a href="#" class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
+						<li><a class="modificarIcono"></a><a href="#" class="textoAbajo linkAbajoModificar">Modificar</a></li>
 					</ul>		
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuConsultar">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Enlaces</h2>
 					<hr>
@@ -99,85 +99,86 @@
 								<td>Michelena-Naguanagua</td>
 								<td>Movistar</td>
 								<td>Armario Bastidor OSN 6800 Optix</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="equipoConsultarMas"></a></td>
 							</tr>
 							<tr>
 								<td>Movilnet</td>
 								<td>Proveedor de servicios</td>
 								<td>Proveedor de servicios</td>
 								<td>Proveedor de servicios</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="equipoConsultarMas"></a></td>
 							</tr>
 							<tr>
 								<td>Vodaphone</td>
 								<td>Vodaphone</td>
 								<td>Vodaphone</td>
 								<td>Proveedor</td>
-								<td><a id="linkEquipos" href="#"></a></td>
+								<td><a class="equipoConsultarMas" ></a></td>
 							</tr>
 						</tbody>
+					
 					</table>
-
-					<div id="contenidoEquipos">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos">
-								<tr>
-									<td class="leftTabla">Central:</td>
-									<td class="rightTabla">Michelena</td>
-									<td class="leftTabla">Sala:</td>
-									<td class="rightTabla">Transmisión Principal</td>
-									<td >Piso:</td>
-									<td >Primer Piso</td>
-								</tr>
-							</table>
+					<div class="consultarContenidoExtra">
+						<div id="contenidoEquipos">
+							<div id="divConsultarEquipoIz">
+								<table id="tablaConsultarEquipos">
+									<tr>
+										<td class="leftTabla">Central:</td>
+										<td class="rightTabla">Michelena</td>
+										<td class="leftTabla">Sala:</td>
+										<td class="rightTabla">Transmisión Principal</td>
+										<td >Piso:</td>
+										<td >Primer Piso</td>
+									</tr>
+								</table>
+							</div>
+							<div id="divConsultarEquipoDer">
+								<div id="map2"></div>
+							</div>
 						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map2"></div>
+						<div id="consultarTransitos">
+							<fieldset>
+								<legend>Transitos</legend>
+									<ul id="listaTareas">
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+									</ul>
+							</fieldset>	
+						</div>
+						<div id="consultarPosiciones">
+							<fieldset>
+								<legend>Posiciones</legend>
+									<ul id="listaTareas">
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+									</ul>
+							</fieldset>	
 						</div>
 					</div>
-					<div id="consultarTransitos">
-						<fieldset>
-							<legend>Transitos</legend>
-								<ul id="listaTareas">
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-								</ul>
-						</fieldset>	
-					</div>
-					<div id="consultarPosiciones">
-						<fieldset>
-							<legend>Posiciones</legend>
-								<ul id="listaTareas">
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-								</ul>
-						</fieldset>	
-					</div>
-
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 
 			</div>
 			
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuModificar">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Enlaces</h2>
 					<hr>
@@ -200,89 +201,92 @@
 								<td>Michelena-Naguanagua</td>
 								<td>Movistar</td>
 								<td>Armario Bastidor OSN 6800 Optix</td>
-								<td><a class="linkEditarEquipos" href="#"></a></td>
+								<td><a class="linkEditarEquipos"></a></td>
 							</tr>
 							<tr>
 								<td>Movilnet</td>
 								<td>Proveedor de servicios</td>
 								<td>Proveedor de servicios</td>
 								<td>Proveedor de servicios</td>
-								<td><a class="linkEditarEquipos" href="#"></a></td>
+								<td><a class="linkEditarEquipos"></a></td>
 							</tr>
 							<tr>
 								<td>Vodaphone</td>
 								<td>Vodaphone</td>
 								<td>Vodaphone</td>
 								<td>Proveedor</td>
-								<td><a class="linkEditarEquipos" href="#"></a></td>
+								<td><a class="linkEditarEquipos"></a></td>
 							</tr>
 						</tbody>
 					</table>
+					<div class="contenidoExtraModificar1">
+						<div id="contenidoEquipos">
+							<div id="divConsultarEquipoIz">
+								<table id="tablaConsultarEquipos">
+									<tr>
+										<td class="leftTabla">Central:</td>
+										<td class="rightTabla">Michelena</td>
+										<td class="leftTabla">Sala:</td>
+										<td class="rightTabla">Transmisión Principal</td>
+										<td >Piso:</td>
+										<td >Primer Piso</td>
+									</tr>
+								</table>
+							</div>
+							<div id="divConsultarEquipoDer">
+								<div id="map3"></div>
+							</div>
+						</div>
 
-					<div id="contenidoEquipos">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos">
-								<tr>
-									<td class="leftTabla">Central:</td>
-									<td class="rightTabla">Michelena</td>
-									<td class="leftTabla">Sala:</td>
-									<td class="rightTabla">Transmisión Principal</td>
-									<td >Piso:</td>
-									<td >Primer Piso</td>
-								</tr>
-							</table>
+						<div id="consultarTransitos">
+							<fieldset>
+								<legend>Transitos</legend>
+									<ul id="listaTareas">
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+										<li><span class="tar">Transito 1</span></li>
+									</ul>
+							</fieldset>	
 						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map3"></div>
+						<div id="consultarPosiciones">
+							<fieldset>
+								<legend>Posiciones</legend>
+									<ul id="listaTareas">
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+										<li><span class="tar">Posicion 1</span></li>
+									</ul>
+							</fieldset>	
 						</div>
-					</div>
-					<div id="consultarTransitos">
-						<fieldset>
-							<legend>Transitos</legend>
-								<ul id="listaTareas">
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-									<li><span class="tar">Transito 1</span></li>
-								</ul>
-						</fieldset>	
-					</div>
-					<div id="consultarPosiciones">
-						<fieldset>
-							<legend>Posiciones</legend>
-								<ul id="listaTareas">
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-									<li><span class="tar">Posicion 1</span></li>
-								</ul>
-						</fieldset>	
-					</div>
-					<div>
-						<button class="modificarEnlace1">Modificar Transitos</button>						
-						<button class="modificarEnlace1">Modificar Posiciones</button>
-					</div>
-					<button class="modificarEnlace2">Modificar Enlace</button>
-					
+						<div class="displayInline">
+							<button id="modificaTransito" class="modificarEnlace1">Modificar Transitos</button>								
+						</div>					
+						<div class="displayInline">
+							<button id="modificaPosicion" class="modificarEnlace1">Modificar Posiciones</button>
+						</div>
+						<button id="modificaEnlace" class="modificarEnlace2">Modificar Enlace</button>
+					</div>	
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes atrasModificar1Enlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuModificar2">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Enlace</h2>
 					<hr>
@@ -347,12 +351,12 @@
 						<button id="eliminarEquipo1"> Eliminar</button>
 					</form>
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes atrasModificar2Enlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuModificarTransitos">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Transitos</h2>
 					<hr>
@@ -386,12 +390,12 @@
 					<button class="modificarEnlace2">Modificar</button>
 					<button class="modificarEnlace2">Eliminar</button>
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes atrasTransitoEnlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuModificarPosiciones">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Posiciones</h2>
 					<hr>
@@ -425,12 +429,12 @@
 					<button class="modificarEnlace2">Modificar</button>
 					<button class="modificarEnlace2">Eliminar</button>
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes atrasPosicionEnlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
 				</div>
 			</div>
 
-			<div class="contenedorAfuera">
+			<div class="contenedorAfuera menuIngresar">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Enlace</h2>
 					<hr>
@@ -517,11 +521,12 @@
 						<div class="displayInline">
 							<button class="botonEnlace ">Agregar Posición</button>
 						</div>
-						<button class="botonEnlace espacioArriba">Agregar Enlace</button>
-						
+						<div>
+							<button class="botonEnlace espacioArriba">Agregar Enlace</button>
+						</div>										
 					</form>
 					<div id="tamaClien">
-						<a href="#" class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes atrasIngresarCliente"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>					
 				</div>
 			</div>

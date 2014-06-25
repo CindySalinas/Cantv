@@ -4,8 +4,8 @@ function inicio ()
 {
 	var map;
 	mostrarMapa();
-	$('#ingresarClientes').on('click',ingresarCliente);
 }	
+
 
 function mostrarMapa(){
 	//crea el mapa 

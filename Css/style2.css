@@ -536,7 +536,7 @@ label{
 
 /*------------------Pagina Clientes-------------------*/
 
-#consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes, #consultarEquipos, #modificarEquipos, #ingresarEquipos, #consultarEnlaces, #modificarEnlaces, #ingresarEnlaces
+#consultarCliente, #modificarCliente, #ingresarCliente, #eliminarCliente, .spanAtrasClientes, #consultarEquipos, #modificarEquipos, #ingresarEquipos, #consultarEnlaces, #modificarEnlaces, #ingresarEnlaces, .consultarIcono, .modificarIcono, .ingresarIcono
 {
 	display: block;
 	margin-bottom: 8px;
@@ -566,15 +566,15 @@ label{
 {
 	content: "\e60c";
 }
-#consultarCliente:before, #consultarEquipos:before, #consultarEnlaces:before
+#consultarCliente:before, #consultarEquipos:before, #consultarEnlaces:before, .consultarIcono:before
 {
 	content: "\e60d";
 }
-#modificarCliente:before, #modificarEquipos:before, #modificarEnlaces:before
+#modificarCliente:before, #modificarEquipos:before, #modificarEnlaces:before, .modificarIcono:before
 {
 	content: "\f044";
 }
-#ingresarCliente:before, #ingresarEquipos:before, #ingresarEnlaces:before
+#ingresarCliente:before, #ingresarEquipos:before, #ingresarEnlaces:before, .ingresarIcono:before
 {
 	content: "\e60f";
 }
@@ -1016,4 +1016,8 @@ label{
 .espacioLeft
 {
 	margin-left: 10px;
+}
+.displayNone
+{
+	display: none;
 }

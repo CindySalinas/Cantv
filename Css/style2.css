@@ -673,25 +673,25 @@ label{
 {
 	margin-top: 1.5em;
 }
-#tablaConsultarDatos, #tablaConsultarDatos2
+#tablaConsultarDatos, #tablaConsultarDatos2, .tablaEstilo
 {
 	margin: 1.5em auto 0 auto;
 	width: 80%;
 }
-#tablaConsultarDatos thead ,#tablaConsultarDatos2 thead
+#tablaConsultarDatos thead ,#tablaConsultarDatos2 thead, .tablaEstilo thead
 {
 	background-color: #E7B752;
 }
-#tablaConsultarDatos thead th, #tablaConsultarDatos2 thead th
+#tablaConsultarDatos thead th, #tablaConsultarDatos2 thead th, .tablaEstilo thead th
 {
 		padding: 5px 10px;
 }
-#tablaConsultarDatos ,#tablaConsultarDatos2
+#tablaConsultarDatos ,#tablaConsultarDatos2, .tablaEstilo
 {
 	border: 1px solid #fff;
 	background-color: #ededed;
 }
-#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td
+#tablaConsultarDatos tr td ,#tablaConsultarDatos2 tr td, .tablaEstilo tr td
 {
 	border: 1px solid #fff;
 	padding: 5px;
@@ -989,7 +989,31 @@ label{
 	vertical-align: top;
 	width: 40%;
 }
+.displayInline2
+{
+	display: inline-block;
+	margin-top: 1em;
+	vertical-align: top;
+}
 .espacioArriba
 {
 	margin-top: 1.5em;
+}
+#tablaresuelta
+{
+	width: 50%;
+}
+.left
+{
+	padding-right: 5px; 
+	text-align: right;
+}
+.right
+{
+	padding-left: 5px;
+	text-align: left;
+}
+.espacioLeft
+{
+	margin-left: 10px;
 }

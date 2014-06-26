@@ -438,59 +438,55 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Enlace</h2>
 					<hr>
-					<form>
+					<div>
 						<table class="tablaModificarEnlace">
 							<tr>
 								<td class="leftModificarEnlace">Número De Enlace: </td>
 								<td id="rightModifiarEquipo">
-									<input type="text" placeholder="Ingrese Número De Enlace">
+									<input id="numEnlaceIngresar" type="text" placeholder="Ingrese Número De Enlace">
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Ruta: </td>
 								<td id="rightModifiarEquipo">
-									<input type="text" placeholder="Ingrese Ruta">
+									<input id="rutaEnlaceIngresar" type="text" placeholder="Ingrese Ruta">
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Central: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Michelena</option>
-										<option>Paseo Las Industrias</option>
+									<select id="centralEnlaceIngresar">
+										<option value="sinSelCentral">Seleccione Central</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Sala: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Transmisión Principal</option>
-										<option>Transmisión Secundaria</option>
+									<select id="salaEnlaceIngresar">
+										<option>Seleccione Sala</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Equipo: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Armario Bastidor OSN 6800 Optix</option>
-										<option>ODF</option>
+									<select id="equipoEnlaceIngresar">
+										<option value="selEquip">Seleccione Equipo</option>
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Ubicación: </td>
 								<td id="rightModifiarEquipo">
-									<input class="noEditar" type="text" value="Fila Nro 1" readonly>
+									<input id="ubicacionEnlaceIngresar" type="text" disabled>
 								</td>								
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Cliente: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Movistar</option>
-										<option>Vodaphone</option>
+									<select id="clienteEnlaceIngresar">
+										<option>Seleccione Cliente</option>
 									</select>
 								</td>
 							</tr>
@@ -500,31 +496,36 @@
 							<div id="consultarTransitos">
 								<fieldset>
 									<legend>Transitos</legend>
-										<ul id="listaTareas">
-											<li><span class="tar">Transito 1</span></li>
+										<ul id="listaTareas" class="transitosListaAgregar">
 										</ul>
 								</fieldset>	
 							</div>
 							<div id="consultarPosiciones">
 								<fieldset>
 									<legend>Posiciones</legend>
-										<ul id="listaTareas">
-											<li><span class="tar">Posicion 1</span></li>
-											<li><span class="tar">Posicion 1</span></li>
+										<ul id="listaTareas" class="posicionesListaAgregar">
 										</ul>
 								</fieldset>	
 							</div>
 						</div>
+						<div>
+							<div class="displayInline">
+								<input id="inputTransitoIngresarEnlace" placeholder="Ingrese un Transito" class="tamInputIngresar" type="text">
+							</div>	
+							<div class="displayInline">
+								<input id="inputPosicionIngresarEnlace" placeholder="Ingrese una Posición" class="tamInputIngresar" type="text">
+							</div>
+						</div>
 						<div class="displayInline">
-							<button class="botonEnlace">Agregar Transito</button>
+							<button id="agregarTransitoIngresarEnlace" class="botonEnlace">Agregar Transito</button>
 						</div>	
 						<div class="displayInline">
-							<button class="botonEnlace ">Agregar Posición</button>
+							<button id="agregarPosicionIngresarEnlace" class="botonEnlace ">Agregar Posición</button>
 						</div>
 						<div>
-							<button class="botonEnlace espacioArriba">Agregar Enlace</button>
+							<button id="ingresarNuevoEnlace" class="botonEnlace espacioArriba">Agregar Enlace</button>
 						</div>										
-					</form>
+					</div>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasIngresarCliente"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>					

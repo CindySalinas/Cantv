@@ -1043,3 +1043,15 @@ label{
 {
 	cursor: pointer;
 }
+#numEnlaceIngresar, #rutaEnlaceIngresar
+{
+	width: 200px;
+}
+#ubicacionEnlaceIngresar
+{
+
+}
+.tamInputIngresar
+{
+	width: 250px;
+}

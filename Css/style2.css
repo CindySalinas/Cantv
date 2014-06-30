@@ -397,7 +397,8 @@ legend{
 	background-color: #e3e3e3;
 	padding: 3px;
 }
-#listaTareas{
+#listaTareas, .listaEstilo
+{
 	background-color: #e3e3e3;
 	border: 2px solid white;
 	list-style: none;
@@ -1053,5 +1054,5 @@ label{
 }
 .tamInputIngresar
 {
-	width: 250px;
+	width: 90%;
 }

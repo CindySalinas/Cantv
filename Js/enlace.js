@@ -12,6 +12,7 @@ function inicio ()
 	$("#equipoEnlaceIngresar").on("change", cambioEquipo);
 	$("#agregarTransitoIngresarEnlace").on("click", agregarTransito);
 	$("#agregarPosicionIngresarEnlace").on("click", agregarPosicion);
+	$("#ingresarNuevoEnlace").on("click", agregarEnlace);
 }	
 function ocultar()
 {
@@ -145,6 +146,57 @@ function agregarPosicion()
 	}
 	else
 		alert("Escriba una Posición");
+}
+
+function agregarEnlace()
+{
+	var cantidadPosiciones = $(".posicionesListaAgregar li").size();
+	var cantidadTransitos = $(".transitosListaAgregar li").size();
+
+	var numEnlace = $("#numEnlaceIngresar").val();
+	var rutEnlace = $("#rutaEnlaceIngresar").val();
+	var equipEnlace = $("#equipoEnlaceIngresar option:selected").val();
+	var clientEnlace = $("#clienteEnlaceIngresar option:selected").val();
+	var centEnlace = $("#centralEnlaceIngresar option:selected").val();
+	var salEnlace = $("#salaEnlaceIngresar option:selected").val();
+
+
+	if(centEnlace!= "sinSelCentral" && salEnlace!="sinSelSala" && equipEnlace!="selEquip" && clientEnlace!="sinSelCliente" && numEnlace!="" && numEnlace!=" " && numEnlace!="  " && numEnlace!="   " && rutEnlace!="" && rutEnlace!=" " && rutEnlace!="  " && rutEnlace!="   ")
+	{
+		var url = "http://127.0.0.1/Cantv/jsonCantv/agregarEnlace.php?jsoncallback=?";
+		$.getJSON(url,{numeroEnlace:numEnlace,rutaEnlace:rutEnlace,equipoEnlace:equipEnlace,clienteEnlace:clientEnlace}).done(
+			function(data){				
+				alert(data.mensaje);		
+				var url2 = "http://127.0.0.1/Cantv/jsonCantv/consultarEnlaceNumeroEnlace.php?jsoncallback=?";
+				$.getJSON(url2,{numero:numEnlace}).done(function(data){
+						var idEnl=data.mensaje;
+						$('.posicionesListaAgregar li').each(function(indice, elemento) 
+						{
+					  		var elem=$(elemento).text();
+					  		var url3 = "http://127.0.0.1/Cantv/jsonCantv/agregarPosiciones.php?jsoncallback=?";
+							$.getJSON(url3,{idEnlace:idEnl,element:elem}).done(
+								function(data){								
+								});
+						});
+						$('.transitosListaAgregar li').each(function(indice2, elemento2) 
+						{
+					  		var elem2=$(elemento2).text();
+					  		var url4 = "http://127.0.0.1/Cantv/jsonCantv/agregarTransito.php?jsoncallback=?";
+							$.getJSON(url4,{idEnlace:idEnl,element:elem2}).done(
+								function(data){				
+								});
+						});
+				});	
+				resetear();
+				$('.nuevasSalas').remove();
+				$('.nuevosEquipos').remove();
+				$('.nuevosTransitos').remove();
+				$('.nuevasPosiciones').remove();
+				$("#centralEnlaceIngresar option[value='sinSelCentral']").attr("selected", "selected");		
+			});
+	}
+	else
+		alert("Ingrese Todos Los Datos Correctamente");	
 }
 
 function eventos()

@@ -211,6 +211,19 @@ function llenarDatosConsultar()
 		});
 	});
 }
+function llenarDatosModificar()
+{
+	$('.colConEnlace2').remove();
+	var tabla = $('#tbodyModificar');
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaces.php?jsoncallback=?";
+	$.getJSON(url).done(function(data){
+		$.each(data,function(i,item){
+			tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMas"></a></td></tr>');
+			$('.equipoConsultarMas').on("click",function(){actionBotones('contenidoExtraModificar1','nada');}); 
+			$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo);}); 
+		});
+	});
+}
 
 function marcaConsultarMapa(num,equi)
 {
@@ -256,23 +269,18 @@ function marcaConsultarMapa(num,equi)
 		}
 	});
 }
-
-function marcarMapa(){
-	var id;
-	$('#slCentral').on("change",function(){
-		id = $('#slCentral').val();
-		map.removeMarkers();
-		crearMarca(id);
-	})
-}
-
-// Carga los datos para añadir la marca
-function crearMarca(id){
-	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadas.php?jsoncallback=?";
-	$.getJSON(url,{idCentral:id}).done(function(data){
+function marcaConsultarMapa2(num,equi)
+{
+	$('.conNuevasPosiciones2').remove();
+	map2.removeMarkers();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadasConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url,{numero:equi}).done(function(data){
 		if(data.num != 0){
 			$.each(data,function(i,item){
-				map.addMarker({
+				$("#spanConsultarCentral").text(item.nomCtrl);
+				$("#spanConsultarSala").text(item.nomb);
+				$("#spanConsultarPiso").text(item.pisos);
+				map2.addMarker({
 				  lat: item.latCtrl,
 				  lng: item.longCtrl,
 				  title: item.nomCtrl,
@@ -283,9 +291,27 @@ function crearMarca(id){
 			});
 		}
 		else{
-			alert(data.mensajee);
+			alert("No Existe Ubicación");
 		}
-	})
+	});
+	
+	var url3 = "http://127.0.0.1/Cantv/jsonCantv/consultarTransitosConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url3,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".modificaTransitos").append("<li class='conNuevasPosiciones2'>"+item.transito+"</li>");
+			});
+		}
+	});
+
+	var url4 = "http://127.0.0.1/Cantv/jsonCantv/consultarPosicionesConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url4,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".modificaPosiciones").append("<li class='conNuevasPosiciones2'>"+item.posicion+"</li>");
+			});
+		}
+	});
 }
 
 function eventos()
@@ -300,6 +326,8 @@ function eventos()
 
 	 $('.modificarIcono').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
 	 $('.linkAbajoModificar').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
+	 $('.modificarIcono').on("click",llenarDatosModificar); 
+	 $('.linkAbajoModificar').on("click",llenarDatosModificar); 
 
 	 $('.linkAtrasConsultar').on("click",function(){actionBotones('menuEnlaces','menuConsultar');}); 
 	 $('.linkAtrasConsultar').on("click",function(){actionBotones('nada','consultarContenidoExtra');}); 

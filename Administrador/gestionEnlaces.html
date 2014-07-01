@@ -85,7 +85,7 @@
 						<input type="text">
 						<span id="dibujoConsultar"></span>
 					</form>
-					<table class="tablaEstilo">
+					<table id="tablaConsultar" class="tablaEstilo">
 						<thead>
 							<th>Número De Enlace</th>
 							<th>Ruta</th>
@@ -93,42 +93,23 @@
 							<th>Equipo</th>
 							<th></th>
 						</thead> 
-						<tbody>
-							<tr>
-								<td>356523</td>
-								<td>Michelena-Naguanagua</td>
-								<td>Movistar</td>
-								<td>Armario Bastidor OSN 6800 Optix</td>
-								<td><a class="equipoConsultarMas"></a></td>
-							</tr>
-							<tr>
-								<td>Movilnet</td>
-								<td>Proveedor de servicios</td>
-								<td>Proveedor de servicios</td>
-								<td>Proveedor de servicios</td>
-								<td><a class="equipoConsultarMas"></a></td>
-							</tr>
-							<tr>
-								<td>Vodaphone</td>
-								<td>Vodaphone</td>
-								<td>Vodaphone</td>
-								<td>Proveedor</td>
-								<td><a class="equipoConsultarMas" ></a></td>
-							</tr>
+						<tbody id="tbodyConsultar">
+							
 						</tbody>
 					
 					</table>
+					<br>
 					<div class="consultarContenidoExtra">
 						<div id="contenidoEquipos">
 							<div id="divConsultarEquipoIz">
 								<table id="tablaConsultarEquipos">
 									<tr>
 										<td class="leftTabla">Central:</td>
-										<td class="rightTabla">Michelena</td>
+										<td class="rightTabla"><span id="spanConsultarCentral"></span></td>
 										<td class="leftTabla">Sala:</td>
-										<td class="rightTabla">Transmisión Principal</td>
+										<td class="rightTabla"><span id="spanConsultarSala"></span></td>
 										<td >Piso:</td>
-										<td >Primer Piso</td>
+										<td ><span id="spanConsultarPiso"></span></td>
 									</tr>
 								</table>
 							</div>
@@ -139,34 +120,14 @@
 						<div id="consultarTransitos">
 							<fieldset>
 								<legend>Transitos</legend>
-									<ul id="listaTareas">
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
+									<ul id="listaTareas" class="consultaTransitos">
 									</ul>
 							</fieldset>	
 						</div>
 						<div id="consultarPosiciones">
 							<fieldset>
 								<legend>Posiciones</legend>
-									<ul id="listaTareas">
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
+									<ul id="listaTareas" class="consultandoPosiciones">
 									</ul>
 							</fieldset>	
 						</div>
@@ -243,15 +204,6 @@
 								<legend>Transitos</legend>
 									<ul id="listaTareas">
 										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
-										<li><span class="tar">Transito 1</span></li>
 									</ul>
 							</fieldset>	
 						</div>
@@ -259,15 +211,6 @@
 							<fieldset>
 								<legend>Posiciones</legend>
 									<ul id="listaTareas">
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
-										<li><span class="tar">Posicion 1</span></li>
 										<li><span class="tar">Posicion 1</span></li>
 									</ul>
 							</fieldset>	

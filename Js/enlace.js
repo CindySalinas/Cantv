@@ -1,8 +1,8 @@
 $(document).on("ready",inicio);
-
+var map,map2;
 function inicio ()
 {
-	var map;
+	
 	mostrarMapa();
 	ocultar();
 	eventos();	
@@ -50,9 +50,9 @@ function mostrarMapa(){
     	div: '#map2',
     	lat:10.174862,
 		lng:-67.962385,
-		zoom:7
+		zoom:5
 	});
-	map = new GMaps({
+	map2 = new GMaps({
     	div: '#map3',
     	lat:10.174862,
 		lng:-67.962385,
@@ -198,11 +198,102 @@ function agregarEnlace()
 	else
 		alert("Ingrese Todos Los Datos Correctamente");	
 }
+function llenarDatosConsultar()
+{
+	$('.colConEnlace').remove();
+	var tabla = $('#tbodyConsultar');
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaces.php?jsoncallback=?";
+	$.getJSON(url).done(function(data){
+		$.each(data,function(i,item){
+			tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="equipoConsultarMas"></a></td></tr>');
+			$('.equipoConsultarMas').on("click",function(){actionBotones('consultarContenidoExtra','nada');}); 
+			$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+		});
+	});
+}
+
+function marcaConsultarMapa(num,equi)
+{
+	$('.conNuevasPosiciones').remove();
+	map.removeMarkers();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadasConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url,{numero:equi}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$("#spanConsultarCentral").text(item.nomCtrl);
+				$("#spanConsultarSala").text(item.nomb);
+				$("#spanConsultarPiso").text(item.pisos);
+				map.addMarker({
+				  lat: item.latCtrl,
+				  lng: item.longCtrl,
+				  title: item.nomCtrl,
+				  infoWindow: {
+				    content : item.dirCtrl
+			   		 }
+				});
+			});
+		}
+		else{
+			alert("No Existe Ubicación");
+		}
+	});
+	
+	var url3 = "http://127.0.0.1/Cantv/jsonCantv/consultarTransitosConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url3,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".consultaTransitos").append("<li class='conNuevasPosiciones'>"+item.transito+"</li>");
+			});
+		}
+	});
+
+	var url4 = "http://127.0.0.1/Cantv/jsonCantv/consultarPosicionesConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url4,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".consultandoPosiciones").append("<li class='conNuevasPosiciones'>"+item.posicion+"</li>");
+			});
+		}
+	});
+}
+
+function marcarMapa(){
+	var id;
+	$('#slCentral').on("change",function(){
+		id = $('#slCentral').val();
+		map.removeMarkers();
+		crearMarca(id);
+	})
+}
+
+// Carga los datos para añadir la marca
+function crearMarca(id){
+	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadas.php?jsoncallback=?";
+	$.getJSON(url,{idCentral:id}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				map.addMarker({
+				  lat: item.latCtrl,
+				  lng: item.longCtrl,
+				  title: item.nomCtrl,
+				  infoWindow: {
+				    content : item.dirCtrl
+			   		 }
+				});
+			});
+		}
+		else{
+			alert(data.mensajee);
+		}
+	})
+}
 
 function eventos()
 {
 	$('.consultarIcono').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
 	 $('.linkAbajoConsultar').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
+	 $('.consultarIcono').on("click", llenarDatosConsultar); 
+	 $('.linkAbajoConsultar').on("click",llenarDatosConsultar); 
 
 	 $('.ingresarIcono').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
 	 $('.linkAbajoIngresar').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 

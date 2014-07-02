@@ -29,7 +29,7 @@ function inicio ()
 	cargarIdPerfil();
 
 	$('#guardarFalla1').on('click',ingresarFalla);
-
+	$('#idEn').on('change',verificarEnlace);
 	
 }	
 /* ------------------------ Variables Globales --------------------------- */
@@ -113,8 +113,8 @@ function fecha()
   var f=new Date();
   var fecha;
 
-  fecha = (diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
-
+ // fecha = (diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
+ 	fecha = (f.getDate()+ "/"+ f.getMonth()+ "/" + f.getFullYear());
   return fecha;
 }
 
@@ -133,14 +133,46 @@ function cargarIdPerfil (){
 		}
 	})
 }
+function verificarEnlace(){
+	var idEn = $('#idEn').val();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarEnlaceNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url,{numero:idEn}).done(function(data){
+		if(data.mensaje != null){
+			//alert(data.mensaje);
+			$('#enIsz').val(data.mensaje);
+			$('#guardarFalla1').show("slide");
+			//actionBotones('guardarFalla1','adsad');
+		}
+		else
+		{
+			//actionBotones('adsad','guardarFalla1');
+			$('#guardarFalla1').hide('slow');
+			alert("No existe enlace, Por Favor ingrese el enlace.");
+
+		}
+	});
+}
 
 function ingresarFalla(){
 	var ids = $('#oculto1').val();
-	var desc = $('#').val();
-	var fecha = fecha();
-	var hora = hora();
+	var desc = $('#descFalla').val();
+	var idEn = $('#enIsz').val();
+	var fec = fecha();
+	var hor = hora();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/ingresarFalla.php?jsoncallback=?";
-	$.getJSON(url,{idEnla:idEn,usr:ids,status:1,descr:desc,fc:fecha,hr:hora}).done(function(data){
-		alert(data.mensaje);
-	})
+	if(desc!= "" && $('#idEn').val()!= ""){
+		$.getJSON(url,{idEnla:idEn,usr:ids,status:1,descr:desc,fc:fec,hr:hor}).done(function(data){
+			alert(data.mensaje);
+			resetear();
+		})
+	}
+	else{
+		alert("No se pueden Guardar Campos vacios");
+	}
+}
+
+
+
+function comprobarEnlace(){
+	
 }

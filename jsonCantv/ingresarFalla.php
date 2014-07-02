@@ -11,7 +11,7 @@ $desc = $_GET["descr"];
 $fecha = $_GET["fc"];
 $hora = $_GET["hr"];
 
-$sql = "INSERT INTO fallas (Id_Enclace,Id_Usuario_Falla,Id_Estatus,Descripcion,Fecha,Hora) VALUES ('$idEnlace','$idUsr','$idStat','$desc','$fecha ','$hora ')";
+$sql = "INSERT INTO fallas (Id_Enlace,Id_Usuario_Falla,Id_Estatus,Descripcion,Fecha,Hora) VALUES ('$idEnlace','$idUsr','$idStat','$desc','$fecha ','$hora ')";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 

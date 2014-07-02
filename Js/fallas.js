@@ -5,6 +5,8 @@ function inicio ()
 	var map;
 	mostrarMapa();
 	ocultar();
+	consultarFallas();
+	cargarIdPerfil();
 
 	$('.consultarIcono').on("click",function(){actionBotones('menuConsultarFallas','menuFallas');}); 
 	$('.linkAbajoConsultar').on("click",function(){actionBotones('menuConsultarFallas','menuFallas');});
@@ -26,15 +28,19 @@ function inicio ()
 
 	$('.linkAtrasEliminar').on("click",function(){actionBotones('menuFallas','menuEliminarFallas');});  
 	$('.linkAtrasEliminar').on("click",function(){actionBotones('nada','contenidoExtraEliminarFalla');});
-	cargarIdPerfil();
-	consultarFallas();
+
+	$('#textoBusqueda1').on('change',consultarFallas2);
+
 	$('#guardarFalla1').on('click',ingresarFalla);
+
 	$('#idEn').on('change',verificarEnlace);
+
 	$('#consultaFallas1 ').on('click','.equipoConsultarMas',function(){
 		var ids = $(this).attr('id');
 		consultarFallasIndi(ids);
 		actionBotones('contenidoExtraConsultarEnlace','nada')
-	})
+	});
+
 }	
 /* ------------------------ Variables Globales --------------------------- */
 	var nomPerf = $.cookie('adminSis');
@@ -48,6 +54,7 @@ function ocultar()
 	$('.menuEliminarFallas').hide();
 	$('.contenidoExtraConsultarEnlace').hide();
 	$('.contenidoExtraEliminarFalla').hide();
+
 }
 
 function resetear()
@@ -179,10 +186,29 @@ function ingresarFalla(){
 function consultarFallas(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas1');
+	$('.newRow').remove();
 	$.getJSON(url).done(function(data){
 		if(data.mensaje != 0){
 			$.each(data,function(i,item){
-				tab.append('<tr><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+'></a></td></tr>');
+				tab.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
+			});
+		}
+		else{
+			alert(data.mensaje);
+		}
+	});
+}
+
+function consultarFallas2(){
+	var busc = $('#textoBusqueda1').val();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarFallaBuscar.php?jsoncallback=?";
+	var tab = $('#consultaFallas1');
+	$('.newRow').remove();
+	$('.newTR').remove();
+	$.getJSON(url,{buscar:busc}).done(function(data){
+		if(data.mensaje != 0){
+			$.each(data,function(i,item){
+				tab.append('<tr class="newRow"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
 			});
 		}
 		else{
@@ -192,11 +218,15 @@ function consultarFallas(){
 }
 
 function consultarFallasIndi(id){
+	var f;
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultaEstadoFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas3');
+	var tab2 = $('#tablaConsultarEquipos');
 	var nums = $('#numEnla');
+	//alert(edoFalla);
 	map2.removeMarkers();
 	$('.newRow2').remove();
+	$('.newRow3').remove();
 	$.getJSON(url,{idEnla:id}).done(function(data){
 		if(data.num !=0){
 			$.each(data,function(i,item){
@@ -204,19 +234,13 @@ function consultarFallasIndi(id){
 				tab.append('<tr class="newRow2"><td>'+item.obser+'</td><td>'+item.nomUsr+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td></tr>');
 				//alert(item.idCent);
 				crearMarca(item.idCent);
+				tab2.append('<tr class="newRow3"><td class="leftTabla">Central:</td><td class="rightTabla">'+item.nombreCen+'</td><td class="leftTabla">Sala:</td><td class="rightTabla">'+item.salaNom+'</td><td >Piso:</td><td >'+item.pisoSala+'</td></tr>');
 			});
 		}
 		else{
 			alert(data.mensaje);
 		}
 	});
-	/* obser
-nomUsr
-numEnla
-fecha
-hora
-lat
-longs*/
 }
 
 // mostrar el mapa y la ubicacion de la consulta de equipos
@@ -251,3 +275,4 @@ function crearMarca(id){
 		}
 	});
 }
+

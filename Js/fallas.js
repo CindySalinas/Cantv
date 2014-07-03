@@ -17,19 +17,19 @@ function inicio ()
 	$('.modificarIcono').on("click",function(){actionBotones('menuEliminarFallas','menuFallas');}); 
 	$('.linkAbajoModificar').on("click",function(){actionBotones('menuEliminarFallas','menuFallas');}); 
 
-	//$('.equipoConsultarMas').on("click",function(){actionBotones('contenidoExtraConsultarEnlace','nada');}); 
+	
 
 	$('.linkAtrasConsultar').on("click",function(){actionBotones('menuFallas','menuConsultarFallas');}); 
 	$('.linkAtrasConsultar').on("click",function(){actionBotones('nada','contenidoExtraConsultarEnlace');}); 
 
 	$('.linkAtrasIngresar').on("click",function(){actionBotones('menuFallas','menuIngresarFallas');});  
 
-	$('.linkEditarEquipos').on("click",function(){actionBotones('contenidoExtraEliminarFalla','nada');});  
 
 	$('.linkAtrasEliminar').on("click",function(){actionBotones('menuFallas','menuEliminarFallas');});  
 	$('.linkAtrasEliminar').on("click",function(){actionBotones('nada','contenidoExtraEliminarFalla');});
 
 	$('#textoBusqueda1').on('change',consultarFallas2);
+	$('.textoBusqueda1').on('change',consultarFallas3);
 
 	$('#guardarFalla1').on('click',ingresarFalla);
 
@@ -40,6 +40,18 @@ function inicio ()
 		consultarFallasIndi(ids);
 		actionBotones('contenidoExtraConsultarEnlace','nada')
 	});
+
+	$('#tablamodificar2').on('click','.linkEditarEquipos',function(){
+		var ids = $(this).attr('id');
+		var id2 = $(this).attr('value');
+		$('#idHide').attr('value',id2);
+		consultarFallasIndi(ids);
+		actionBotones('contenidoExtraEliminarFalla','nada');
+		
+	});
+
+	$('#btnCambiar').on('click',cambiarStatus);
+	$('#btnEliminar').on('click',eliminarFalla);
 
 }	
 /* ------------------------ Variables Globales --------------------------- */
@@ -186,11 +198,16 @@ function ingresarFalla(){
 function consultarFallas(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas1');
+	var tab2 = $('#tablamodificar2');
 	$('.newRow').remove();
 	$.getJSON(url).done(function(data){
 		if(data.mensaje != 0){
 			$.each(data,function(i,item){
 				tab.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
+
+				// Tabla de modificar Fallas 
+				tab2.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="linkEditarEquipos" id='+item.idEnla+' value='+item.idFall+'></a></td></tr>');
+				
 			});
 		}
 		else{
@@ -209,6 +226,25 @@ function consultarFallas2(){
 		if(data.mensaje != 0){
 			$.each(data,function(i,item){
 				tab.append('<tr class="newRow"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
+			
+			});
+		}
+		else{
+			alert(data.mensaje);
+		}
+	});
+}
+function consultarFallas3(){
+	var busc = $('.textoBusqueda1').val();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarFallaBuscar.php?jsoncallback=?";
+	var tab = $('#tablamodificar2');
+	$('.newRow').remove();
+	$('.newTR').remove();
+	$.getJSON(url,{buscar:busc}).done(function(data){
+		if(data.mensaje != 0){
+			$.each(data,function(i,item){
+				tab.append('<tr class="newRow"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
+				
 			});
 		}
 		else{
@@ -218,23 +254,36 @@ function consultarFallas2(){
 }
 
 function consultarFallasIndi(id){
-	var f;
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultaEstadoFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas3');
 	var tab2 = $('#tablaConsultarEquipos');
+	var tab3 = $('#consultarEliminar');
+	var tab4 = $('.tablaConsultarEquipos');
 	var nums = $('#numEnla');
-	//alert(edoFalla);
+	var nums2 = $('.numEnla');
 	map2.removeMarkers();
 	$('.newRow2').remove();
 	$('.newRow3').remove();
+	$('.newRow4').remove();
+	$('.newRow5').remove();
 	$.getJSON(url,{idEnla:id}).done(function(data){
 		if(data.num !=0){
 			$.each(data,function(i,item){
 				nums.text(item.numEnla);
-				tab.append('<tr class="newRow2"><td>'+item.obser+'</td><td>'+item.nomUsr+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td></tr>');
-				//alert(item.idCent);
-				crearMarca(item.idCent);
+				nums2.text(item.numEnla);
+				// Tabla 1
+				tab.append('<tr class="newRow2"><td>'+item.obser+'</td><td>'+item.nomUsr+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td></tr>');	
+				
+				// Tabla de consultas de fallas
 				tab2.append('<tr class="newRow3"><td class="leftTabla">Central:</td><td class="rightTabla">'+item.nombreCen+'</td><td class="leftTabla">Sala:</td><td class="rightTabla">'+item.salaNom+'</td><td >Piso:</td><td >'+item.pisoSala+'</td></tr>');
+				//tabla de modificar fallas
+				tab3.append('<tr class="newRow5"><td>'+item.obser+'</td><td>'+item.nomUsr+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td></tr>');
+				
+				// tabla de salas de falla consulta
+				tab4.append('<tr class="newRow3"><td class="leftTabla">Central:</td><td class="rightTabla">'+item.nombreCen+'</td><td class="leftTabla">Sala:</td><td class="rightTabla">'+item.salaNom+'</td><td >Piso:</td><td >'+item.pisoSala+'</td></tr>');
+
+				// Crear marca en el mapa
+				crearMarca(item.idCent);
 			});
 		}
 		else{
@@ -252,6 +301,7 @@ function crearMarca(id){
 	$.getJSON(url,{idCentral:id}).done(function(data){
 		if(data.num != 0){
 			$.each(data,function(i,item){
+
 				map2.addMarker({
 				  lat: item.latCtrl,
 				  lng: item.longCtrl,
@@ -260,6 +310,7 @@ function crearMarca(id){
 				    content : item.dirCtrl
 			   		 }
 				});
+
 				map3.addMarker({
 				  lat: item.latCtrl,
 				  lng: item.longCtrl,
@@ -268,6 +319,7 @@ function crearMarca(id){
 				    content : item.dirCtrl
 			   		 }
 				});
+
 			});
 		}
 		else{
@@ -276,3 +328,22 @@ function crearMarca(id){
 	});
 }
 
+function cambiarStatus(){
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cambiarStatus.php?jsoncallback=?";
+	var hor = hora();
+	var fec = fecha();
+	var ids = $('#idHide').attr('value');
+	$.getJSON(url,{idFalla:ids,hora:hor,fecha:fec}).done(function(data){
+		alert(data.mensaje);
+		location.reload(); 
+	});
+}
+
+function eliminarFalla(){
+	var url = "http://127.0.0.1/Cantv/jsonCantv/eliminarFalla.php?jsoncallback=?";
+	var ids = $('#idHide').attr('value');
+	$.getJSON(url,{id:ids}).done(function(data){
+		alert(data.mensaje);
+		location.reload(); 
+	});
+}

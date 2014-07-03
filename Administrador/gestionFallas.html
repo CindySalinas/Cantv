@@ -6,7 +6,6 @@
 		<title>Crear Central</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
-
 		<script src="../Js/jquery.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
     	</script>
@@ -97,26 +96,9 @@
 							<th>Estatus</th>
 							<th></th>
 						</thead>
-						<!--tbody>
-							<tr>
-								<td>143245</td>
-								<td>Servicio Malo</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-								<td>Carlos Andres</td>
-								<td>Sin Resolver</td>
-								<td><a class="equipoConsultarMas" ></a></td>
-							</tr>
-							<tr>
-								<td>133345</td>
-								<td>Dañado</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-								<td>Carlos Andres</td>
-								<td>Resuelta</td>
-								<td><a class="equipoConsultarMas" ></a></td>
-							</tr>
-						</tbody-->
+						<tbody>
+							<!--Contenido Generado Dinamicamente -->
+						</tbody>
 					</table>
 					<div class="contenidoExtraConsultarEnlace">
 						<table class="tablaEstilo" id="consultaFallas3">
@@ -127,33 +109,15 @@
 								<th>Fecha</th>
 								<th>Hora</th>
 							</thead>
-							<!--tbody>
-								<tr>
-									<td>Observación 1</td>
-									<td>Manuel Abrante</td>
-									<td>10/03/2014</td>
-									<td>05:10pm</td>
-								</tr>
-								<tr>
-									<td>Observación 1</td>
-									<td>Cindy Salinas</td>
-									<td>10/03/2014</td>
-									<td>05:10pm</td>
-								</tr>
-							</tbody-->
+							<tbody>
+								<!--Contenido Generado Dinamicamente -->
+							</tbody>
 						</table>
 
 						<div id="contenidoEquipos">
 							<div id="divConsultarEquipoIz">
 								<table id="tablaConsultarEquipos">
-									<!--tr>
-										<td class="leftTabla">Central:</td>
-										<td class="rightTabla">Michelena</td>
-										<td class="leftTabla">Sala:</td>
-										<td class="rightTabla">Transmisión Principal</td>
-										<td >Piso:</td>
-										<td >Primer Piso</td>
-									</tr-->
+									<!--Contenido Generado Dinamicamente -->
 								</table>
 							</div>
 							<div id="divConsultarEquipoDer">
@@ -195,10 +159,10 @@
 					<hr>
 					<form id="formConsultarClientes">
 						<label id="labelBuscarClientes">Buscar</label>
-						<input type="text" id="textoBusqueda1">
+						<input type="text" id="textoBusqueda1" class="textoBusqueda1" placeholder="Buscar por Numeor de Enlace">
 						<span id="dibujoConsultar"></span>
 					</form>
-					<table class="tablaEstilo">
+					<table class="tablaEstilo" id="tablamodificar2">
 						<thead>
 							<th>Número De Enlace</th>
 							<th>Descripción</th>
@@ -209,29 +173,13 @@
 							<th></th>
 						</thead>
 						<tbody>
-							<tr>
-								<td>143245</td>
-								<td>Servicio Malo</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-								<td>Carlos Andres</td>
-								<td>Sin Resolver</td>
-								<td><a class="linkEditarEquipos"></a></td>
-							</tr>
-							<tr>
-								<td>133345</td>
-								<td>Dañado</td>
-								<td>10/03/2014</td>
-								<td>05:10pm</td>
-								<td>Carlos Andres</td>
-								<td>Resuelta</td>
-								<td><a class="linkEditarEquipos"></a></td>
-							</tr>
+							<input type="hidden"  id="idHide">
+							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
 					<div class="contenidoExtraEliminarFalla">
-						<table class="tablaEstilo">
-							<caption>Observaciones De La Falla En El Enlace: <span>143245</span></caption> 
+						<table class="tablaEstilo" id="consultarEliminar">
+							<caption>Observaciones De La Falla En El Enlace: <span class="numEnla"></span></caption> 
 							<thead>
 								<th>Observación</th>
 								<th>Usuario</th>
@@ -239,32 +187,14 @@
 								<th>Hora</th>
 							</thead>
 							<tbody>
-								<tr>
-									<td>Observación 1</td>
-									<td>Manuel Abrante</td>
-									<td>10/03/2014</td>
-									<td>05:10pm</td>
-								</tr>
-								<tr>
-									<td>Observación 1</td>
-									<td>Cindy Salinas</td>
-									<td>10/03/2014</td>
-									<td>05:10pm</td>
-								</tr>
+								<!--Contenido Generado Dinamicamente -->
 							</tbody>
 						</table>
 
 						<div id="contenidoEquipos">
 							<div id="divConsultarEquipoIz">
-								<table id="tablaConsultarEquipos">
-									<tr>
-										<td class="leftTabla">Central:</td>
-										<td class="rightTabla">Michelena</td>
-										<td class="leftTabla">Sala:</td>
-										<td class="rightTabla">Transmisión Principal</td>
-										<td >Piso:</td>
-										<td >Primer Piso</td>
-									</tr>
+								<table id="tablaConsultarEquipos" class="tablaConsultarEquipos">
+									<!--Contenido Generado Dinamicamente -->
 								</table>
 							</div>
 							<div id="divConsultarEquipoDer">
@@ -293,10 +223,13 @@
 							</tr>
 						</table>
 						<div class="displayInline2">
-							<button class="botonEnlace">Cambiar Estatus</button>
+							<input type="button" value="Cambiar Estatus" id="btnCambiar">
+
+							<!--button class="botonEnlace">Cambiar Estatus</button-->
 						</div>
 						<div class="displayInline2 espacioLeft">
-							<button class="botonEnlace">Eliminar</button>
+							<input type="button" value="Eliminar" id="btnEliminar">
+							<!--button class="botonEnlace">Eliminar</button-->
 						</div>
 					</div>
 					<div id="tamaClien" class="atras" class="atras">

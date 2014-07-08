@@ -182,7 +182,7 @@
 						<div id="consultarTransitos">
 							<fieldset>
 								<legend>Transitos</legend>
-									<ul id="listaTareas" class="modificaTransitos">
+									<ul id="listaTareas" class="modificaTransitos tranMod">
 									</ul>
 							</fieldset>	
 						</div>
@@ -218,60 +218,53 @@
 							<tr>
 								<td class="leftModificarEnlace">Número De Enlace: </td>
 								<td id="rightModifiarEquipo">
-									<input type="text" value="356523">
+									<input type="text" id="inputNumEnlaceModificar">
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Ruta: </td>
 								<td id="rightModifiarEquipo">
-									<input type="text" value="Michelena-Naguanagua	">
+									<input type="text" id="inputRutaEnlaceModificar">
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Central: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Michelena</option>
-										<option>Paseo Las Industrias</option>
+									<select id="modificarCentralEnlace">
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Sala: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Transmisión Principal</option>
-										<option>Transmisión Secundaria</option>
+									<select id="salaModificarEnlace">
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Equipo: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Armario Bastidor OSN 6800 Optix</option>
-										<option>ODF</option>
+									<select id="equiposEnlaceModificar">
 									</select>
 								</td>
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Ubicación: </td>
 								<td id="rightModifiarEquipo">
-									<input type="text" value="Fila Nro 1">
+									<input type="text" id="inputUbicacionEnlaceModificar" disabled>
 								</td>								
 							</tr>
 							<tr>
 								<td class="leftModificarEnlace">Cliente: </td>
 								<td id="rightModifiarEquipo">
-									<select>
-										<option>Movistar</option>
-										<option>Vodaphone</option>
+									<select id="clientesEnlaceModificar">
+										
 									</select>
 								</td>
 							</tr>
 						</table>		
-						<button id="modificarEquipo2">Modificar</button>	
-						<button id="eliminarEquipo1"> Eliminar</button>
+						<button id="modificarEnlace3">Modificar</button>	
+						<button id="eliminarEnlace3"> Eliminar</button>
 					</form>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasModificar2Enlace"><span class="spanAtrasClientes"></span>Atras</a>
@@ -283,35 +276,26 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Transitos</h2>
 					<hr>
-					<form>
+					<div>
+						<div>
+							<label>Transito a Agregar</label>
+							<input id="inputTransitoAgregarModificar" type="text" placeholder="Ingrese Una Posición">
+							<button id="agregarTransitoModificar">Agregar Transito</button>
+						</div>
+						<div id="consultarTransitos">
+							<fieldset>
+								<legend>Transitos</legend>
+									<ul id="listaTareas" class="modificaTransitos2 modPos1">
+									</ul>
+							</fieldset>	
+						</div>
 						<div class="espacioArribaModificar2">
 							<label>Transito Seleccionado</label>
-							<input type="text" placeholder="No Ha Seleccionado Ningún Transito">
+							<input id="inputTransitoModificar" type="text" placeholder="No Ha Seleccionado Ningún Transito">
 						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Transito 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Transito 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Transito 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize"/>
-							<label>Transito 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize"/>
-							<label>Transito 1</label>
-						</div>
-						
-					</form>
-					<button class="modificarEnlace2">Modificar</button>
-					<button class="modificarEnlace2">Eliminar</button>
+					</div>
+					<button id="botonModificarTransito" class="modificarEnlace2">Modificar</button>
+					<button id="botonEliminarTransito" class="modificarEnlace2">Eliminar</button>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasTransitoEnlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>
@@ -323,34 +307,26 @@
 					<h2 class="h2Clientes">Modificar Posiciones</h2>
 					<hr>
 					<form>
+						<div>
+							<label>Posición a Agregar</label>
+							<input id="inputPosicionAgregarModificar" type="text" placeholder="Ingrese Una Posición">
+							<button id="agregarPosicionModificar">Agregar Posicion</button>
+						</div>
+						<div id="consultarPosiciones">
+							<fieldset>
+								<legend>Posiciones</legend>
+									<ul id="listaTareas" class="modificaPosiciones2 modPos1">
+									</ul>
+							</fieldset>	
+						</div>
+
 						<div class="espacioArribaModificar2">
 							<label>Posición Seleccionada</label>
-							<input type="text" placeholder="No Ha Seleccionado Ninguna Posición">
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Posición 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Posición 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize" />
-							<label>Posición 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize"/>
-							<label>Posición 1</label>
-						</div>
-						<div class="espacioArribaModificar">
-							<input type = "radio" name = "radSize"/>
-							<label>Posición 1</label>
-						</div>
-						
+							<input id="inputPosicionModificar" type="text" placeholder="No Ha Seleccionado Ninguna Posición">
+						</div>						
 					</form>
-					<button class="modificarEnlace2">Modificar</button>
-					<button class="modificarEnlace2">Eliminar</button>
+					<button id="botonModificarPosicion" class="modificarEnlace2">Modificar</button>
+					<button id="botonEliminarPosicion" class="modificarEnlace2">Eliminar</button>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasPosicionEnlace"><span class="spanAtrasClientes"></span>Atras</a>
 					</div>

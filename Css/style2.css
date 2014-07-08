@@ -1056,3 +1056,18 @@ label{
 {
 	width: 90%;
 }
+.modPos1 li:hover
+{
+	background-color: gray;
+	color: #ededed;
+	cursor: pointer;
+}
+.tranMod li
+{
+
+}
+.colorOscuro
+{
+	background-color: #ab6800;
+	color: #ededed;
+}

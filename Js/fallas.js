@@ -37,16 +37,17 @@ function inicio ()
 
 	$('#consultaFallas1 ').on('click','.equipoConsultarMas',function(){
 		var ids = $(this).attr('id');
-		consultarFallasIndi(ids);
-		actionBotones('contenidoExtraConsultarEnlace','nada')
+		var id2 = $(this).attr('value');
+		consultarFallasIndi(ids, id2);
+		$('.contenidoExtraConsultarEnlace').show("slide");
 	});
 
 	$('#tablamodificar2').on('click','.linkEditarEquipos',function(){
 		var ids = $(this).attr('id');
 		var id2 = $(this).attr('value');
 		$('#idHide').attr('value',id2);
-		consultarFallasIndi(ids);
-		actionBotones('contenidoExtraEliminarFalla','nada');
+		consultarFallasIndi(ids,id2);
+		$('.contenidoExtraEliminarFalla').show("slide");
 		
 	});
 
@@ -71,7 +72,8 @@ function ocultar()
 
 function resetear()
 {
-	$('input[type=text]').val("");
+	$('input[type=text]').val("");	
+	consultarFallas();
 }
 
 function actionBotones(mostrar,ocultar)
@@ -194,16 +196,15 @@ function ingresarFalla(){
 	}
 }
 
-
 function consultarFallas(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas1');
 	var tab2 = $('#tablamodificar2');
-	$('.newRow').remove();
+	$('.newTR').remove();
 	$.getJSON(url).done(function(data){
-		if(data.mensaje != 0){
+		if(data.num != 0){
 			$.each(data,function(i,item){
-				tab.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idStat+'></a></td></tr>');
+				tab.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="equipoConsultarMas" id='+item.idEnla+' value='+item.idFall+'></a></td></tr>');
 
 				// Tabla de modificar Fallas 
 				tab2.append('<tr class="newTR"><td>'+item.numEnla+'</td><td>'+item.descri+'</td><td>'+item.fecha+'</td><td>'+item.hora+'</td><td>'+item.nomApell+'</td><td>'+item.stat+'</td><td><a class="linkEditarEquipos" id='+item.idEnla+' value='+item.idFall+'></a></td></tr>');
@@ -211,7 +212,7 @@ function consultarFallas(){
 			});
 		}
 		else{
-			alert(data.mensaje);
+			
 		}
 	});
 }
@@ -252,8 +253,9 @@ function consultarFallas3(){
 		}
 	});
 }
-
-function consultarFallasIndi(id){
+var fallaSeleccionada;
+function consultarFallasIndi(id, id2){
+	fallaSeleccionada=id2;
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultaEstadoFalla.php?jsoncallback=?";
 	var tab = $('#consultaFallas3');
 	var tab2 = $('#tablaConsultarEquipos');
@@ -266,9 +268,12 @@ function consultarFallasIndi(id){
 	$('.newRow3').remove();
 	$('.newRow4').remove();
 	$('.newRow5').remove();
-	$.getJSON(url,{idEnla:id}).done(function(data){
+	$.getJSON(url,{idEnla:id, idFal:id2}).done(function(data){
+
 		if(data.num !=0){
 			$.each(data,function(i,item){
+				$("#consultarEliminar").show();
+				$("#consultaFallas3").show();
 				nums.text(item.numEnla);
 				nums2.text(item.numEnla);
 				// Tabla 1
@@ -281,13 +286,13 @@ function consultarFallasIndi(id){
 				
 				// tabla de salas de falla consulta
 				tab4.append('<tr class="newRow3"><td class="leftTabla">Central:</td><td class="rightTabla">'+item.nombreCen+'</td><td class="leftTabla">Sala:</td><td class="rightTabla">'+item.salaNom+'</td><td >Piso:</td><td >'+item.pisoSala+'</td></tr>');
-
 				// Crear marca en el mapa
 				crearMarca(item.idCent);
 			});
 		}
 		else{
-			alert(data.mensaje);
+			$("#consultarEliminar").hide();
+			$("#consultaFallas3").hide();
 		}
 	});
 }

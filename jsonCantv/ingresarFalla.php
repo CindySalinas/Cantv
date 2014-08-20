@@ -16,7 +16,7 @@ $sql = "INSERT INTO fallas (Id_Enlace,Id_Usuario_Falla,Id_Estatus,Descripcion,Fe
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 
 
-$estado["mensaje"]= "Nueva Equipo Agregado";
+$estado["mensaje"]= "Nueva Falla Agregada";
 //Convertir los resultados a formato json
 $estadoJson = json_encode($estado);
 

@@ -79,9 +79,13 @@ nav ul li:hover, #lista2 li:hover{
 	border-bottom: 1px solid #e09509;
 	
 }
-nav ul li a:hover, #lista2 li a:hover, #lista3 li a:hover
+nav ul li a:hover, #lista2 li a:hover
 {
 	color: white;
+}
+#lista3 li a:hover
+{
+	color: #265710;
 }
 nav ul li:hover
 {
@@ -111,7 +115,6 @@ nav ul li:hover
 	vertical-align: top;
 	background-color: #e5e5e5;
 	bottom: 0;
-	height: 500px;
 	width: 20%;
 	margin-bottom: 25px
 }
@@ -135,11 +138,11 @@ nav ul li:hover
 }
 
 /* Lista de Mi perfil , edicion, Salir*/
-#lista3{
-	width: 100%;
+#lista3
+{
+	margin-top: 5em;
 	text-align: center;
-	margin-top: 125px;
-	margin-left: 0;
+	width: 100%;
 }
 #lista3 li{
 	width: 100%;

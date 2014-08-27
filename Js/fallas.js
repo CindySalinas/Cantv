@@ -90,7 +90,7 @@ function mostrarMapa(){
     	div: '#map2',
     	lat:10.174862,
 		lng:-67.962385,
-		zoom:7
+		zoom:10
 	});
 	map3 = new GMaps({
     	div: '#map3',

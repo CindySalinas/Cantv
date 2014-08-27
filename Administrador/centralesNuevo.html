@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Crear Central</title>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/centrales.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="perfil.html"> Mi Perfil</a></li>
+				<li><a href="#"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div id="contenedorMenuClientes" class="menuCentrales">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Centrales</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a class="consultarIcono" ></a><a class="textoAbajo linkAbajoConsultar">Consultar</a></li>
+						<li><a class="ingresarIcono" ></a><a class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
+						<li><a href="#" class="modificarIcono" ></a><a class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
+					</ul>		
+				</div>
+			</div>
+			<div class="contenedorAfuera menuConsultarCentrales">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Centrales</h2>
+					<hr>
+
+					<div id="mapaCentral">
+						<div id="mapCentral2"></div>
+					</div>
+
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="contenedorAfuera menuIngresarCentrales">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Central</h2>
+					<hr>
+					<div>
+						<div id="mapaCentral">
+							<div id="mapCentral"></div>
+						</div>
+						<div class="centrar displayInline3" id="divIngresarCentral">
+							<label class="displayBlock">Nombre De La Central</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock">Dirección De La Central</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock arribaCentarl">Seleccione Ubicación en el Mapa</label>
+							<span class="displayBlock arribaCentarl centrar">Latitud de la Central</span>
+							<span class="displayBlock arribaCentarl centrar">Longitud de la Central</span>
+							<div class="arribaCentralBotones">
+								<button class="displayInline3">Guardar</button>
+								<button class="displayInline3">Resetear</button>
+							</div>
+						</div>						
+					</div>
+					
+					<div id="tamaClien" class="atras" class="atras">
+					<a class="linkAtrasClientes linkAtrasIngresar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+			<div class="contenedorAfuera menuModificarCentrales">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar o Eliminar Central</h2>
+					<hr>
+
+					<div>
+						<label>Seleccionar Central</label>
+						<select>
+							<option>Seleccione una Central</option>
+						</select>
+						<a id="buscarCentral">Buscar</a>
+					</div>
+					<div id="mapaCentral" class="mapCentralOculto">
+						<div id="mapCentral3"></div>
+					</div>
+					<div class="mapCentralOculto">
+						<button id="modificaCentral1">Modificar</button>
+						<button>Eliminar</button>
+					</div>
+					
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasModificar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+			<div class="contenedorAfuera menuModificarModificarCentrales">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Central</h2>
+					<hr>
+
+					<div>
+						<div id="mapaCentral">
+							<div id="mapCentral4"></div>
+						</div>
+						<div class="centrar displayInline3" id="divIngresarCentral">
+							<label class="displayBlock">Nombre De La Central</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock">Dirección De La Central</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock arribaCentarl">Ubicación en el Mapa</label>
+							<span class="displayBlock arribaCentarl centrar">Latitud de la Central</span>
+							<span class="displayBlock arribaCentarl centrar">Longitud de la Central</span>
+							<div class="arribaCentralBotones">
+								<button>Modificar</button>
+							</div>
+						</div>						
+					</div>
+					
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasModificarModificar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

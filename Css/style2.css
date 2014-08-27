@@ -890,6 +890,14 @@ label{
 	padding: 5px;
 	background: #ab6800;
 }
+#mapaCentral
+{
+	display: inline-block;
+	border-radius: 5px;
+	padding: 5px;
+	background: #ab6800;
+	margin-right: 0.5em;
+}
 #map2, #map3
 {
     display: inline-block;
@@ -897,6 +905,20 @@ label{
     width: 400px;
     height: 170px;
     
+}
+#mapCentral, #mapCentral3, #mapCentral4
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 450px;
+    height: 300px;
+}
+#mapCentral2
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+    height: 350px;
 }
 #tablaConsultarEquipos,#tablaConsultarEquipos2
 {
@@ -1073,4 +1095,46 @@ label{
 {
 	background-color: #ab6800;
 	color: #ededed;
+}
+
+/*CENTRALESSSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+#divIngresarCentral
+{
+	background-color: #e7b752;
+	border: 3px solid white;
+	padding-top: 1.5em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+	height: 280px;
+	width: 30%;
+}
+
+.arribaCentralBotones
+{
+	margin-top: 1em;
+}
+.centrar
+{
+	margin: 0.5em auto;
+	text-align: center;
+}
+.displayBlock
+{
+	display: block;
+}
+
+.displayInline3
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#buscarCentral
+{
+	cursor: pointer;
+}
+.mapCentralOculto
+{
+	margin-top: 1em;
 }

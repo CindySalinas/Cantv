@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Crear Central</title>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/salas.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="perfil.html"> Mi Perfil</a></li>
+				<li><a href="#"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div id="contenedorMenuClientes" class="menuSalas">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Salas</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a class="consultarIcono" ></a><a class="textoAbajo linkAbajoConsultar">Consultar</a></li>
+						<li><a class="ingresarIcono" ></a><a class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
+						<li><a href="#" class="modificarIcono" ></a><a class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
+					</ul>		
+				</div>
+			</div>
+			<div class="contenedorAfuera menuConsultarSalas">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Salas</h2>
+					<hr>
+					<div class="displayInline" id="divConsultaSalaSelect">
+						<div id="sCentralCon">
+							<label>Seleccionar Central</label>
+							<select>
+								<option>Centrales</option>
+							</select>
+						</div>
+						<div id="mapaCentral">
+							<div id="mapCentral1"></div>
+						</div>	
+					</div>
+
+					<table class="tablaEstilo" id="tablaConsultaSalas">
+						<thead>
+							<th>Nombre</th>
+							<th>Piso</th>
+							<th>Descripción</th>
+						</thead>
+						<tbody>
+							<!--Contenido Generado Dinamicamente -->
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="contenedorAfuera menuIngresarSalas">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Nueva Sala</h2>
+					<hr>
+					<div>						
+						<div class="centrar displayInline3 espacioSalaIngresar" id="divIngresarSala">
+							<label class="displayBlock">Nombre De La Sala</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock">Descripción</label>
+							<textarea class="datos_Mapa displayBlock centrar arribaCentarl" name="textA" id="textA"></textarea>							
+							<label class="displayBlock arribaCentarl">Piso</label>
+							<input type="text" class="displayBlock centrar arribaCentarl">
+							<label class="displayBlock arribaCentarl">Seleccione Central</label>
+							<select class="centrar">
+								<option>Seleccionar Central</option>
+							</select>
+							<div class="arribaCentralBotones">
+								<button class="displayInline3">Guardar</button>
+								<button class="displayInline3">Resetear</button>
+							</div>
+						</div>		
+						<div id="mapaCentral">
+							<div id="mapCentral"></div>
+						</div>
+									
+					</div>
+					
+					<div id="tamaClien" class="atras" class="atras">
+					<a class="linkAtrasClientes linkAtrasIngresar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+			<div class="contenedorAfuera menuModificarSalas">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar o Eliminar Sala</h2>
+					<hr>
+
+					<div class="displayInline" id="divConsultaSalaSelect">
+						<div id="sCentralCon">
+							<label>Seleccionar Central</label>
+							<select>
+								<option>Centrales</option>
+							</select>
+						</div>
+						<div id="mapaCentral">
+							<div id="mapCentral5"></div>
+						</div>	
+					</div>
+
+					<table class="tablaEstilo" id="tablaModificarSalas">
+						<thead>
+							<th class="demasThSalas">Nombre</th>
+							<th class="demasThSalas">Piso</th>
+							<th class="demasThSalas">Descripción</th>
+							<th id="modificaSala"></th>
+						</thead>
+						<tbody>
+							<!--Contenido Generado Dinamicamente -->
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+							<tr class="columnasEspacio">
+								<td>&nbsp</td>
+								<td></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasModificar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+			<div class="contenedorAfuera menuModificarModificarSalas">
+
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar o Eliminar Sala</h2>
+					<hr>
+
+					<div>
+						<div class="centrar displayInline3" id="divIngresarCentral">
+						<label class="displayBlock">Nombre De La Sala</label>
+						<input type="text" class="displayBlock centrar arribaCentarl">
+						<label class="displayBlock">Piso</label>
+						<input type="text" class="displayBlock centrar arribaCentarl">
+						<label class="displayBlock arribaCentarl">Descripción</label>
+						<textarea class="datos_Mapa displayBlock centrar arribaCentarl" name="textA" id="textA2"></textarea>		
+							
+						<div class="arribaCentralBotones2">
+							<button>Modificar</button>
+							<button>Eliminar</button>
+						</div>
+					</div>		
+
+					<div class="displayInline" id="divConsultaSalaSelect2">
+						<div id="sCentralCon">
+							<label>Cambiar Central</label>
+							<select>
+								
+							</select>
+						</div>
+						<div id="mapaCentral">
+							<div id="mapCentral6"></div>
+						</div>	
+					</div>		
+
+					
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasModificarModificar"><span class="spanAtrasClientes"></span>Atras</a>
+					</div>
+				</div>
+			</div>
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

@@ -913,6 +913,20 @@ label{
     width: 450px;
     height: 300px;
 }
+#mapCentral1, #mapCentral5
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 350px;
+    height: 200px;
+}
+#mapCentral6
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 390px;
+    height: 200px;
+}
 #mapCentral2
 {
     display: inline-block;
@@ -1109,6 +1123,16 @@ label{
 	height: 280px;
 	width: 30%;
 }
+#divIngresarSala
+{
+	background-color: #e7b752;
+	border: 3px solid white;
+	padding-top: 1.5em;
+	padding-left: 0.7em;
+	padding-right: 0.7em;
+	height: 335px;
+	width: 30%;
+}
 
 .arribaCentralBotones
 {
@@ -1137,4 +1161,57 @@ label{
 .mapCentralOculto
 {
 	margin-top: 1em;
+}
+
+/*SALASSSSSSSSSSSSSSSSSSSSSSSSSS*/
+
+#tablaConsultaSalas, #tablaModificarSalas
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: auto;
+	margin-top: 0;
+	margin-left: 2%;
+}
+
+#tablaConsultaSalas thead th
+{
+	width: 120px;
+}
+#divConsultaSalaSelect
+{
+	background-color: #e7b752;
+	vertical-align: middle;
+	width: 360px;
+	border-radius: 5px;
+	border: 2px solid white;
+}
+#sCentralCon
+{
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+#tablaModificarSalas .demasThSalas
+{
+	width: 100px;
+}
+#modificaSala
+{
+	width: 20px;
+}
+.arribaCentralBotones2
+{
+	margin-top: 1.5em;
+}
+#divConsultaSalaSelect2
+{
+	background-color: #e7b752;
+	vertical-align: middle;
+	width: 400px;
+	border-radius: 5px;
+	margin-left: 2%;
+}
+.espacioSalaIngresar
+{
+	margin-right: 2%;
 }

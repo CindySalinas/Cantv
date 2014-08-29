@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts-clientes/icomoon.eot?-17snv3');
+	src:url('fonts-clientes/icomoon.eot?#iefix-17snv3') format('embedded-opentype'),
+		url('fonts-clientes/icomoon.woff?-17snv3') format('woff'),
+		url('fonts-clientes/icomoon.ttf?-17snv3') format('truetype'),
+		url('fonts-clientes/icomoon.svg?-17snv3#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#consultarClienteNewDesign, #ingresarClienteNewDesign, #modificarClienteNewDesign, .spanAtrasClientesNewDesign, .spanGuardarCliente, .spanModificarCliente, .spanEliminarCliente, .spanEditarCliente, .spanEditarCliente2
+{
+	display: block;
+	margin-bottom: 8px;
+	font-family: 'icomoon';
+	font-size: 60px;
+	font-weight: normal;
+}
+.spanGuardarCliente:before
+{
+	content: "\f1ac";
+}
+.spanEditarCliente:before, .spanEditarCliente2:before
+{
+	content: "\e615";
+}
+.spanEditarCliente
+{
+	font-size: 16px;
+	color: black;
+}
+.spanEditarCliente2
+{
+	font-size: 16px;
+	color: #4b4b4b;
+}
+.spanEliminarCliente:before
+{
+	content: "\f032";
+}
+.spanModificarCliente:before
+{
+	content: "\e623";
+}
+#ingresarClientes
+{
+	color: #383838;
+}
+#modificarClientes
+{
+	color: #7B2F9A;
+}
+#eliminarClientes
+{
+	color: #B43C2E;
+}
+.spanAtrasClientesNewDesign:before
+{
+	content: "\e621";
+}
+ .spanAtrasClientesNewDesign:hover
+ {
+ 	transform: scale(1.08) rotate(20deg);
+	-webkit-transform: scale(1.08) rotate(20deg);
+	-moz-transition: all 0.5s ease;
+ }
+.aGuardarCliente:hover
+ {
+ 	cursor: pointer;
+	transform: scale(1.08);
+	-webkit-transform: scale(1.08);
+	-moz-transition: all 0.5s ease;
+ }
+.aGuardarCliente
+ {
+ 	margin-top: 12px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+ }
+ .spanAtrasClientesNewDesign
+ {
+ 	margin: 0 auto;
+	font-size: 40px;
+	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+ }
+.spanGuardarCliente 
+{
+	margin: 0 auto;
+	font-size: 40px;
+}
+.spanModificarCliente
+{
+	font-size: 50px;
+}
+.spanEliminarCliente
+{
+	font-size: 35px;
+}
+#consultarClienteNewDesign:before
+{
+	content: "\e613";
+	color: #D1740D;
+}
+#ingresarClienteNewDesign:before
+{
+	content: "\e61d";
+	color: #18489A;
+}
+#modificarClienteNewDesign:before
+{
+	content: "\e617";
+	color: #7F120A;
+}
+#ulMenuIconos #modificarCliente2
+{
+	color: #7F120A;
+}
+#ulMenuIconos #ingresarCliente2
+{
+	color: #18489A;
+}
+#ulMenuIconos #consultarCliente2
+{
+	color: #D1740D;
+}
+.otroParaModificar
+{
+	text-align: center;
+	margin: 0 auto;
+}
+.espModCliente
+{
+	margin-right: 2em;
+}
+#dirCl2,#nomCl2
+{
+	background-color: white;
+}

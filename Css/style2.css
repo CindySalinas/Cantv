@@ -754,7 +754,7 @@ label{
 
 	padding: 15px;
 }
-#ingresarClientes, #modificarClientes, #eliminarClientes
+#ingresarClientes, 
 {
 	background-color: #fff;
 	color: #572404;
@@ -763,7 +763,7 @@ label{
 	padding: 7px 15px;
 	margin-top: 1em;
 }
-#ingresarClientes:hover, #modificarClientes:hover, #eliminarClientes:hover
+#ingresarClientes:hover, 
 {
 	background-color: #784900;
 	color: #ededed;
@@ -1153,6 +1153,12 @@ label{
 	display: inline-block;
 	vertical-align: middle;
 }
+.displayInline4
+{
+	border: 0px solid red;
+	display: inline-block;
+	vertical-align: bottom;
+}
 
 #buscarCentral
 {
@@ -1215,3 +1221,170 @@ label{
 {
 	margin-right: 2%;
 }
+
+/*CAMPOOOO DE BUSQUEDAAAAAAAAAA*/
+
+#searchform 
+{
+    width: 280px;
+	height:30px;
+    padding: 8px;
+	margin: 10px auto 0 auto;/*
+    background: #ccc;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.4) inset, 0 2px 0 rgba(255,255,255,.5);*/
+}
+#searchform input 
+{
+    width: 190px;
+	height:20px;
+    padding: 5px;
+    float: left;
+    border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset;
+}
+#searchform input:focus 
+{
+	outline: 0;
+	height:21px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+#searchform input:-webkit-input-placeholder 
+{
+   color: #999;
+   font-weight: normal;
+   font-style: italic;
+}
+#searchform input:-moz-placeholder 
+{
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}
+#searchform input:-ms-input-placeholder 
+{
+    color: #999;
+    font-weight: normal;
+    font-style: italic;
+}   
+#searchform button 
+{
+    position: relative;
+    float: right;
+    border: 0;
+    cursor: pointer;
+    height: 30px;
+    width: 80px;
+    font-size:15px;
+    color: #fff;
+    background: #18489A;
+    border-radius: 0 3px 3px 0;
+    text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
+}  
+#searchform button:hover{
+    background: #ab6800;
+}
+#searchform button:active,
+#searchform button:focus
+{
+    background: #356710;
+}
+#searchform button:before 
+{ /* flecha */
+    content: '';
+    position: absolute;
+    border-width: 8px 8px 8px 0;
+    border-style: solid solid solid none;
+    border-color: transparent #18489A transparent;
+    top: 8px;
+    left: -5px;
+}
+#searchform button:hover:before
+{
+    border-right-color: #ab6800;
+}
+#searchform button:focus:before
+{
+    border-right-color: #356710;
+}   
+
+/* Formulario de Contacto, Estilo Negro Limón
+----------------------------------------------- */
+/* Contenedor principal */
+.contact-form-widget {
+	width:100%;
+	max-width: 300px;
+	margin: 1em auto;
+	margin-bottom: 25px;
+	padding: 16px;
+	padding-top: 1.3em;
+	border:none;
+	background: #eee;
+	border-bottom: 35px solid #18489A;
+	border-top: 5px solid #e7b752;
+	border-radius: 4px;
+	color: #000;
+	text-align: left;
+}
+/* Estilos de los campos */
+.contact-form-name, .contact-form-email, .contact-form-email-message
+{
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 10px ;
+	display: block;
+	padding: 5px;
+	border: 0;
+    background: #eee;
+    border-radius: 3px 0 0 3px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.4) inset;
+	margin-top: 3px;
+}
+.contact-form-email-message
+{
+	height: 4em;
+}
+.contact-form-name:focus , .contact-form-email:focus
+{
+	outline: 0;
+	height:21px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+.contact-form-email-message:focus 
+{
+	outline: 0;
+	height:3em;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,.8) inset;
+}
+/* Campo del mensaje */
+.contact-form-email-message {
+}
+/* Botón de enviar */
+.contact-form-button-submit {
+	width: 25%;
+	max-width: 35%;
+	height: auto;
+	background: #e7b752;
+	height: 30px;
+	padding: 2px 5px;
+	border-radius: 2px;
+	border: none;
+	color: #282828;
+	font-size: 16px;
+	font-family: 'Lucida Grande', Helvetica, Arial, Sans-Serif;
+	font-weight: normal;
+	margin-top: 1em;
+	margin-bottom: 5px;
+}
+/* Botón de enviar al pasar el cursor */
+.contact-form-button-submit:hover{
+	background: #F9D423;
+	color: #282828;
+	border: none;
+}
+

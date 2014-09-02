@@ -79,21 +79,21 @@ function ocultaMapa()
 
 function eventos()
 {
-	$('.consultarIcono').on("click",function(){actionBotones('menuConsultarCentrales','menuCentrales');}); 
+	$('.consultarIconoCentralesNewDesign').on("click",function(){actionBotones('menuConsultarCentrales','menuCentrales');}); 
 	$('.linkAbajoConsultar').on("click",function(){actionBotones('menuConsultarCentrales','menuCentrales');}); 
 
-	$('.ingresarIcono').on("click",function(){actionBotones('menuIngresarCentrales','menuCentrales');}); 
+	$('.ingresarIconoCentralesNewDesign').on("click",function(){actionBotones('menuIngresarCentrales','menuCentrales');}); 
 	$('.linkAbajoIngresar').on("click",function(){actionBotones('menuIngresarCentrales','menuCentrales');}); 
 
-	$('.consultarIcono').on("click",mostrarMapa2); 
+	$('.consultarIconoCentralesNewDesign').on("click",mostrarMapa2); 
 	$('.linkAbajoConsultar').on("click",mostrarMapa2); 
 
-	$('.ingresarIcono').on("click",mostrarMapa1); 
+	$('.ingresarIconoCentralesNewDesign').on("click",mostrarMapa1); 
 	$('.linkAbajoIngresar').on("click",mostrarMapa1); 
 
 	$('#buscarCentral').on("click",mostrarMapa3); 
 
-	$('.modificarIcono').on("click",function(){actionBotones('menuModificarCentrales','menuCentrales');}); 
+	$('.modificarIconoCentralesNewDesign').on("click",function(){actionBotones('menuModificarCentrales','menuCentrales');}); 
 	$('.linkAbajoModificar').on("click",function(){actionBotones('menuModificarCentrales','menuCentrales');}); 
 
 	$('.linkAtrasConsultar').on("click",function(){actionBotones('menuCentrales','menuConsultarCentrales');}); 

@@ -17,6 +17,84 @@
 	font-size: 60px;
 	font-weight: normal;
 }
+#seten
+{
+	font-weight: bold;
+	width: 80%;
+}
+.alertMensaje
+{
+	font-family: 'icomoon';
+	font-weight: normal;
+	font-size: 33px;
+	margin-right: 5px;
+}
+.alertMensaje:before
+{
+	content: "\f08f";
+	color: #FFB20E;
+}
+.consultarIconoFallasNewDesign:before
+{
+	content: "\e607";
+	color: #18489A;
+	font-size: 54px;
+}
+.ingresarIconoFallasNewDesign:before
+{
+	content: "\e65e";
+	color: #D1740D;
+}
+.modificarIconoFallasNewDesign:before
+{
+	content: "\e623";
+	color: #7F120A;
+}
+.consultarIconoEnlacesNewDesign:before
+{
+	content: "\e67d";
+	color: #18489A;
+}
+.ingresarIconoEnlacesNewDesign:before
+{
+	content: "\e67e";
+	color: #D1740D;
+}
+.modificarIconoEnlacesNewDesign:before
+{
+	content: "\e67f";
+	color: #7F120A;
+}
+.consultarIconoCentralesNewDesign:before
+{
+	content: "\e668";
+	color: #18489A;
+}
+.modificarIconoCentralesNewDesign:before
+{
+	content: "\e660";
+	color: #7F120A;
+}
+.ingresarIconoCentralesNewDesign:before
+{
+	content: "\e667";
+	color: #D1740D;
+}
+.consultarIconoSalasNewDesign:before
+{
+	content: "\e663";
+	color: #18489A;
+}
+.modificarIconoSalasNewDesign:before
+{
+	content: "\e662";
+	color: #7F120A;
+}
+.ingresarIconoSalasNewDesign:before
+{
+	content: "\e665";
+	color: #D1740D;
+}
 #consultarEquiposNewDesign:before
 {
 	content: "\f030";
@@ -199,18 +277,19 @@
 	content: "\e617";
 	color: #7F120A;
 }
+
 /*ROJOOOOOOO*/
-#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2
+#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar
 {
 	color: #7F120A;
 }
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar
 {
 	color: #18489A;
 }
 /*NARANJAAAAA*/
-#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2
+#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2, #ulMenuIconos #linkNewSalaIngresar, #ulMenuIconos #ingCentralLinkAbajo, #ulMenuIconos #linkTextoEnlacesIngresar, #ulMenuIconos #textoFallasNewIngresar
 {
 	color: #D1740D;
 }

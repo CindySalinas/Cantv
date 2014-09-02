@@ -596,17 +596,17 @@ function eliminarEnlaceFinal()
 }
 function eventos()
 {
-	$('.consultarIcono').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
+	$('.consultarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
 	 $('.linkAbajoConsultar').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
-	 $('.consultarIcono').on("click", llenarDatosConsultar); 
+	 $('.consultarIconoEnlacesNewDesign').on("click", llenarDatosConsultar); 
 	 $('.linkAbajoConsultar').on("click",llenarDatosConsultar); 
 
-	 $('.ingresarIcono').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
+	 $('.ingresarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
 	 $('.linkAbajoIngresar').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
 
-	 $('.modificarIcono').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
+	 $('.modificarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
 	 $('.linkAbajoModificar').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
-	 $('.modificarIcono').on("click",llenarDatosModificar); 
+	 $('.modificarIconoEnlacesNewDesign').on("click",llenarDatosModificar); 
 	 $('.linkAbajoModificar').on("click",llenarDatosModificar); 
 
 	 $('.linkAtrasConsultar').on("click",function(){actionBotones('menuEnlaces','menuConsultar');}); 

@@ -8,13 +8,13 @@ function inicio ()
 	consultarFallas();
 	cargarIdPerfil();
 
-	$('.consultarIcono').on("click",function(){actionBotones('menuConsultarFallas','menuFallas');}); 
+	$('.consultarIconoFallasNewDesign').on("click",function(){actionBotones('menuConsultarFallas','menuFallas');}); 
 	$('.linkAbajoConsultar').on("click",function(){actionBotones('menuConsultarFallas','menuFallas');});
 
-	$('.ingresarIcono').on("click",function(){actionBotones('menuIngresarFallas','menuFallas');}); 
+	$('.ingresarIconoFallasNewDesign').on("click",function(){actionBotones('menuIngresarFallas','menuFallas');}); 
 	$('.linkAbajoIngresar').on("click",function(){actionBotones('menuIngresarFallas','menuFallas');}); 
 
-	$('.modificarIcono').on("click",function(){actionBotones('menuEliminarFallas','menuFallas');}); 
+	$('.modificarIconoFallasNewDesign').on("click",function(){actionBotones('menuEliminarFallas','menuFallas');}); 
 	$('.linkAbajoModificar').on("click",function(){actionBotones('menuEliminarFallas','menuFallas');}); 
 
 	

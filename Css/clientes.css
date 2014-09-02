@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-#consultarClienteNewDesign, #ingresarClienteNewDesign, #modificarClienteNewDesign, .spanAtrasClientesNewDesign, .spanGuardarCliente, .spanModificarCliente, .spanEliminarCliente, .spanEditarCliente, .spanEditarCliente2
+#consultarClienteNewDesign, #ingresarClienteNewDesign, #modificarClienteNewDesign, .spanAtrasClientesNewDesign, .spanGuardarCliente, .spanModificarCliente, .spanEliminarCliente, .spanEditarCliente, .spanEditarCliente2, .paraIconos
 {
 	display: block;
 	margin-bottom: 8px;
@@ -17,14 +17,79 @@
 	font-size: 60px;
 	font-weight: normal;
 }
+#consultarEquiposNewDesign:before
+{
+	content: "\f030";
+	color: #18489A;
+	font-size: 55px;
+}
+#ingresarEquiposNewDesign:before
+{
+	content: "\e62d";
+	font-size: 55px;
+	color: #D1740D;
+}
+#modificarEquiposNewDesign:before
+{
+	content: "\f031";
+	font-size: 50px;
+	color: #7F120A;
+}
+#modificarEquipos2
+{
+	font-size: 15px;
+}
 .spanGuardarCliente:before
 {
 	content: "\f1ac";
+	color: #7F120A;
+}
+.spanGuardarEquipo:before
+{
+	content: "\f06a";
+	color: #7F120A;
+}
+#aceptarEquipo, #ingresarClientes
+{
+	color: #7F120A;
 }
 .spanEditarCliente:before, .spanEditarCliente2:before
 {
 	content: "\e615";
 }
+.linkEquiposNewDesign:before, .linkEquiposNewDesign2:before
+{
+	content: "\e609";
+}
+.linkEquiposNewDesign3:before, .linkEquiposNewDesign4:before
+{
+	content: "\e606";
+}
+.linkEquiposNewDesign, .linkEquiposNewDesign2, .linkEquiposNewDesign3, .linkEquiposNewDesign4
+{
+	font-size: 16px;
+}
+#linkEquiposNewDesignId1
+{
+	color: #18489A;
+}
+#linkEquiposNewDesignId2
+{
+	color: #531031;
+}
+#linkEquiposNewDesignId3
+{
+	color: #18489A;
+}
+#linkEquiposNewDesignId4
+{
+	color: #356710;
+}
+#linkEquiposNewDesignId1:hover, #linkEquiposNewDesignId2:hover, #linkEquiposNewDesignId3, #linkEquiposNewDesignId4
+{
+	cursor: pointer;
+}
+
 .spanEditarCliente
 {
 	font-size: 16px;
@@ -42,10 +107,6 @@
 .spanModificarCliente:before
 {
 	content: "\e623";
-}
-#ingresarClientes
-{
-	color: #383838;
 }
 #modificarClientes
 {
@@ -92,6 +153,29 @@
 	margin: 0 auto;
 	font-size: 40px;
 }
+.spanGuardarEquipo
+{
+	margin: 0 auto;
+	font-size: 40px;
+}
+.spanModificarEquipo:before
+{
+	content: "\f0ad";
+}
+.spanEliminarEquipo:before
+{
+	content: "\f090";
+}
+.spanModificarEquipo
+{
+	margin: 0 auto;
+	font-size: 40px;
+}
+.spanEliminarEquipo
+{
+	margin: 0 auto;
+	font-size: 44px;
+}
 .spanModificarCliente
 {
 	font-size: 50px;
@@ -115,15 +199,18 @@
 	content: "\e617";
 	color: #7F120A;
 }
-#ulMenuIconos #modificarCliente2
+/*ROJOOOOOOO*/
+#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2
 {
 	color: #7F120A;
 }
-#ulMenuIconos #ingresarCliente2
+/*AZULLLLL*/
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2
 {
 	color: #18489A;
 }
-#ulMenuIconos #consultarCliente2
+/*NARANJAAAAA*/
+#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2
 {
 	color: #D1740D;
 }
@@ -139,4 +226,14 @@
 #dirCl2,#nomCl2
 {
 	background-color: white;
+}
+/*MORADOOOOO*/
+#modificarEquipo2
+{
+	color: #7B2F9A;
+}
+/*ROSADOOOOO*/
+#eliminarEquipo1
+{
+	color: #B43C2E;
 }

@@ -5,7 +5,7 @@ include("conex.php");
 //header('Content-type: application/json');
 
 $id = $_GET['idSala'];
-$sql = "SELECT DISTINCT S.Id_Sala,S.Id_Central,S.Nombre,S.Piso,S.Descipcion,C.Nombre FROM salas S INNER JOIN centrales C ON S.Id_Central = C.Id_Central WHERE Id_Sala = '$id'";
+$sql = "SELECT DISTINCT S.Id_Sala,S.Id_Central,S.Nombre,S.Piso,S.Descipcion,C.Nombre, C.Direccion FROM salas S INNER JOIN centrales C ON S.Id_Central = C.Id_Central WHERE Id_Sala = '$id'";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;
@@ -19,6 +19,7 @@ while($row = mysql_fetch_row($result)){
 	$dat[$i]["piso"]= $row[3];
 	$dat[$i]["desc"]= $row[4];
 	$dat[$i]["nomC"]= $row[5];
+	$dat[$i]["dirCen"]= $row[6];
 	$i++;	
 }
 if($cantidad == 0){

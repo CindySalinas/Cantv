@@ -5,9 +5,8 @@ include("conex.php");
 //header('Content-type: application/json');
 
 $nom= $_GET["tipoE"];
-$mar= $_GET["idMarca"];
 
-$sql = "INSERT INTO tipo_equipos (Id_Marca,Tipo_Equipo) VALUES ('$mar','$nom')";
+$sql = "INSERT INTO tipo_equipos (Tipo_Equipo) VALUES ('$nom')";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 

@@ -877,7 +877,7 @@ label{
 }
 .contenidoEquipos
 {
-	margin-top: 1.5em;
+	margin-top: 1em;
 }
 #linkEquipos
 {
@@ -904,6 +904,14 @@ label{
     vertical-align: middle;
     width: 400px;
     height: 170px;
+    
+}
+#map2consultar, #map3consultar
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 400px;
+    height: 230px;
     
 }
 #mapCentral, #mapCentral3, #mapCentral4
@@ -1388,3 +1396,52 @@ label{
 	border: none;
 }
 
+/*EQUIPOOOO*/
+
+#divConEquipoArriba
+{
+	margin-top: 0;
+	width: 50%;
+	max-width: 600px;
+	min-width: 300px;
+}
+
+#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar
+{
+	height:auto;
+}
+#tiposEquipo, #marcaEquipo, #centralParaModificar,#salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar
+{
+	display: inline-block;
+	margin-right: 8px;
+	width: auto;
+}
+#tipoN, #marcaN
+{
+	display: inline-block;
+	margin-right: 8px;
+	width: 70%;
+}
+.tamAingEquipo
+{
+	cursor: pointer;
+	font-size: 14px;
+}
+#divIngresarEquipo
+{
+	width: 45%;
+	min-width: 350px;
+	max-width: 600px;
+}
+#centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar
+{
+	width: 100%;
+}
+#linkParaNuevoTipoIngresar,#linkParaSelectTipoIngresar, #linkParaSelectMarcaIngresar, #linkParaNuevoMarcaIngresar
+{
+	cursor: pointer;
+}
+.divEspRig
+{
+	margin-right: 2em;
+}

@@ -3,9 +3,10 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Crear Central</title>
+		<title>Equipos</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/clientes.css" />
 
 		<script src="../Js/jquery.js"></script>
 		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
@@ -68,9 +69,9 @@
 					</div>
 					<hr>
 					<ul id="ulMenuIconos">
-						<li><a  id="consultarEquipos" ></a><a  id="consultarEquipos2" class="textoAbajo">Consultar</a></li>
-						<li><a  id="ingresarEquipos" ></a><a  id="ingresarEquipos2" class="textoAbajo">Ingresar</a></li>
-						<li><a  id="modificarEquipos" ></a><a  id="modificarEquipos2" class="textoAbajo">Modificar</a></li>
+						<li><a  id="consultarEquiposNewDesign" class="paraIconos colorIconosLinkAzul"></a><a id="consultarEquipos2" class="textoAbajo">Consultar</a></li>
+						<li><a  id="ingresarEquiposNewDesign" class="paraIconos"></a><a  id="ingresarEquipos2" class="textoAbajo">Ingresar</a></li>
+						<li><a  id="modificarEquiposNewDesign" class="paraIconos"></a><a  id="modificarEquipos2" class="textoAbajo">Modificar / Eliminar</a></li>
 					</ul>		
 				</div>
 			</div>
@@ -79,15 +80,13 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Equipos</h2>
 					<hr>
-					<form class="formConsultarEquipos">
-						<label id="labelBuscarEquipos">Buscar</label>
-						<input type="text" id="textoBusqueda1">
-						<span id="dibujoConsultar"></span>
-					</form>
 
-					<table id="tablaConsultarDatos1">
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
 
-					<table class="tablaEstilo">
+					<table id="tablaConsultarDatos1" class="tablaEstilo">
 						<thead>
 							<th>Nombre Del Equipo</th>
 							<th>Marca</th>
@@ -101,20 +100,30 @@
 					</table>
 
 					<div class="contenidoEquipos" id="contMapa2">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos">
-								<tbody>
-								</tbody>
-							</table>
+						<div id="divConEquipoArriba" class="contact-form-widget">
+							<label>Nombre de la Central: </label>
+							<span id="otroConsultCen"></span>
+							<hr>		
+							<label>Dirección: </label>
+							<span id="otroConsultDir"></span>
+							<hr>	
+							<label>Nombre de la Sala: </label>
+							<span id="otroConsultSala"></span>
+							<hr>
+							<label>Descripción de la Sala: </label>
+							<span id="otroConsultSalaDes"></span>
+							<hr>		
+							<label>Piso: </label>
+							<span id="otroConsultPiso"></span>
 						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map2"></div>
+						<div id="divConsultarEquipoDer" class="displayBlock">
+							<div id="map2consultar"></div>
 						</div>
 					</div>
 
 
 					<div id="tamaClien" class="atras">
-						<a class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
 				</div>
 
@@ -124,16 +133,13 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Equipos</h2>
 					<hr>
-					<form class="formConsultarEquipos">
-						<label id="labelBuscarEquipos">Buscar</label>
-						<input type="text" id="buscarEquipo2">
-						<span id="dibujoConsultar"></span>
-					</form>
 
-					<table id="tablaConsultarDatos2">
+					<div id="searchform">
+				        <input id="buscarEquipo2" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar2">Buscar</button>
+				    </div>	
 
-					<table class="tablaEstilo">
-
+					<table id="tablaConsultarDatos2" class="tablaEstilo">
 						<thead>
 							<th>Nombre Del Equipo</th>
 							<th>Marca</th>
@@ -143,254 +149,149 @@
 							<th></th>
 						</thead> 
 						<tbody>
-							<!--tr>
-								<td>Armario Bastidor OSN 6800 Optix </td>
-								<td>Huawei</td>
-								<td>Proyecto Red de Integración Internacional</td>
-								<td>Fila Nº 1</td>
-								<td>En Servicio</td>
-								<td><a id="linkEditarEquipos" href="#"></a></td>
-							</tr>
-							<tr>
-								<td>Movilnet</td>
-								<td>Proveedor de servicios</td>
-								<td>Proveedor de servicios</td>
-								<td>Proveedor de servicios</td>
-								<td>Fuera De Servicio</td>
-								<td><a id="linkEditarEquipos" href="#"></a></td>
-							</tr>
-							<tr>
-								<td>Vodaphone</td>
-								<td>Vodaphone</td>
-								<td>Vodaphone</td>
-								<td>Proveedor</td>
-								<td>Proveedor</td>
-								<td><a id="linkEditarEquipos" href="#"></a></td>
-							</tr-->
 						</tbody>
 					</table>
 
-					<div class="contenidoEquipos">
-						<div id="divConsultarEquipoIz">
-							<table id="tablaConsultarEquipos2">
-								<tr>
-									<!--td class="leftTabla">Central:</td>
-									<td class="rightTabla">Michelena</td>
-									<td class="leftTabla">Sala:</td>
-									<td class="rightTabla">Transmisión Principal</td>
-									<td >Piso:</td>
-									<td >Primer Piso</td-->
-								</tr>
-							</table>
+					<div class="contenidoEquipos" id="contMapa3">
+						<div id="divConEquipoArriba" class="contact-form-widget">
+							<label class="displayBlock">Tipo de Equipo: </label>
+							<select class="contact-form-name" id="tipoEquipoParaModificar">
+							</select>
+							<hr>
+							<label class="displayBlock">Marca: </label>
+							<select class="contact-form-name" id="marcaParaModificar">
+							</select>
+							<hr>
+							<label class="displayBlock">Función Principal: </label>
+							<input type="text" class="contact-form-name" id="func2">
+							<hr>
+							<label class="displayBlock">Ubicación: </label>
+							<input type="text" class="contact-form-name" id="ubic2">
+							<hr>	
+							<label class="displayBlock">Condición: </label>
+							<select class="contact-form-name" id="idCondi">
+								<option value="1">En Servicio</option>
+								<option value="2">Fuera De Servicio</option>
+							</select>
+							<hr>
+							<label class="displayBlock">Central: </label>
+							<select class="centrales contact-form-name" id="centralParaModificar">
+							</select>
+							<hr>		
+							<label>Dirección: </label>
+							<span id="otroModiDir"></span>
+							<hr>	
+							<label class="displayBlock">Sala: </label>
+							<select id="salaCentrarModificar" class="contact-form-name">
+							</select>
+							<div class="centrar" id="divAlertNoSalasModificar">
+								<span>alert</span>
+								<span class="alert">No se encuentra salas para la central seleccionada</span>
+							</div>
+							<div id="apareciendoModi">
+								<hr>
+								<label>Descripción de la Sala: </label>
+								<span id="otroModiSalaDes"></span>
+								<hr>		
+								<label>Piso: </label>
+								<span id="otroModiPiso"></span>
+							</div>
 						</div>
-						<div id="divConsultarEquipoDer">
-							<div id="map3"></div>
+						<div id="divConsultarEquipoDer" class="displayBlock">
+							<div id="map3consultar"></div>
 						</div>
+						<div>
+							<div class="centrar aGuardarCliente displayInline3 divEspRig">
+								<a id="modificarEquipo2" class="linkAtrasClientes"><span class="paraIconos spanModificarEquipo"></span>Modificar</a>
+							</div>
+							<div class="centrar aGuardarCliente displayInline3">
+								<a id="eliminarEquipo1" class="linkAtrasClientes"><span class="paraIconos spanEliminarEquipo"></span>Eliminar</a>
+							</div>	
+						</div>
+						
 					</div>
-					<button id="modificarEquipo1"> Modificar</button>
-
+					
 					<div id="tamaClien" class="atras">
-						<a  class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a  class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
 				</div>
 
-			</div>
-			<div class="contenedorAfuera" id="modEquipos2">
-				<div class="contenedorAdentro">
-					<h2 class="h2Clientes">Modificar Equipos</h2>
-					<hr>
-					<form>
-						<table id="tablaModificarEquipo">
-							<tr>
-								<input type="hidden" id="idEquipo">
-								<td id="leftModificarEquipo">Tipo De Equipo: </td>
-								<td id="rightModifiarEquipo">
-									<select class="tiposEquipo">
-										
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Marca: </td>
-								<td id="rightModifiarEquipo">
-									<select class="marcaEquipo">
-										
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Función Principal: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text"  id="func2" placeholder="Proyecto Red de Integración Internacional">
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Ubicación: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="ubic2" placeholder="Fila Nro 1">	
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Condición: </td>
-								<td id="rightModifiarEquipo">
-									<select class="idCondi">
-										<option value="1">En Servicio</option>
-										<option value="2">Fuera De Servicio</option>
-									</select>
-								</td>								
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Central: </td>
-								<td id="rightModifiarEquipo">
-									<select class="centrales">
-									</select>
-								</td>
-							</tr>
-							<tr id="salaCen2">
-								<td id="leftModificarEquipo">Sala: </td>
-								<td id="rightModifiarEquipo">
-									<select class="salaCentral">
-									</select>
-								</td>
-							</tr>
-							<!--tr>
-								<td id="leftModificarEquipo">Piso: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="fila2" placeholder="Fila Nro 1">
-								</td>
-							</tr-->
-						</table>		
-						<button id="modificarEquipo2">Modificar</button>	
-						<button id="eliminarEquipo1"> Eliminar</button>
-					</form>
-					<div id="tamaClien" class="atras2">
-						<a  class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
-					</div>
-				</div>
 			</div>
 
 			<div class="contenedorAfuera" id="ingEquipo">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Equipo</h2>
 					<hr>
-					<form>
-						<table id="tablaModificarEquipo">
-							<tr id="listaE">
-								<td id="leftModificarEquipo">Tipo De Equipo: </td>
-								<td id="rightModifiarEquipo">
-									<select id="tiposEquipo">
-									</select>
-									<a  id="linkNuevoTipoEquipo">Nuevo</a>
-								</td>
-							</tr>
-							<tr id="tipoNM" >
-								<td id="leftModificarEquipo">Tipo De Equipo: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="tipoN">
-									<a  id="linkSeleccionarTipoEquipo">Seleccionar</a>
-								</td>
-							</tr>
-							<tr id="listaM">
-								<td id="leftModificarEquipo">Marca: </td>
-								<td id="rightModifiarEquipo">
-									<select id="marcaEquipo">
-									</select>
-									<a href="#" id="linkNuevaMarca">Nuevo</a>
-								</td>
-							</tr>
-							<tr id="marcaNM">
-								<td id="leftModificarEquipo">Marca: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="marcaN">
-									<a  id="linkSeleccionarMarca">Seleccionar</a>
-								</td>
-							</tr>
-							
-							<tr>
-								<td id="leftModificarEquipo">Función Principal: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="func1" placeholder="Proyecto Red de Integración Internacional">
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Ubicación: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="ubi1" placeholder="Fila Nro 1">	
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Condición: </td>
-								<td id="rightModifiarEquipo">
-									<select id="idCondi">
-										<option value="1">En Servicio</option>
-										<option value="2">Fuera De Servicio</option>
-									</select>
-								</td>								
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Central: </td>
-								<td id="rightModifiarEquipo">
-									<select id="centrales">	
-									</select>
-								</td>
-							</tr>
-							<tr id="salaCen">
-								<td id="leftModificarEquipo">Sala: </td>
-								<td id="rightModifiarEquipo">
-									<select id="salaCentral" >	
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td id="leftModificarEquipo">Piso: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="piso1" placeholder="Piso 1">
-								</td>
-							</tr>
-						</table>		
-						<button id="aceptarEquipo">Ingresar</button>				
-					</form>
+
+					<div id="divIngresarEquipo" class="contact-form-widget">
+
+						<label class="displayBlock">Tipo De Equipo</label>
+
+						<div id="ocultaSelecTipoIngresar">							
+							<select id="tiposEquipo" class="contact-form-name">
+								<option value="0">Seleccione Tipo de Equipo</option>
+							</select>
+							<a id="linkParaNuevoTipoIngresar" class="tamAingEquipo">Nuevo</a>
+						</div>						
+						<div id="ocultaNuevoTipoIngresar">
+							<input id="tipoN" class="contact-form-name" placeholder="Ingrese un nuevo tipo de equipo">
+							<a id="linkParaSelectTipoIngresar" class="tamAingEquipo">Seleccionar</a>
+						</div>						
+						<hr>
+
+						<label class="displayBlock">Marca</label>
+						<div id="ocultoSelectMarcaIngresar">
+							<select id="marcaEquipo" class="contact-form-name">
+								<option value="0">Seleccione Marca Del Equipo</option>
+							</select>
+							<a id="linkParaSelectMarcaIngresar" class="tamAingEquipo">Nuevo</a>
+						</div>
+						<div id="ocultoNuevoMarcaIngresar">
+							<input id="marcaN" class="contact-form-name" placeholder="Ingrese una nueva marca para el equipo">
+							<a id="linkParaNuevoMarcaIngresar" class="tamAingEquipo">Seleccionar</a>
+						</div>					
+						<hr>
+
+						<label>Función Principal</label>
+						<input id="func1" class="contact-form-name" placeholder="Ingrese la función del equipo">
+						<hr>
+
+						<label>Ubicación</label>
+						<input id="ubi1" class="contact-form-name" placeholder="Ingrese la ubicación del equipo">
+						<hr>
+
+						<label class="displayBlock">Condición</label>
+						<select id="idCondi" class="condiIngEqui contact-form-name">
+							<option value="0">Seleccione la Condición del Equipo</option>
+							<option value="1">En Servicio</option>
+							<option value="2">Fuera De Servicio</option>
+						</select>
+
+						<label class="displayBlock">Central</label>
+						<select id="centrales" class="contact-form-name">
+							<option value="0">Seleccione La Central</option>		
+						</select>
+						<label class="displayBlock">Sala</label>
+						<select id="salaCentral" class="contact-form-name">
+							<option value="0">Seleccione Primero La Central</option>				
+						</select>
+						<div class="centrar" id="divAlertNoSalas">
+							<span>alert</span>
+							<span class="alert">No se encuentra salas para la central seleccionada</span>
+						</div>
+						
+						<div id="divColEqui" class="centrar aGuardarCliente">
+							<a id="aceptarEquipo" class="linkAtrasClientes"><span class="paraIconos spanGuardarEquipo"></span>Guardar</a>
+						</div>						
+					</div>
+
+					
 					<div id="tamaClien" class="atras">
-						<a  class="linkAtrasClientes"><span class="spanAtrasClientes"></span>Atras</a>
+						<a  class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
 				</div>
 			</div>
 
-			<!-- <div id="contEquipos">
-				<div class="titulo2">
-					<h1>Equipos</h1>
-					
-				</div>
-				<hr>
-				<form id="ingresoEquipo">
-						<label class="datos_equipo" for="nomb">Nuevo Equipo </label>
-						<input class="datos_equipo" type="text" name="nomb" id="nomb" placeholder="Nombre de Equipo">
-						<label class="datos_equipo" for="tipoEquipo">Seleccionar tipo de Equipo </label>
-						<select class="datos_equipo" name="tipoEquipo" id="tipoEquipo"></select>
-						<label class="datos_equipo" for="marca1">Marca </label>
-						<select class="datos_equipo" name="marca1" id="marca1">
-							<option value="1">Marca 1</option>
-							<option value="2">Marca 2</option>
-						</select>	
-						input class="datos_equipo" type="text" name="marca2" id="marca2" placeholder="Marca"
-						
-						<label class="datos_equipo" for="condi">Condiciones </label>
-						<select class="datos_equipo" name="condi" id="condi">
-							<option value="1">En servicio</option>
-							<option value="2">Fuera de Servicio</option>
-						</select>	
-
-						<label class="datos_equipo" for="slCentral">Seleccione Central </label>
-						<select class="datos_equipo" name="slCentral" id="slCentral"></select>
-						<label class="datos_equipo" for="slSalal">Seleccione Sala </label>
-						<select class="datos_equipo" name="slSala" id="slSala"></select>
-					</form>
-					<div id="contMapaSalas">
-						<div id="map"></div>
-						<input type="button" class="btn_datos_mapa" id="guardarMarca" value="Guardar">
-					</div>	
-			</div> -->
-			
 		</section>	
 
 		<!-- Footer -->

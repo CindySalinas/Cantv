@@ -10,8 +10,9 @@ $idC= $_GET["idCn"];
 $fun= $_GET["funcP"];
 $ubi = $_GET["ubic"];
 $id = $_GET["idE"];
+$marca = $_GET["mar"];
 
-$sql2 = "UPDATE equipos SET Id_Tipo_Equipo='$idTp', Id_Sala='$idSa',Id_Condicion = '$idC',Funcion_Principal= '$fun', Ubicacion ='ubi'  WHERE Id_Equipo='$id'";
+$sql2 = "UPDATE equipos SET Id_Tipo_Equipo='$idTp', Id_Sala='$idSa',Id_Condicion = '$idC',Funcion_Principal= '$fun', Ubicacion ='$ubi', Id_Marca='$marca'  WHERE Id_Equipo='$id'";
 
 
 $result2 = mysql_query($sql2) or die("Error de Consulta". mysql_error());

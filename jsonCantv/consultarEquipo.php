@@ -4,7 +4,7 @@ include("conex.php");
 //formato JSON
 //header('Content-type: application/json');
 $id = $_GET['idE'];
-$sql = "SELECT E.Id_Equipo,E.Id_Sala,E.Id_Tipo_Equipo,T.Tipo_Equipo,T.ID_Marca,M.Marca,E.Id_Condicion,C.Condicion,E.Funcion_Principal,E.Ubicacion FROM equipos E INNER JOIN tipo_equipos T ON E.Id_Tipo_Equipo = T.Id_Tipo_Equipo INNER JOIN  marca M ON T.Id_Marca = M.Id_Marca INNER JOIN condicion C ON E.Id_Condicion = C.Id_Condicion WHERE E.Id_Equipo = '$id'";
+$sql = "SELECT E.Id_Equipo,E.Id_Sala,E.Id_Tipo_Equipo,T.Tipo_Equipo,E.ID_Marca,M.Marca,E.Id_Condicion,C.Condicion,E.Funcion_Principal,E.Ubicacion FROM equipos E INNER JOIN tipo_equipos T ON E.Id_Tipo_Equipo = T.Id_Tipo_Equipo INNER JOIN  marca M ON E.Id_Marca = M.Id_Marca INNER JOIN condicion C ON E.Id_Condicion = C.Id_Condicion WHERE E.Id_Equipo = '$id'";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;

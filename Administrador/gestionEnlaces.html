@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Crear Central</title>
+		<title>Enlaces</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
 		<link rel="stylesheet" href="../Css/clientes.css" />
@@ -81,11 +81,10 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Enlaces</h2>
 					<hr>
-					<form class="formConsultarEquipos">
-						<label id="labelBuscarEquipos">Buscar</label>
-						<input type="text">
-						<span id="dibujoConsultar"></span>
-					</form>
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
 					<table id="tablaConsultar" class="tablaEstilo">
 						<thead>
 							<th>Número De Enlace</th>
@@ -102,19 +101,24 @@
 					<br>
 					<div class="consultarContenidoExtra">
 						<div id="contenidoEquipos">
-							<div id="divConsultarEquipoIz">
-								<table id="tablaConsultarEquipos">
-									<tr>
-										<td class="leftTabla">Central:</td>
-										<td class="rightTabla"><span id="spanConsultarCentral"></span></td>
-										<td class="leftTabla">Sala:</td>
-										<td class="rightTabla"><span id="spanConsultarSala"></span></td>
-										<td >Piso:</td>
-										<td ><span id="spanConsultarPiso"></span></td>
-									</tr>
-								</table>
+
+							<div id="divConEquipoArriba" class="contact-form-widget">
+								<label>Nombre de la Central: </label>
+								<span id="spanConsultarCentral"></span>
+								<hr>		
+								<label>Dirección: </label>
+								<span id="spanConsultDirCentral"></span>
+								<hr>	
+								<label>Nombre de la Sala: </label>
+								<span id="spanConsultarSala"></span>
+								<hr>
+								<label>Descripción de la Sala: </label>
+								<span id="spanConsultSalaDes"></span>
+								<hr>		
+								<label>Piso: </label>
+								<span id="spanConsultarPiso"></span>
 							</div>
-							<div id="divConsultarEquipoDer">
+							<div id="divConsultarEquipoDer" class="abajoEspPosTran">
 								<div id="map2"></div>
 							</div>
 						</div>
@@ -144,11 +148,10 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Enlaces</h2>
 					<hr>
-					<form class="formConsultarEquipos">
-						<label id="labelBuscarEquipos">Buscar</label>
-						<input type="text">
-						<span id="dibujoConsultar"></span>
-					</form>
+					<div id="searchform">
+				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar2">Buscar</button>
+				    </div>	
 					<table class="tablaEstilo">
 						<thead>
 							<th>Número De Enlace</th>
@@ -162,24 +165,26 @@
 					</table>
 					<br>
 					<div class="contenidoExtraModificar1">
-						<div id="contenidoEquipos">
-							<div id="divConsultarEquipoIz">
-								<table id="tablaConsultarEquipos">
-									<tr>
-										<td class="leftTabla">Central:</td>
-										<td class="rightTabla">Michelena</td>
-										<td class="leftTabla">Sala:</td>
-										<td class="rightTabla">Transmisión Principal</td>
-										<td >Piso:</td>
-										<td >Primer Piso</td>
-									</tr>
-								</table>
-							</div>
-							<div id="divConsultarEquipoDer">
-								<div id="map3"></div>
-							</div>
+						<div id="divConEquipoArriba" class="contact-form-widget">
+							<label>Nombre de la Central: </label>
+							<span id="spanModifiCentral"></span>
+							<hr>		
+							<label>Dirección: </label>
+							<span id="spanModifiDirCentral"></span>
+							<hr>	
+							<label>Nombre de la Sala: </label>
+							<span id="spanModifiSala"></span>
+							<hr>
+							<label>Descripción de la Sala: </label>
+							<span id="spanModifiSalaDes"></span>
+							<hr>		
+							<label>Piso: </label>
+							<span id="spanModifiPiso"></span>
 						</div>
-
+						<div id="divConsultarEquipoDer" class="abajoEspPosTran">
+							<div id="map3"></div>
+						</div>
+						<div></div>
 						<div id="consultarTransitos">
 							<fieldset>
 								<legend>Transitos</legend>
@@ -194,15 +199,15 @@
 									</ul>
 							</fieldset>	
 						</div>
-						<div class="displayInline">
-							<button id="modificaTransito" class="modificarEnlace1">Modificar Transitos</button>								
+						<div id="idParaAnimacion" class="displayInline">	
+							<a id="modificaTransito"><span class="modificarTransitoModificarNewDesign1 displayBlock"><span class="fontSize16">Modificar Transito</span></span></a>		
 						</div>					
 						<div class="displayInline">
-							<button id="modificaPosicion" class="modificarEnlace1">Modificar Posiciones</button>
+							<a id="modificaPosicion" class="animacionGrande"><span class="modificarPosicionModificarNewDesign1 displayBlock"><span class="fontSize16">&nbspModificar Posición</span></span></a>	
 						</div>
-						<div>
-							<button id="modificaEnlace" class="modificarEnlace2">Modificar Enlace</button>
-						</div>						
+						<div id="arrDivEnNew">
+							<a id="modificaEnlace" class="displayInline3"><span class="paraIconos modificaEnlaceNewDesign1"></span>Modificar Enlace</a>
+						</div>					
 					</div>	
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasModificar1Enlace"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
@@ -214,59 +219,57 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Enlace</h2>
 					<hr>
-					<form>
-						<table class="tablaModificarEnlace">
-							<tr>
-								<td class="leftModificarEnlace">Número De Enlace: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="inputNumEnlaceModificar">
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Ruta: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="inputRutaEnlaceModificar">
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Central: </td>
-								<td id="rightModifiarEquipo">
-									<select id="modificarCentralEnlace">
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Sala: </td>
-								<td id="rightModifiarEquipo">
-									<select id="salaModificarEnlace">
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Equipo: </td>
-								<td id="rightModifiarEquipo">
-									<select id="equiposEnlaceModificar">
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Ubicación: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="inputUbicacionEnlaceModificar" disabled>
-								</td>								
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Cliente: </td>
-								<td id="rightModifiarEquipo">
-									<select id="clientesEnlaceModificar">
-										
-									</select>
-								</td>
-							</tr>
-						</table>		
-						<button id="modificarEnlace3">Modificar</button>	
-						<button id="eliminarEnlace3"> Eliminar</button>
-					</form>
+					<div id="divConEquipoArriba" class="contact-form-widget">
+						<label>Número De Enlace:</label>
+						<input type="text" class="contact-form-name" id="inputNumEnlaceModificar">
+						<hr>		
+						<label>Ruta:</label>
+						<input type="text" class="contact-form-name" id="inputRutaEnlaceModificar">
+						<hr>	
+						<label>Central: </label>
+						<select class="contact-form-name" id="modificarCentralEnlace">
+						</select>
+						<hr>
+						<label>Sala: </label>
+						<select class="contact-form-name" id="salaModificarEnlace">
+						</select>
+						<div class="centrar" id="divAlertNoSalasModificarEnlace">
+							<div class="displayInline3">
+								<span class="alertMensaje"></span>
+							</div>
+							<div class="displayInline3" id="seten">
+								<span class="alert">No se encontró salas para la central seleccionada</span>
+							</div>	
+						</div>
+						<hr>		
+						<label>Equipo: </label>
+						<select class="contact-form-name" id="equiposEnlaceModificar">
+						</select>
+						<div class="centrar" id="divAlertNoEquiposModificarEnlace">
+							<div class="displayInline3">
+								<span class="alertMensaje"></span>
+							</div>
+							<div class="displayInline3" id="seten">
+								<span class="alert">No se encontró equipos para la sala seleccionada</span>
+							</div>	
+						</div>
+						<hr>		
+						<label>Ubicación:</label>
+						<span id="inputUbicacionEnlaceModificar"></span>
+						<hr>		
+						<label>Cliente: </label>
+						<select class="contact-form-name" id="clientesEnlaceModificar">
+						</select>
+						<div class="centrar">
+
+							<a id="modificarEnlace3" class="displayInline3"><span class="modificandoEnlaceNewDesign1 displayBlock"></span>Modificar</a>	
+							<a id="eliminarEnlace3" class="displayInline3"><span class="eliminandoEnlaceNewDesign1 displayBlock"></span>Eliminar</a>	
+
+						</div>						
+					</div>
+					<div>	
+						
+					</div>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasModificar2Enlace"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
@@ -278,11 +281,6 @@
 					<h2 class="h2Clientes">Modificar Transitos</h2>
 					<hr>
 					<div>
-						<div>
-							<label>Transito a Agregar</label>
-							<input id="inputTransitoAgregarModificar" type="text" placeholder="Ingrese Una Posición">
-							<button id="agregarTransitoModificar">Agregar Transito</button>
-						</div>
 						<div id="consultarTransitos">
 							<fieldset>
 								<legend>Transitos</legend>
@@ -290,13 +288,20 @@
 									</ul>
 							</fieldset>	
 						</div>
-						<div class="espacioArribaModificar2">
+						<br>
+						<div class="displayInline espacioArribaModificar2">
+							<label>Agregar Nuevo Transito</label>
+							<input id="inputTransitoAgregarModificar" type="text" placeholder="Ingrese Un Transito" class="contact-form-name" >
+							<a id="agregarTransitoModificar" class="displayInline3"><span class="agregarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspAgregar</span></span></a>
+						</div>
+						<div class="displayInline espacioArribaModificar2">
 							<label>Transito Seleccionado</label>
-							<input id="inputTransitoModificar" type="text" placeholder="No Ha Seleccionado Ningún Transito">
+							<input id="inputTransitoModificar" type="text" placeholder="No Ha Seleccionado Ningún Transito"class="contact-form-name" >
+							<a id="botonModificarTransito" class="displayInline3"><span class="modificarTransitoModificarNewDesign2 displayInline5"><span class="fontSize16 displayInline5">Modificar</span></span></a>	&nbsp&nbsp
+							<a id="botonEliminarTransito" class="displayInline3"><span class="eliminarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspEliminar</span></span></a>
 						</div>
 					</div>
-					<button id="botonModificarTransito" class="modificarEnlace2">Modificar</button>
-					<button id="botonEliminarTransito" class="modificarEnlace2">Eliminar</button>
+					
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasTransitoEnlace"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
@@ -307,12 +312,7 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar Posiciones</h2>
 					<hr>
-					<form>
-						<div>
-							<label>Posición a Agregar</label>
-							<input id="inputPosicionAgregarModificar" type="text" placeholder="Ingrese Una Posición">
-							<button id="agregarPosicionModificar">Agregar Posicion</button>
-						</div>
+					<div>
 						<div id="consultarPosiciones">
 							<fieldset>
 								<legend>Posiciones</legend>
@@ -320,14 +320,19 @@
 									</ul>
 							</fieldset>	
 						</div>
-
-						<div class="espacioArribaModificar2">
+						<br>
+						<div class="displayInline espacioArribaModificar2">
+							<label>Agregar Nueva Posicion</label>
+							<input id="inputPosicionAgregarModificar" type="text" placeholder="Ingrese Una Posición" class="contact-form-name" >
+							<a id="agregarPosicionModificar" class="displayInline3"><span class="agregarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspAgregar</span></span></a>
+						</div>
+						<div class="displayInline espacioArribaModificar2">
 							<label>Posición Seleccionada</label>
-							<input id="inputPosicionModificar" type="text" placeholder="No Ha Seleccionado Ninguna Posición">
-						</div>						
-					</form>
-					<button id="botonModificarPosicion" class="modificarEnlace2">Modificar</button>
-					<button id="botonEliminarPosicion" class="modificarEnlace2">Eliminar</button>
+							<input id="inputPosicionModificar" type="text" placeholder="No Ha Seleccionado Ningún Transito"class="contact-form-name" >
+							<a id="botonModificarPosicion" class="displayInline3"><span class="modificarTransitoModificarNewDesign2 displayInline5"><span class="fontSize16 displayInline5">Modificar</span></span></a>	&nbsp&nbsp
+							<a id="botonEliminarPosicion" class="displayInline3"><span class="eliminarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspEliminar</span></span></a>
+						</div>			
+					</div>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes atrasPosicionEnlace"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
@@ -338,60 +343,53 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Enlace</h2>
 					<hr>
+					<div id="divConEquipoArriba" class="contact-form-widget">
+						<label>Número De Enlace: </label>
+						<input id="numEnlaceIngresar" class="contact-form-name" type="text" placeholder="Ingrese Número De Enlace">
+						<hr>		
+						<label>Ruta: </label>
+						<input id="rutaEnlaceIngresar" class="contact-form-name" type="text" placeholder="Ingrese La Ruta Del Enlace">
+						<hr>	
+						<label>Central: </label>
+						<select id="centralEnlaceIngresar" class="contact-form-name">
+							<option value="sinSelCentral">Seleccione Central</option>
+						</select>
+						<hr>
+						<label>Sala: </label>
+						<select id="salaEnlaceIngresar" class="contact-form-name">
+							<option value="sinSelSala">Seleccione Sala</option>
+						</select>
+						<div class="centrar" id="divAlertNoSalasIngresarEnlace">
+							<div class="displayInline3">
+								<span class="alertMensaje"></span>
+							</div>
+							<div class="displayInline3" id="seten">
+								<span class="alert">No se encontró salas para la central seleccionada</span>
+							</div>	
+						</div>
+						<hr>		
+						<label>Equipo: </label>
+						<select id="equipoEnlaceIngresar" class="contact-form-name">
+							<option value="selEquip">Seleccione Equipo</option>
+						</select>
+						<div class="centrar" id="divAlertNoEquiposIngresarEnlace">
+							<div class="displayInline3">
+								<span class="alertMensaje"></span>
+							</div>
+							<div class="displayInline3" id="seten">
+								<span class="alert">No se encontró equipos para la sala seleccionada</span>
+							</div>	
+						</div>
+						<hr>
+						<label>Ubicación: </label>
+						<span id="ubicacionEnlaceIngresar"></span>
+						<hr>
+						<label>Cliente</label>
+						<select id="clienteEnlaceIngresar" class="contact-form-name">
+							<option value="sinSelCliente">Seleccione Cliente</option>
+						</select>
+					</div>
 					<div>
-						<table class="tablaModificarEnlace">
-							<tr>
-								<td class="leftModificarEnlace">Número De Enlace: </td>
-								<td id="rightModifiarEquipo">
-									<input id="numEnlaceIngresar" type="text" placeholder="Ingrese Número De Enlace">
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Ruta: </td>
-								<td id="rightModifiarEquipo">
-									<input id="rutaEnlaceIngresar" type="text" placeholder="Ingrese Ruta">
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Central: </td>
-								<td id="rightModifiarEquipo">
-									<select id="centralEnlaceIngresar">
-										<option value="sinSelCentral">Seleccione Central</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Sala: </td>
-								<td id="rightModifiarEquipo">
-									<select id="salaEnlaceIngresar">
-										<option value="sinSelSala">Seleccione Sala</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Equipo: </td>
-								<td id="rightModifiarEquipo">
-									<select id="equipoEnlaceIngresar">
-										<option value="selEquip">Seleccione Equipo</option>
-									</select>
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Ubicación: </td>
-								<td id="rightModifiarEquipo">
-									<input id="ubicacionEnlaceIngresar" type="text" disabled>
-								</td>								
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Cliente: </td>
-								<td id="rightModifiarEquipo">
-									<select id="clienteEnlaceIngresar">
-										<option value="sinSelCliente">Seleccione Cliente</option>
-									</select>
-								</td>
-							</tr>
-						</table>	
-
 						<div>
 							<div id="consultarTransitos">
 								<fieldset>
@@ -410,20 +408,25 @@
 						</div>
 						<div>
 							<div class="displayInline">
-								<input id="inputTransitoIngresarEnlace" placeholder="Ingrese un Transito" class="tamInputIngresar" type="text">
+								<div id="widDiv70" class="displayInline3">
+									<input id="inputTransitoIngresarEnlace" placeholder="Ingrese un Transito" class=" colorPlace contact-form-name" type="text">
+								</div>
+								<div id="widDiv25" class="displayInline3">
+									<a id="agregarTransitoIngresarEnlace"><span class="agregaTransitoIngresarNewDesign"></span></a>
+								</div>
+								
 							</div>	
 							<div class="displayInline">
-								<input id="inputPosicionIngresarEnlace" placeholder="Ingrese una Posición" class="tamInputIngresar" type="text">
+								<div id="widDiv70" class="displayInline3">
+									<input id="inputPosicionIngresarEnlace" placeholder="Ingrese una Posición" class="colorPlace contact-form-name" type="text">
+								</div>
+								<div id="widDiv25" class="displayInline3">
+									<a id="agregarPosicionIngresarEnlace"><span class="agregaPosicionIngresarNewDesign"></span></a>
+								</div>
 							</div>
 						</div>
-						<div class="displayInline">
-							<button id="agregarTransitoIngresarEnlace" class="botonEnlace">Agregar Transito</button>
-						</div>	
-						<div class="displayInline">
-							<button id="agregarPosicionIngresarEnlace" class="botonEnlace ">Agregar Posición</button>
-						</div>
-						<div>
-							<button id="ingresarNuevoEnlace" class="botonEnlace espacioArriba">Agregar Enlace</button>
+						<div id="arrDivEnNew">
+							<a id="ingresarNuevoEnlace" class="displayInline3"><span class="displayInline3 paraIconos igresoNuevoEnlaceNewDesign"></span>Agregar Enlace</a>
 						</div>										
 					</div>
 					<div id="tamaClien">

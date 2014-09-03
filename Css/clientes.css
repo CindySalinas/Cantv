@@ -17,10 +17,99 @@
 	font-size: 60px;
 	font-weight: normal;
 }
+.equipoConsultarMasNewDesign1,.equipoConsultarMasNewDesign2,.agregaPosicionIngresarNewDesign,.agregaTransitoIngresarNewDesign,.equipoConsultarMasNewDesign3,.equipoConsultarMasNewDesign4,.modificaEnlaceNewDesign1
+{
+	font-family: 'icomoon';
+	font-size: 16px;
+	font-weight: normal;
+	margin-top: 8px;
+}
+.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1
+{
+	font-family: 'icomoon';
+	font-size: 16px;
+	font-weight: normal;
+}
+.modificarTransitoModificarNewDesign1,.modificarPosicionModificarNewDesign1, .modificandoEnlaceNewDesign1, .eliminandoEnlaceNewDesign1
+{
+	font-family: 'icomoon';
+	font-size: 37px;
+	font-weight: normal;
+	margin-top: 3px;
+}
+.modificandoEnlaceNewDesign1:before
+{
+	content: "\f085";
+	font-size: 30px;
+}
+.eliminandoEnlaceNewDesign1:before
+{
+	content: "\e66e";
+	font-size: 30px;
+}
+.agregarTransitoModificarNewDesign1:before
+{
+	content: "\e657";
+	font-size: 25px;
+}
+.eliminarTransitoModificarNewDesign1:before
+{
+	content: "\f081";
+	font-size: 25px;
+}
+.modificarTransitoModificarNewDesign2:before
+{
+	content: "\f044";
+	font-size: 25px;
+}
+.modificaEnlaceNewDesign1:before
+{
+	content: "\e60e";
+	font-size: 40px;
+}
+.modificarTransitoModificarNewDesign1:before
+{
+	content: "\f0d4";
+	font-size: 37px;
+}
+.modificarPosicionModificarNewDesign1:before
+{
+	content: "\e60a";
+	font-size: 30px;
+}
+.agregaPosicionIngresarNewDesign:before, .agregaTransitoIngresarNewDesign:before
+{
+	content: "\f090";
+	font-size: 40px;
+}
+.igresoNuevoEnlaceNewDesign:before
+{
+	content: "\e642";
+	font-size: 50px;
+}
+.equipoConsultarMasNewDesign1:before, .equipoConsultarMasNewDesign2:before
+{
+	content: "\e674";
+	cursor: pointer;
+}
+.equipoConsultarMasNewDesign3:before, .equipoConsultarMasNewDesign4:before
+{
+	content: "\e647";
+	cursor: pointer;
+}
+.colConEnlace2 .equipoConsultarMasNewDesign3
+{
+	color: #356710;
+}
+.colConEnlace2 .equipoConsultarMasNewDesign4
+{
+	color: #18489A;
+}
 #seten
 {
 	font-weight: bold;
 	width: 80%;
+	text-align: justify;
 }
 .alertMensaje
 {
@@ -31,7 +120,7 @@
 }
 .alertMensaje:before
 {
-	content: "\f08f";
+	content: "\e64f";
 	color: #FFB20E;
 }
 .consultarIconoFallasNewDesign:before
@@ -161,7 +250,7 @@
 }
 #linkEquiposNewDesignId4
 {
-	color: #356710;
+	color: #444;
 }
 #linkEquiposNewDesignId1:hover, #linkEquiposNewDesignId2:hover, #linkEquiposNewDesignId3, #linkEquiposNewDesignId4
 {
@@ -226,6 +315,7 @@
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
  }
+
 .spanGuardarCliente 
 {
 	margin: 0 auto;
@@ -279,12 +369,16 @@
 }
 
 /*ROJOOOOOOO*/
-#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar
+#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar, .colConEnlace .equipoConsultarMasNewDesign2, #botonEliminarTransito,#botonEliminarPosicion
 {
 	color: #7F120A;
 }
+#ingresarNuevoEnlace
+{
+	color: #ab6800;
+}
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace
 {
 	color: #18489A;
 }
@@ -307,12 +401,26 @@
 	background-color: white;
 }
 /*MORADOOOOO*/
-#modificarEquipo2
+#modificarEquipo2,#modificaPosicion, #botonModificarTransito, #botonModificarPosicion,#eliminarEnlace3
 {
 	color: #7B2F9A;
 }
 /*ROSADOOOOO*/
-#eliminarEquipo1
+#eliminarEquipo1,#modificaTransito, #agregarTransitoModificar, #agregarPosicionModificar,#modificarEnlace3
 {
 	color: #B43C2E;
 }
+ #ingresarNuevoEnlace,#modificaTransito, .modificarTransitoModificarNewDesign1,.modificarPosicionModificarNewDesign1, #modificaEnlace,#botonModificarTransito,#botonEliminarTransito,#agregarTransitoModificar,#agregarPosicionModificar,#botonModificarPosicion,#botonEliminarPosicion, #modificarEnlace3,#eliminarEnlace3
+ {
+ 	transition: all 0.5s ease;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+ }
+ #ingresarNuevoEnlace:hover,#modificaTransito:hover, .modificarTransitoModificarNewDesign1:hover,.modificarPosicionModificarNewDesign1:hover, #modificaEnlace:hover,#botonEliminarTransito:hover,#botonModificarTransito:hover,#agregarTransitoModificar:hover,#agregarPosicionModificar:hover,#botonModificarPosicion:hover,#botonEliminarPosicion:hover, #modificarEnlace3:hover,#eliminarEnlace3:hover
+ {
+ 	cursor: pointer;
+	transform: scale(1.08);
+	-webkit-transform: scale(1.08);
+	-moz-transition: all 0.5s ease;
+ }
+

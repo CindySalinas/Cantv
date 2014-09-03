@@ -2,7 +2,6 @@ $(document).on("ready",inicio);
 var map,map2,idposi,idtransi, idNumEnlace,idEnlaceSel;
 function inicio ()
 {
-	mostrarMapa();
 	ocultar();
 	eventos();	
 	ingresarEnlaceTextBox();
@@ -20,6 +19,9 @@ function inicio ()
 
 	$("#modificarEnlace3").on("click", modificarEnlaceFinal);
 	$("#eliminarEnlace3").on("click", eliminarEnlaceFinal);
+
+	$("#dibujoConsultar").on("click", buscarEnlacesConsultar);
+	$("#dibujoConsultar2").on("click", buscarEnlacesModificar);
 
 	cargarCentrales();
 }	
@@ -54,6 +56,7 @@ function actionBotones(mostrar,ocultar)
 	$('.nuevosTransitos').remove();
 	$('.nuevasPosiciones').remove();
 	$("#centralEnlaceIngresar option[value='sinSelCentral']").attr("selected", "selected");
+	$("#clienteEnlaceIngresar option[value='sinSelCliente']").attr("selected", "selected");
 }
 
 function mostrarMapa(){
@@ -64,6 +67,9 @@ function mostrarMapa(){
 		lng:-67.962385,
 		zoom:5
 	});
+}
+function mostrarMapa2 () 
+{
 	map2 = new GMaps({
     	div: '#map3',
     	lat:10.174862,
@@ -93,39 +99,56 @@ function ingresarEnlaceTextBox()
 }
 function cambioCentral()
 {
-	$("#ubicacionEnlaceIngresar").val("");	
+	$("#ubicacionEnlaceIngresar").text("");	
 	$('.nuevasSalas').remove();
 	$('.nuevosEquipos').remove();
 	var central = $('#centralEnlaceIngresar option:selected').val();
-
+	$("#divAlertNoEquiposIngresarEnlace").hide("slide");
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarSalarIdCentral.php?jsoncallback=?";
 
 	$.getJSON(url,{idCent: central
 	}).done(function(data){
-		$.each(data, function(i,item)
-		{				
-			$("#salaEnlaceIngresar").append("<option class='nuevasSalas' value='"+item.idSala+"'>"+item.nombreSala+"</option>");
-		});
+		if(data.mensaje==0)
+		{
+			$("#divAlertNoSalasIngresarEnlace").show("slide");
+		}
+		else
+		{
+			$.each(data, function(i,item)
+			{
+				$("#divAlertNoSalasIngresarEnlace").hide("slide");
+				$("#salaEnlaceIngresar").append("<option class='nuevasSalas' value='"+item.idSala+"'>"+item.nombreSala+"</option>");
+			});
+		}
+		
 	});
 }
 function cambioSala()
 {
-	$("#ubicacionEnlaceIngresar").val("");	
+	$("#ubicacionEnlaceIngresar").text("");		
 	$('.nuevosEquipos').remove();
 	var sala = $('#salaEnlaceIngresar option:selected').val();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarEquipoIdSala.php?jsoncallback=?";
 
 	$.getJSON(url,{idSal: sala
 	}).done(function(data){
-		$.each(data, function(i,item)
-		{				
-			$("#equipoEnlaceIngresar").append("<option class='nuevosEquipos' value='"+item.idEquipo+"'>"+item.nombreEquipo+"</option>");	
-		});
+		if(data.mensaje==0)
+		{
+			$("#divAlertNoEquiposIngresarEnlace").show("slide");
+		}
+		else
+		{
+			$.each(data, function(i,item)
+			{				
+				$("#divAlertNoEquiposIngresarEnlace").hide("slide");
+				$("#equipoEnlaceIngresar").append("<option class='nuevosEquipos' value='"+item.idEquipo+"'>"+item.nombreEquipo+"</option>");	
+			});
+		}		
 	});
 }
 function cambioEquipo()
 {
-	$("#ubicacionEnlaceIngresar").val("");	
+	$("#ubicacionEnlaceIngresar").text();	
 	var equipo = $('#equipoEnlaceIngresar option:selected').val();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarUbicacionEquipoIdEquipo.php?jsoncallback=?";
 		
@@ -133,7 +156,7 @@ function cambioEquipo()
 	}).done(function(data){
 		$.each(data, function(i,item)
 		{				
-			$("#ubicacionEnlaceIngresar").val(item.ubicacion);	
+			$("#ubicacionEnlaceIngresar").text(item.ubicacion);	
 		});
 	});
 }
@@ -210,16 +233,28 @@ function agregarEnlace()
 	else
 		alert("Ingrese Todos Los Datos Correctamente");	
 }
-function llenarDatosConsultar()
+function buscarEnlacesModificar()
 {
-	$('.colConEnlace').remove();
-	var tabla = $('#tbodyConsultar');
-	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaces.php?jsoncallback=?";
-	$.getJSON(url).done(function(data){
+	$(".contenidoExtraModificar1").hide("slide");
+	$('.colConEnlace2').remove();
+	var tabla = $('#tbodyModificar');
+	var numer=$("#textoBusqueda2").val();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/buscarEnlaces.php?jsoncallback=?";
+	var contar=0;
+	$.getJSON(url,{buscarNum:numer}).done(function(data){
 		$.each(data,function(i,item){
-			tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="equipoConsultarMas"></a></td></tr>');
-			$('.equipoConsultarMas').on("click",function(){actionBotones('consultarContenidoExtra','nada');}); 
-			$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+			contar++;
+			if(contar%2==0)
+			{
+				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign3"></a></td></tr>');
+				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+			}
+			else
+			{
+				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign4"></a></td></tr>');
+				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+			}
+			
 		});
 	});
 }
@@ -228,61 +263,28 @@ function llenarDatosModificar()
 	$('.colConEnlace2').remove();
 	var tabla = $('#tbodyModificar');
 	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaces.php?jsoncallback=?";
+	var contar=0;
 	$.getJSON(url).done(function(data){
 		$.each(data,function(i,item){
-			tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMas"></a></td></tr>');
-			$('.equipoConsultarMas').on("click",function(){actionBotones('contenidoExtraModificar1','nada');}); 
-			$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+			contar++;
+			if(contar%2==0)
+			{
+				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign3"></a></td></tr>');
+				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+			}
+			else
+			{
+				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign4"></a></td></tr>');
+				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+			}
 		});
 	});
 }
 
-function marcaConsultarMapa(num,equi)
-{
-	$('.conNuevasPosiciones').remove();
-	map.removeMarkers();
-	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadasConNumeroEnlace.php?jsoncallback=?";
-	$.getJSON(url,{numero:equi}).done(function(data){
-		if(data.num != 0){
-			$.each(data,function(i,item){
-				$("#spanConsultarCentral").text(item.nomCtrl);
-				$("#spanConsultarSala").text(item.nomb);
-				$("#spanConsultarPiso").text(item.pisos);
-				map.addMarker({
-				  lat: item.latCtrl,
-				  lng: item.longCtrl,
-				  title: item.nomCtrl,
-				  infoWindow: {
-				    content : item.dirCtrl
-			   		 }
-				});
-			});
-		}
-		else{
-			alert("No Existe Ubicación");
-		}
-	});
-	
-	var url3 = "http://127.0.0.1/Cantv/jsonCantv/consultarTransitosConNumeroEnlace.php?jsoncallback=?";
-	$.getJSON(url3,{numero:num}).done(function(data){
-		if(data.num != 0){
-			$.each(data,function(i,item){
-				$(".consultaTransitos").append("<li class='conNuevasPosiciones'>"+item.transito+"</li>");
-			});
-		}
-	});
-
-	var url4 = "http://127.0.0.1/Cantv/jsonCantv/consultarPosicionesConNumeroEnlace.php?jsoncallback=?";
-	$.getJSON(url4,{numero:num}).done(function(data){
-		if(data.num != 0){
-			$.each(data,function(i,item){
-				$(".consultandoPosiciones").append("<li class='conNuevasPosiciones'>"+item.posicion+"</li>");
-			});
-		}
-	});
-}
 function marcaConsultarMapa2(num,equi,iden)
 {
+	$(".contenidoExtraModificar1").show("slide");
+	mostrarMapa2();
 	$('.conNuevasPosiciones2').remove();
 	idNumEnlace=num;
 	idEnlaceSel=iden;
@@ -291,9 +293,11 @@ function marcaConsultarMapa2(num,equi,iden)
 	$.getJSON(url,{numero:equi}).done(function(data){
 		if(data.num != 0){
 			$.each(data,function(i,item){
-				$("#spanConsultarCentral").text(item.nomCtrl);
-				$("#spanConsultarSala").text(item.nomb);
-				$("#spanConsultarPiso").text(item.pisos);
+				$("#spanModifiCentral").text(item.nomCtrl);
+				$("#spanModifiSala").text(item.nomb);
+				$("#spanModifiPiso").text(item.pisos);
+				$("#spanModifiDirCentral").text(item.dirCtrl);
+				$("#spanModifiSalaDes").text(item.desc);
 				map2.addMarker({
 				  lat: item.latCtrl,
 				  lng: item.longCtrl,
@@ -370,15 +374,17 @@ function modificarPosicion()
 	if(idposi!=null)
 	{
 		var posi=$("#inputPosicionModificar").val();
-		var url = "http://127.0.0.1/Cantv/jsonCantv/modificarPosicionConId.php?jsoncallback=?";
-		$.getJSON(url,{idpos:idposi,pos:posi}).done(
-			function(data){		
-				alert(data.mensaje);
-				cargarPosicionesTransitos();
-				$("#inputPosicionModificar").val("");
-				idposi=null;
-			}
-		);		
+		if(posi!="" && posi!=" " && posi!="  " && posi!="   ")
+		{
+			var url = "http://127.0.0.1/Cantv/jsonCantv/modificarPosicionConId.php?jsoncallback=?";
+			$.getJSON(url,{idpos:idposi,pos:posi}).done(
+				function(data){		
+					cargarPosicionesTransitos();
+					$("#inputPosicionModificar").val("");
+					idposi=null;
+				}
+			);		
+		}
 	}
 	else
 		alert("Seleccione Posición a Modificar");
@@ -390,7 +396,6 @@ function eliminarPosicion()
 		var url = "http://127.0.0.1/Cantv/jsonCantv/eliminarPosicionConId.php?jsoncallback=?";
 		$.getJSON(url,{idpos:idposi}).done(
 			function(data){		
-				alert(data.mensaje);
 				cargarPosicionesTransitos();
 				$("#inputPosicionModificar").val("");
 				idtransi=null;
@@ -405,15 +410,17 @@ function modificarTransito()
 	if(idtransi!=null)
 	{
 		var transi=$("#inputTransitoModificar").val();
-		var url = "http://127.0.0.1/Cantv/jsonCantv/modificarTransitoConId.php?jsoncallback=?";
-		$.getJSON(url,{idtran:idtransi,tran:transi}).done(
-			function(data){		
-				alert(data.mensaje);
-				cargarPosicionesTransitos();
-				$("#inputTransitoModificar").val("");
-				idtransi=null;
-			}
-		);		
+		if(transi!="" && transi!=" " && transi!="  " && transi!="   ")
+		{
+			var url = "http://127.0.0.1/Cantv/jsonCantv/modificarTransitoConId.php?jsoncallback=?";
+			$.getJSON(url,{idtran:idtransi,tran:transi}).done(
+				function(data){		
+					cargarPosicionesTransitos();
+					$("#inputTransitoModificar").val("");
+					idtransi=null;
+				}
+			);	
+		}			
 	}
 	else
 		alert("Seleccione Transito a Modificar");
@@ -425,7 +432,6 @@ function eliminarTransito()
 		var url = "http://127.0.0.1/Cantv/jsonCantv/eliminarTransitoConId.php?jsoncallback=?";
 		$.getJSON(url,{idtran:idtransi}).done(
 			function(data){		
-				alert(data.mensaje);
 				cargarPosicionesTransitos();
 				$("#inputTransitoModificar").val("");
 				idtransi=null;
@@ -438,24 +444,28 @@ function eliminarTransito()
 function agregarNuevoTransito()
 {
 	var elem2=$("#inputTransitoAgregarModificar").val();
-	var url4 = "http://127.0.0.1/Cantv/jsonCantv/agregarTransito.php?jsoncallback=?";
-	$.getJSON(url4,{idEnlace:idEnlaceSel,element:elem2}).done(
-		function(data){			
-			alert(data.mensaje);		
+	if(elem2!="" && elem2!=" " && elem2!="  " && elem2!="   ")
+	{
+		var url4 = "http://127.0.0.1/Cantv/jsonCantv/agregarTransito.php?jsoncallback=?";
+		$.getJSON(url4,{idEnlace:idEnlaceSel,element:elem2}).done(
+		function(data){				
 			cargarPosicionesTransitos();	
 			$("#inputTransitoAgregarModificar").val("");
 		});
+	}	
 }
 function agregarNuevaPosicion()
 {
 	var elem=$("#inputPosicionAgregarModificar").val();
-	var url3 = "http://127.0.0.1/Cantv/jsonCantv/agregarPosiciones.php?jsoncallback=?";
-	$.getJSON(url3,{idEnlace:idEnlaceSel,element:elem}).done(
-		function(data){		
-			alert(data.mensaje);		
+	if(elem!="" && elem!=" " && elem!="  " && elem!="   ")
+	{
+		var url3 = "http://127.0.0.1/Cantv/jsonCantv/agregarPosiciones.php?jsoncallback=?";
+		$.getJSON(url3,{idEnlace:idEnlaceSel,element:elem}).done(
+		function(data){			
 			cargarPosicionesTransitos();	
 			$("#inputPosicionAgregarModificar").val("");			
 		});
+	}	
 }
 function cargarCentrales()
 {	
@@ -478,6 +488,8 @@ function cargarCentrales()
 }
 function modificandoEnlace()
 {
+	$("#divAlertNoSalasModificarEnlace").hide();
+	$("#divAlertNoEquiposModificarEnlace").hide();
 	$(".nuevasSalas").remove();
 	$(".nuevosEquipos").remove();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaceConId.php?jsoncallback=?";
@@ -507,7 +519,7 @@ function modificandoEnlace()
 				$.each(data, function(i,item)
 				{						
 					$("#equiposEnlaceModificar").append("<option class='nuevosEquipos' value='"+item.idEquipo+"'>"+item.nombreEquipo+"</option>");
-					$("#inputUbicacionEnlaceModificar").val(item.ubicacion);
+					$("#inputUbicacionEnlaceModificar").text(item.ubicacion);
 				});
 				$("#equiposEnlaceModificar option[value='"+idEquipoSelect+"']").attr("selected", "selected");
 			});
@@ -516,7 +528,7 @@ function modificandoEnlace()
 }
 function cambioCentralModificar()
 {
-	$("#inputUbicacionEnlaceModificar").val("");	
+	$("#inputUbicacionEnlaceModificar").text("");	
 	$('.nuevasSalas').remove();
 	$('.nuevosEquipos').remove();
 	var central = $('#modificarCentralEnlace option:selected').val();
@@ -525,15 +537,24 @@ function cambioCentralModificar()
 	$("#salaModificarEnlace").append("<option class='nuevasSalas' value='0'>Seleccione Una Sala</option>");
 	$.getJSON(url,{idCent: central
 	}).done(function(data){
-		$.each(data, function(i,item)
-		{				
-			$("#salaModificarEnlace").append("<option class='nuevasSalas' value='"+item.idSala+"'>"+item.nombreSala+"</option>");
-		});
+		$("#divAlertNoEquiposModificarEnlace").hide("slide");
+		if(data.mensaje==0)
+		{
+			$("#divAlertNoSalasModificarEnlace").show("slide");
+		}
+		else
+		{
+			$.each(data, function(i,item)
+			{				
+				$("#divAlertNoSalasModificarEnlace").hide("slide");
+				$("#salaModificarEnlace").append("<option class='nuevasSalas' value='"+item.idSala+"'>"+item.nombreSala+"</option>");
+			});
+		}		
 	});
 }
 function cambioSalaModificar()
 {
-	$("#inputUbicacionEnlaceModificar").val("");	
+	$("#inputUbicacionEnlaceModificar").text("");	
 	$('.nuevosEquipos').remove();
 	var sala = $('#salaModificarEnlace option:selected').val();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarEquipoIdSala.php?jsoncallback=?";
@@ -541,15 +562,23 @@ function cambioSalaModificar()
 	$("#equiposEnlaceModificar").append("<option class='nuevosEquipos' value='0'>Seleccione Un Equipo</option>");
 	$.getJSON(url,{idSal: sala
 	}).done(function(data){
-		$.each(data, function(i,item)
-		{				
-			$("#equiposEnlaceModificar").append("<option class='nuevosEquipos' value='"+item.idEquipo+"'>"+item.nombreEquipo+"</option>");	
-		});
+		if(data.mensaje==0)
+		{
+			$("#divAlertNoEquiposModificarEnlace").show("slide");
+		}
+		else
+		{
+			$("#divAlertNoEquiposModificarEnlace").hide("slide");
+			$.each(data, function(i,item)
+			{				
+				$("#equiposEnlaceModificar").append("<option class='nuevosEquipos' value='"+item.idEquipo+"'>"+item.nombreEquipo+"</option>");	
+			});
+		}		
 	});
 }
 function cambioEquipoModificar()
 {
-	$("#inputUbicacionEnlaceModificar").val("");	
+	$("#inputUbicacionEnlaceModificar").text("");	
 	var equipo = $('#equiposEnlaceModificar option:selected').val();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/consultarUbicacionEquipoIdEquipo.php?jsoncallback=?";
 		
@@ -557,7 +586,7 @@ function cambioEquipoModificar()
 	}).done(function(data){
 		$.each(data, function(i,item)
 		{				
-			$("#inputUbicacionEnlaceModificar").val(item.ubicacion);	
+			$("#inputUbicacionEnlaceModificar").text(item.ubicacion);	
 		});
 	});
 }
@@ -594,6 +623,12 @@ function eliminarEnlaceFinal()
 		$('.contenidoExtraModificar1').hide();	
 	});
 }
+function eventoConIngresar () 
+{
+	$("#divAlertNoSalasIngresarEnlace").hide();
+	$("#divAlertNoEquiposIngresarEnlace").hide();
+	$("#ubicacionEnlaceIngresar").text("");
+}
 function eventos()
 {
 	$('.consultarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuConsultar','menuEnlaces');}); 
@@ -603,6 +638,9 @@ function eventos()
 
 	 $('.ingresarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
 	 $('.linkAbajoIngresar').on("click",function(){actionBotones('menuIngresar','menuEnlaces');}); 
+	  $('.ingresarIconoEnlacesNewDesign').on("click",eventoConIngresar); 
+	 $('.linkAbajoIngresar').on("click",eventoConIngresar); 
+
 
 	 $('.modificarIconoEnlacesNewDesign').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
 	 $('.linkAbajoModificar').on("click",function(){actionBotones('menuModificar','menuEnlaces');}); 
@@ -617,6 +655,8 @@ function eventos()
 	 $('.atrasIngresarCliente').on("click",function(){actionBotones('menuEnlaces','menuIngresar');}); 
 
 	 $('.atrasModificar2Enlace').on("click",function(){actionBotones('menuModificar','menuModificar2');}); 
+	 $('.atrasModificar2Enlace').on("click",function(){actionBotones('menuModificar','menuModificar2');}); 
+	 $('.atrasModificar2Enlace').on("click",function(){actionBotones('contenidoExtraModificar1','nada');}); 
 
 	 $('.atrasTransitoEnlace').on("click",function(){actionBotones('menuModificar','menuModificarTransitos');}); 
 
@@ -642,4 +682,101 @@ function eventos()
 
 	 $('#agregarTransitoModificar').on("click",agregarNuevoTransito); 
 	 $('#agregarPosicionModificar').on("click",agregarNuevaPosicion); 
+}
+
+function llenarDatosConsultar()
+{
+	$('.colConEnlace').remove();
+	var tabla = $('#tbodyConsultar');
+	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEnlaces.php?jsoncallback=?";
+	var contar=0;
+	$.getJSON(url).done(function(data){
+		$.each(data,function(i,item){
+			contar++;
+			if(contar%2==0)
+			{
+				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign1"></a></td></tr>');
+				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+			}
+			else
+			{
+				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign2"></a></td></tr>');
+				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+			}
+			
+		});
+	});
+}
+function buscarEnlacesConsultar () 
+{
+	$(".consultarContenidoExtra").hide("slide");
+	$('.colConEnlace').remove();
+	var tabla = $('#tbodyConsultar');
+	var numer=$("#textoBusqueda1").val();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/buscarEnlaces.php?jsoncallback=?";
+	var contar=0;
+	$.getJSON(url,{buscarNum:numer}).done(function(data){
+		$.each(data,function(i,item){
+			contar++;
+			if(contar%2==0)
+			{
+				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign1"></a></td></tr>');
+				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+			}
+			else
+			{
+				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign2"></a></td></tr>');
+				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+			}
+			
+		});
+	});
+}
+function marcaConsultarMapa(num,equi)
+{
+	$(".consultarContenidoExtra").show("slide");
+	mostrarMapa();
+	$('.conNuevasPosiciones').remove();
+	map.removeMarkers();
+	var url = "http://127.0.0.1/Cantv/jsonCantv/coordenadasConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url,{numero:equi}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$("#spanConsultarCentral").text(item.nomCtrl);
+				$("#spanConsultarSala").text(item.nomb);
+				$("#spanConsultarPiso").text(item.pisos);
+				$("#spanConsultDirCentral").text(item.dirCtrl);
+				$("#spanConsultSalaDes").text(item.desc);
+				map.addMarker({
+				  lat: item.latCtrl,
+				  lng: item.longCtrl,
+				  title: item.nomCtrl,
+				  infoWindow: {
+				    content : item.dirCtrl
+			   		 }
+				});
+			});
+		}
+		else{
+			alert("No Existe Ubicación");
+		}
+	});
+	
+	var url3 = "http://127.0.0.1/Cantv/jsonCantv/consultarTransitosConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url3,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".consultaTransitos").append("<li class='conNuevasPosiciones'>"+item.transito+"</li>");
+			});
+		}
+	});
+
+	var url4 = "http://127.0.0.1/Cantv/jsonCantv/consultarPosicionesConNumeroEnlace.php?jsoncallback=?";
+	$.getJSON(url4,{numero:num}).done(function(data){
+		if(data.num != 0){
+			$.each(data,function(i,item){
+				$(".consultandoPosiciones").append("<li class='conNuevasPosiciones'>"+item.posicion+"</li>");
+			});
+		}
+	});
 }

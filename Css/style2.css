@@ -903,7 +903,7 @@ label{
     display: inline-block;
     vertical-align: middle;
     width: 400px;
-    height: 170px;
+    height: 220px;
     
 }
 #map2consultar, #map3consultar
@@ -1014,7 +1014,7 @@ label{
 }
 #consultarTransitos, #consultarPosiciones
 {
-	margin-top: 1em;
+	margin-top: 0.8em;
 	width: 40%;
 	display: inline-block;
 }
@@ -1038,7 +1038,7 @@ label{
 }
 .espacioArribaModificar2
 {
-	margin-top: 1.5em;
+	margin-top: 0.8em;
 	margin-bottom: 1em;
 }
 .noEditar
@@ -1093,7 +1093,7 @@ label{
 }
 #numEnlaceIngresar, #rutaEnlaceIngresar
 {
-	width: 200px;
+	width: 100%;
 }
 #ubicacionEnlaceIngresar
 {
@@ -1166,6 +1166,12 @@ label{
 	border: 0px solid red;
 	display: inline-block;
 	vertical-align: bottom;
+}
+.displayInline5
+{
+	border: 0px solid red;
+	display: inline-block;
+	vertical-align: text-bottom;
 }
 
 #buscarCentral
@@ -1407,7 +1413,7 @@ label{
 	min-width: 300px;
 }
 
-#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar
+#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar,#centralEnlaceIngresar:focus,#salaEnlaceIngresar:focus, #equipoEnlaceIngresar:focus,#clienteEnlaceIngresar:focus,#clientesEnlaceModificar:focus, #equiposEnlaceModificar:focus,#salaModificarEnlace:focus,#modificarCentralEnlace:focus
 {
 	height:auto;
 }
@@ -1445,4 +1451,53 @@ label{
 .divEspRig
 {
 	margin-right: 2em;
+}
+.abajoEspPosTran
+{
+	margin-bottom: 0.8em;
+}
+#inputTransitoIngresarEnlace, #inputPosicionIngresarEnlace, #inputTransitoAgregarModificar, #inputTransitoModificar, #inputPosicionAgregarModificar,#inputPosicionModificar
+{
+	margin: 0 auto;
+	width: 100%;
+	background-color: #fff;
+    border: 2px solid #356710;
+    border-left: 4px solid #18489A;
+}
+#inputTransitoModificar, #inputTransitoAgregarModificar, #inputPosicionAgregarModificar,#inputPosicionModificar
+{
+	margin: 0.7em auto;
+	width: 90%;
+}
+#inputTransitoIngresarEnlace:focus, #inputPosicionIngresarEnlace:focus
+{	
+    background-color:white;
+    border-left: 4px solid #18489A;
+}
+#widDiv70
+{
+	width: 70%;
+}
+#widDiv25
+{
+	margin-left: 1em;
+}
+#agregarTransitoIngresarEnlace,#agregarPosicionIngresarEnlace,#ingresarNuevoEnlace
+{
+	cursor: pointer;
+}
+#arrDivEnNew
+{
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+.fontSize16
+{
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+#eliminarEnlace3
+{
+	margin-left:5%;
 }

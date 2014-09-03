@@ -18,6 +18,10 @@ while($row = mysql_fetch_row($result)){
 	$dat[$i]["ubicacion"]= $row[2];
 	$i++;	
 }
+if($cantidad==0)
+{
+	$dat["mensaje"]=0;
+}
 $datJson = json_encode($dat);
 
 /*Muestra el resultado en un formato que no da problemas de seguridad en browsers */

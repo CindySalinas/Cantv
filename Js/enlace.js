@@ -65,7 +65,7 @@ function mostrarMapa(){
     	div: '#map2',
     	lat:10.174862,
 		lng:-67.962385,
-		zoom:5
+		zoom:7
 	});
 }
 function mostrarMapa2 () 

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Crear Central</title>
+		<title>Centrales</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
 		<link rel="stylesheet" href="../Css/clientes.css" />
@@ -33,7 +33,7 @@
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
 					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
-					<li><a href="gestionCentrales.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
 					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
 					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
 					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
@@ -82,10 +82,24 @@
 					<h2 class="h2Clientes">Consultar Centrales</h2>
 					<hr>
 
-					<div id="mapaCentral">
+					<div id="mapaCentral2">
 						<div id="mapCentral2"></div>
 					</div>
-
+					<table id="tablaConsultarCentrales" class="tablaEstilo">
+						<thead>
+							<th>Nombre De La Central</th>
+							<th>Dirección</th>
+							<th></th>
+						</thead> 
+						<tbody id="tbodyConsultar">
+							
+						</tbody>
+					
+					</table>
+					<div id="searchform">
+				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar2">Buscar</button>
+				    </div>	
 					<div id="tamaClien" class="atras" class="atras">
 						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
@@ -98,22 +112,26 @@
 					<h2 class="h2Clientes">Ingresar Central</h2>
 					<hr>
 					<div>
-						<div id="mapaCentral">
+						<div id="divCentralIngresarDesign" class="centrar displayInline3 contact-form-widget">
+							<label>Nombre de la Central: </label>
+							<input type="text" class="contact-form-name" id="ingresarCentralCentrales" placeholder="Ingrese Nombre De La Central">
+							<hr>		
+							<label>Dirección De La Central: </label>
+							<input type="text" class="contact-form-name" id="ingresarDireccionCentrales" placeholder="Ingrese Dirección De La Central">
+							<hr>	
+							<label>Seleccione Ubicación en el Mapa: </label>
+							<br>
+							<div class="centrar">
+								<span id="latid">Latitud de la Central</span><br><br>
+								<span id="longs">Longitud de la Central</span>
+								<br><br>
+								<a id="ingresarCentralAceptar" class="displayInline3"><span class="agregarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspAgregar</span></span></a>
+							</div>							
+						</div>	
+						<div id="mapaCentral2">
 							<div id="mapCentral"></div>
 						</div>
-						<div class="centrar displayInline3" id="divIngresarCentral">
-							<label class="displayBlock">Nombre De La Central</label>
-							<input type="text" class="displayBlock centrar arribaCentarl">
-							<label class="displayBlock">Dirección De La Central</label>
-							<input type="text" class="displayBlock centrar arribaCentarl">
-							<label class="displayBlock arribaCentarl">Seleccione Ubicación en el Mapa</label>
-							<span class="displayBlock arribaCentarl centrar">Latitud de la Central</span>
-							<span class="displayBlock arribaCentarl centrar">Longitud de la Central</span>
-							<div class="arribaCentralBotones">
-								<button class="displayInline3">Guardar</button>
-								<button class="displayInline3">Resetear</button>
-							</div>
-						</div>						
+										
 					</div>
 					
 					<div id="tamaClien" class="atras" class="atras">
@@ -126,20 +144,31 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Modificar o Eliminar Central</h2>
 					<hr>
-
-					<div>
-						<label>Seleccionar Central</label>
-						<select>
-							<option>Seleccione una Central</option>
-						</select>
-						<a id="buscarCentral">Buscar</a>
-					</div>
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
+					<table id="tablaModificarCentrales" class="tablaEstilo">
+						<thead>
+							<th>Nombre De La Central</th>
+							<th>Dirección</th>
+							<th></th>
+						</thead> 
+						<tbody id="tbodyConsultar">
+							
+						</tbody>
+					
+					</table>
 					<div id="mapaCentral" class="mapCentralOculto">
 						<div id="mapCentral3"></div>
 					</div>
 					<div class="mapCentralOculto">
-						<button id="modificaCentral1">Modificar</button>
-						<button>Eliminar</button>
+						<div class="centrar aGuardarCliente displayInline3 divEspRig">
+							<a id="modificaCentral1" class="linkAtrasClientes"><span class="paraIconos spanModificarCentral"></span>Modificar</a>
+						</div>
+						<div class="centrar aGuardarCliente displayInline3">
+							<a id="eliminaCentral1" class="linkAtrasClientes"><span class="paraIconos spanEliminarCentral"></span>Eliminar</a>
+						</div>	
 					</div>
 					
 					<div id="tamaClien" class="atras" class="atras">
@@ -153,22 +182,26 @@
 					<h2 class="h2Clientes">Modificar Central</h2>
 					<hr>
 
-					<div>
-						<div id="mapaCentral">
+					<div>						
+						<div id="divCentralIngresarDesign" class="centrar displayInline3 contact-form-widget">
+							<label>Nombre de la Central: </label>
+							<input type="text" class="contact-form-name" id="modificarCentralCentrales" placeholder="Ingrese Nombre De La Central">
+							<hr>		
+							<label>Dirección De La Central: </label>
+							<input type="text" class="contact-form-name" id="modificarDireccionCentrales" placeholder="Ingrese Dirección De La Central">
+							<hr>	
+							<label>Seleccione Ubicación en el Mapa: </label>
+							<br>
+							<div class="centrar">
+								<span id="latidModificar">Latitud de la Central</span><br><br>
+								<span id="longsModificar">Longitud de la Central</span>
+								<br><br>
+								<a id="modificarCentralAceptar" class="displayInline3"><span class="agregarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspModificar</span></span></a>
+							</div>							
+						</div>	
+						<div id="mapaCentral2">
 							<div id="mapCentral4"></div>
-						</div>
-						<div class="centrar displayInline3" id="divIngresarCentral">
-							<label class="displayBlock">Nombre De La Central</label>
-							<input type="text" class="displayBlock centrar arribaCentarl">
-							<label class="displayBlock">Dirección De La Central</label>
-							<input type="text" class="displayBlock centrar arribaCentarl">
-							<label class="displayBlock arribaCentarl">Ubicación en el Mapa</label>
-							<span class="displayBlock arribaCentarl centrar">Latitud de la Central</span>
-							<span class="displayBlock arribaCentarl centrar">Longitud de la Central</span>
-							<div class="arribaCentralBotones">
-								<button>Modificar</button>
-							</div>
-						</div>						
+						</div>					
 					</div>
 					
 					<div id="tamaClien" class="atras" class="atras">

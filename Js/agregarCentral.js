@@ -7,8 +7,7 @@ function inicio ()
 	var dir = $('#dir').val();
 
 	verify();
-	agregarMapa();
-	datos();
+	agregarMapa();mapMarca();
 	$('#quitarMarca').on('click',quitar);
 	$('#guardarMarca').on("click",guardar);
 	
@@ -63,7 +62,7 @@ function hideAndShow (ocultar,mostrar) {
 }
 
 /* Funcion que agrega la marca o la quita en el mapa*/
-function mapMarca(nom,dir){
+function mapMarca(){
 	
 	GMaps.on('click', map.map, function(e) {
 		hideAndShow('success','1');
@@ -79,10 +78,6 @@ function mapMarca(nom,dir){
 			map.addMarker({
 				lat: lats,
 				lng: lngs,
-				title: nom,
-				infoWindow: {
-				    content : dir
-			    }
 			    });
 		    lt.val(lats);
 		    ln.val(lngs);
@@ -92,18 +87,24 @@ function mapMarca(nom,dir){
 		    lt.val("");
 		    ln.val("");
 		    console.log(lats,lngs);
+		    map.addMarker({
+				lat: lats,
+				lng: lngs,
+			    });
+		    lt.val(lats);
+		    ln.val(lngs);
 		}
 	});
 }
 
-function datos(){
+/*function datos(){
 	$('#nomb').on("change",function(){
 		$('#dir').on("change",function(){
 			hideAndShow('error','dsf');
 			mapMarca($('#nomb').val(),$('#dir').val())
 		});
 	});
-}
+}*/
 
 function guardar(){
 	var nom = $('#nomb').val();

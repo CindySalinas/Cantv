@@ -896,7 +896,15 @@ label{
 	border-radius: 5px;
 	padding: 5px;
 	background: #ab6800;
-	margin-right: 0.5em;
+	margin-left: 0.5em;
+}
+#mapaCentral2
+{
+	display: inline-block;
+	border-radius: 5px;
+	padding: 5px;
+	background: #356710;
+	margin-left: 0.5em;
 }
 #map2, #map3
 {
@@ -1131,6 +1139,11 @@ label{
 	height: 280px;
 	width: 30%;
 }
+#divCentralIngresarDesign
+{
+	min-width: 223px;
+	width: 30%;	
+}
 #divIngresarSala
 {
 	background-color: #e7b752;
@@ -1160,6 +1173,11 @@ label{
 {
 	display: inline-block;
 	vertical-align: middle;
+}
+.displayInline6
+{
+	display: inline-block;
+	vertical-align: top;
 }
 .displayInline4
 {
@@ -1500,4 +1518,13 @@ label{
 #eliminarEnlace3
 {
 	margin-left:5%;
+}
+.todoInput
+{
+	width: 100%;
+}
+#tablaConsultarCentrales thead
+{
+	background-color: #18489A;
+	color: #ededed;
 }

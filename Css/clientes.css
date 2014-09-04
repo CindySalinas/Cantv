@@ -24,7 +24,7 @@
 	font-weight: normal;
 	margin-top: 8px;
 }
-.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1
+.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1, .linkMapaCentralesConsultar, .linkMapaCentralesModificar, .linkMapaCentralesModificar2
 {
 	font-family: 'icomoon';
 	font-size: 16px;
@@ -36,6 +36,18 @@
 	font-size: 37px;
 	font-weight: normal;
 	margin-top: 3px;
+}
+.linkMapaCentralesModificar:before, .linkMapaCentralesModificar2:before
+{
+	content: "\f00b";
+	cursor: pointer;	
+	font-size: 21px;
+}
+.linkMapaCentralesConsultar:before
+{
+	content: "\e66c";
+	cursor: pointer;	
+	font-size: 25px;
 }
 .modificandoEnlaceNewDesign1:before
 {
@@ -330,16 +342,24 @@
 {
 	content: "\f0ad";
 }
+.spanModificarCentral:before
+{
+	content: "\e623";
+}
+.spanEliminarCentral:before
+{
+	content: "\e678";
+}
 .spanEliminarEquipo:before
 {
 	content: "\f090";
 }
-.spanModificarEquipo
+.spanModificarEquipo, .spanModificarCentral
 {
 	margin: 0 auto;
 	font-size: 40px;
 }
-.spanEliminarEquipo
+.spanEliminarEquipo, .spanEliminarCentral
 {
 	margin: 0 auto;
 	font-size: 44px;
@@ -369,7 +389,7 @@
 }
 
 /*ROJOOOOOOO*/
-#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar, .colConEnlace .equipoConsultarMasNewDesign2, #botonEliminarTransito,#botonEliminarPosicion
+#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar, .colConEnlace .equipoConsultarMasNewDesign2, #botonEliminarTransito,#botonEliminarPosicion,#ingresarCentralAceptar, #eliminaCentral1, #modificarCentralAceptar
 {
 	color: #7F120A;
 }
@@ -378,7 +398,7 @@
 	color: #ab6800;
 }
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1
 {
 	color: #18489A;
 }
@@ -410,13 +430,13 @@
 {
 	color: #B43C2E;
 }
- #ingresarNuevoEnlace,#modificaTransito, .modificarTransitoModificarNewDesign1,.modificarPosicionModificarNewDesign1, #modificaEnlace,#botonModificarTransito,#botonEliminarTransito,#agregarTransitoModificar,#agregarPosicionModificar,#botonModificarPosicion,#botonEliminarPosicion, #modificarEnlace3,#eliminarEnlace3
+ #ingresarNuevoEnlace,#modificaTransito, .modificarTransitoModificarNewDesign1,.modificarPosicionModificarNewDesign1, #modificaEnlace,#botonModificarTransito,#botonEliminarTransito,#agregarTransitoModificar,#agregarPosicionModificar,#botonModificarPosicion,#botonEliminarPosicion, #modificarEnlace3,#eliminarEnlace3,#ingresarCentralAceptar, #modificarCentralAceptar
  {
  	transition: all 0.5s ease;
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
  }
- #ingresarNuevoEnlace:hover,#modificaTransito:hover, .modificarTransitoModificarNewDesign1:hover,.modificarPosicionModificarNewDesign1:hover, #modificaEnlace:hover,#botonEliminarTransito:hover,#botonModificarTransito:hover,#agregarTransitoModificar:hover,#agregarPosicionModificar:hover,#botonModificarPosicion:hover,#botonEliminarPosicion:hover, #modificarEnlace3:hover,#eliminarEnlace3:hover
+ #ingresarNuevoEnlace:hover,#modificaTransito:hover, .modificarTransitoModificarNewDesign1:hover,.modificarPosicionModificarNewDesign1:hover, #modificaEnlace:hover,#botonEliminarTransito:hover,#botonModificarTransito:hover,#agregarTransitoModificar:hover,#agregarPosicionModificar:hover,#botonModificarPosicion:hover,#botonEliminarPosicion:hover, #modificarEnlace3:hover,#eliminarEnlace3:hover,#ingresarCentralAceptar:hover, #modificarCentralAceptar:hover
  {
  	cursor: pointer;
 	transform: scale(1.08);

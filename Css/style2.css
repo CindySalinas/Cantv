@@ -684,7 +684,7 @@ label{
 #tablaConsultarDatos, #tablaConsultarDatos2, .tablaEstilo
 
 {
-	margin: 1.5em auto 0 auto;
+	margin: 1.3em auto 0 auto;
 	width: 80%;
 }
 
@@ -929,18 +929,18 @@ label{
     width: 450px;
     height: 300px;
 }
+#mapCentralll, #mapCentral6
+{
+    display: inline-block;
+    vertical-align: middle;
+    width: 450px;
+    height: 380px;
+}
 #mapCentral1, #mapCentral5
 {
     display: inline-block;
     vertical-align: middle;
     width: 350px;
-    height: 200px;
-}
-#mapCentral6
-{
-    display: inline-block;
-    vertical-align: middle;
-    width: 390px;
     height: 200px;
 }
 #mapCentral2
@@ -1225,6 +1225,15 @@ label{
 	border: 2px solid white;
 	margin-bottom: 1em;
 }
+#divConsultaSalaSelect5
+{
+	background-color: #e7b752;
+	vertical-align: middle;
+	width: 380px;
+	border-radius: 5px;
+	border: 2px solid white;
+	margin-bottom: 1em;
+}
 #sCentralCon
 {
 	margin-top: 6px;
@@ -1431,9 +1440,14 @@ label{
 	min-width: 300px;
 }
 
-#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar,#centralEnlaceIngresar:focus,#salaEnlaceIngresar:focus, #equipoEnlaceIngresar:focus,#clienteEnlaceIngresar:focus,#clientesEnlaceModificar:focus, #equiposEnlaceModificar:focus,#salaModificarEnlace:focus,#modificarCentralEnlace:focus
+#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar,#centralEnlaceIngresar:focus,#salaEnlaceIngresar:focus, #equipoEnlaceIngresar:focus,#clienteEnlaceIngresar:focus,#clientesEnlaceModificar:focus, #equiposEnlaceModificar:focus,#salaModificarEnlace:focus,#modificarCentralEnlace:focus,#ingresarCentralSalas:focus,#ingresarDesSalas:focus,#consultarSalasSalas:focus,#modificarSalasSalas:focus,#modificarCentralSalas:focus,#modificarDesSalas:focus
 {
 	height:auto;
+}
+#consultarSalasSalas,#modificarSalasSalas
+{
+	display: inline-block;
+	width: auto;
 }
 #tiposEquipo, #marcaEquipo, #centralParaModificar,#salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar
 {
@@ -1527,4 +1541,12 @@ label{
 {
 	background-color: #18489A;
 	color: #ededed;
+}
+#tablaConsultaSalas
+{
+	margin-top: 1em;
+}
+.espaciosSalasAbajo
+{
+	margin-bottom: 1em;
 }

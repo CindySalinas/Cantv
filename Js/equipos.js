@@ -426,7 +426,7 @@ function llenarSelectCentral(){
 	 		sel.append("<option value="+item.idCtrl+">"+item.nomCtrl+"</option>");
 	 		sel2.append("<option value="+item.idCtrl+">"+item.nomCtrl+"</option>");
 	 	});
-	 })
+	 });
 }
 
 // cargar en ingreso

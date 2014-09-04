@@ -34,7 +34,7 @@
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
 					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
 					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
-					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="salasNuevo.html" id="navSalasAdmin">Salas</a></li>
 					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
 					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
 				</ul>
@@ -84,11 +84,11 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Consultar Fallas</h2>
 					<hr>
-					<form id="formConsultarClientes">
-						<label id="labelBuscarClientes">Buscar</label>
-						<input type="text" id="textoBusqueda1" placeholder="Buscar Numero de Falla">
-						<span id="dibujoConsultar"></span>
-					</form>
+
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
 					<table class="tablaEstilo" id="consultaFallas1">
 						<thead>
 							<th>Número De Enlace</th>

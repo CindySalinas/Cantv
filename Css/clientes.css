@@ -24,7 +24,7 @@
 	font-weight: normal;
 	margin-top: 8px;
 }
-.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1, .linkMapaCentralesConsultar, .linkMapaCentralesModificar, .linkMapaCentralesModificar2
+.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1, .linkMapaCentralesConsultar, .linkMapaCentralesModificar, .linkMapaCentralesModificar2, .linkParaModificarSalas, .linkParaModificarSalas2
 {
 	font-family: 'icomoon';
 	font-size: 16px;
@@ -42,6 +42,12 @@
 	content: "\f00b";
 	cursor: pointer;	
 	font-size: 21px;
+}
+.linkParaModificarSalas:before, .linkParaModificarSalas2:before
+{
+	content: "\e677";
+	cursor: pointer;	
+	font-size: 18px;
 }
 .linkMapaCentralesConsultar:before
 {
@@ -398,7 +404,7 @@
 	color: #ab6800;
 }
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1, #tablaModificaSalas .linkParaModificarSalas
 {
 	color: #18489A;
 }

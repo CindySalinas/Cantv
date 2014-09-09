@@ -6,7 +6,7 @@ include("conex.php");
 
 $id = $_GET["mail"];
 
-$sql = "SELECT M.Id_Mensaje, M.Mensaje, M.Asunto, M.Emisor, M.Receptor, M.Fecha, M.Hora, U.Foto_Perfil FROM mensajes M INNER JOIN usuarios U ON U.Email = M.Emisor WHERE M.Receptor = '$id' ";
+$sql = "SELECT M.Id_Mensaje, M.Mensaje, M.Asunto, M.Emisor, M.Receptor, M.Fecha, M.Hora, U.Foto_Perfil FROM mensajes M INNER JOIN usuarios U ON U.Email = M.Emisor WHERE M.Receptor = '$id' ORDER BY M.Id_Mensaje DESC";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;

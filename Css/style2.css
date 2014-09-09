@@ -2031,8 +2031,7 @@ label{
 {
 	padding: 0;
 	width: 100%;
-	text-align: left;
-
+	text-align: left;word-break: break-all;	
 }
 #tablaMisMensajes a, #tablaMisMensajesEnviados a
 {
@@ -2105,4 +2104,18 @@ label{
 {
 	color: #18489A;
 	cursor: pointer;
+}
+#tablaVerMas
+{
+	text-align: left;
+	width: 100%;word-break: break-all;
+}
+#tablaVerMas tr
+{
+	border-bottom: 1px solid #ccc;	
+}
+#tablaVerMas tr td
+{
+	padding: 8px;
+
 }

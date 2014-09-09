@@ -15,7 +15,42 @@ function verify(){
 		$.getJSON(url,{namePerf:ckie}).done(function(data){
 			if(data.num != 0){
 				$.each(data,function(i,item){
-					$('#fotoPerfil').append("<img src='../"+item.ftPerfil+"'>");
+
+					$("#userEditar").val(item.nomUser);
+					$("#emailEditar").val(item.mails);
+					$("#fechaNacEditar").val(item.fechaNac);
+					$("#telefonoEditar").val(item.telf);
+
+					$('#fotoPerfil').append("<img src='../Img/fotoPerfil/"+item.ftPerfil+"'>");
+					$('#fotoPerfil2').append("<img src='../Img/fotoPerfil/"+item.ftPerfil+"'>");
+					$('#fotoPerfil2').append("<section class='captionFigurePerfil2'>"+item.nomUser+"</section>")
+
+					$('#nombreConsultaPerfil').text(item.nom);
+					$('#apellodpConsultaPerfil').text(item.apll);
+					$('#emailConsultaPerfil').text(item.mails);
+					$('#fechaConsultaPerfil').text(item.fechaNac);
+					
+					var numeroLetras = item.fechaNac.length;
+					var porcion;
+					if(numeroLetras==8)
+					{
+						porcion = ho.substring(4);
+					}
+					else if(numeroLetras==9)
+					{
+						porcion = ho.substring(5);
+					}
+					else if(numeroLetras==10)
+					{	
+						porcion = item.fechaNac.substring(6);
+					}
+					var f=new Date();
+					var fecha = (f.getFullYear());
+					var edad=fecha-porcion;
+					$('#edadConsultaPerfil').text(edad);
+					$('#telConsultaPerfil').text(item.telf);
+					$('#cargoConsultaPerfil').text(item.cargo);
+					$('#centralConsultaPerfil').text(item.central);
 				});
 			}
 			else{

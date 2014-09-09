@@ -6,7 +6,7 @@ header('Content-type: application/json');
 $user = $_GET["usr"];
 $pass = $_GET["pwd"];
 
-$sql = "SELECT nombre_usuario,Password,Id_Tipo_Usuario FROM usuarios where nombre_usuario ='$user' and Password='$pass'";
+$sql = "SELECT nombre_usuario,Password,Id_Tipo_Usuario,Id_Usuario FROM usuarios where nombre_usuario ='$user' and Password='$pass'";
 $result = mysql_query($sql) or die ("Query error: " . mysql_error());
 
 $cantidad=0;
@@ -15,16 +15,17 @@ while($row = mysql_fetch_row($result)) {
 	$cantidad++;
 	$nom = $row[0];
 	$resultados["T"] = $row[2];
+	$id = $row[3];
 }
 $resultados["validacion"] = $cantidad;
 
 if($cantidad>0 && $resultados["T"] == 1){
-	setcookie("adminSis",$nom,time()+36000,"/");
+	setcookie("adminSis",$id,time()+36000,"/");
 	$resultados["mensaje"] = "Bienvenido Admin $nom";
 }
 else
 if($cantidad>0 && $resultados["T"] == 2 ){
-	setcookie("tecSis",$nom,time()+36000,"/");
+	setcookie("tecSis",$id,time()+36000,"/");
 	$resultados["mensaje"] = "Bienvenido Tecnico $nom";
 }
 else{

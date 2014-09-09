@@ -57,8 +57,8 @@ function datosPerfil(name){
 	$.getJSON(url,{namePerf:name}).done(function(data){
 		if(data.num != 0){
 			$.each(data,function(i,item){
-				$('#fotoPerfil').append("<a href='perfil.html'><img src='../"+item.ftPerfil+"'></a>");
-				$('#perfilGrande').append("<img src='../"+item.ftPerfil+"'><a href='#' title="+'Cambiar Foto'+">Foto de Perfil</a>");
+				$('#fotoPerfil').append("<a href='perfil.html'><img src='../Img/fotoPerfil/"+item.ftPerfil+"'></a>");
+				$('#perfilGrande').append("<img src='../Img/fotoPerfil/"+item.ftPerfil+"'><a href='#' title="+'Cambiar Foto'+">Foto de Perfil</a>");
 				$('#nomUsr').append(item.nom);
 				$('#appUsr').append(item.apll)
 				$('#mailUsr').append(item.mails)

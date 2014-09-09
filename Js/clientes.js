@@ -81,7 +81,7 @@ function consultarClientes(){
 		else{
 			
 		}
-	})
+	});
 }
 function llenarClientes(){
 	var tabla = $('#tablaConsultarDatos');

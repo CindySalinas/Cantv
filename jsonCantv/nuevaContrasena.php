@@ -4,18 +4,15 @@ include("conex.php");
 //formato JSON
 //header('Content-type: application/json');
 
-$id = $_GET["idFalla"];
-$estatus =  $_GET["estatus"];
+$id = $_GET['User'];
+$pass = $_GET['password'];
+
+$sql = "UPDATE usuarios SET Password='$pass' WHERE Id_Usuario='$id'";
+
+$result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 
 
-$sql2 = "UPDATE fallas SET Id_Estatus='$estatus' WHERE Id_Falla='$id'";
-
-
-$result2 = mysql_query($sql2) or die("Error de Consulta". mysql_error());
-
-
-
-$estado["mensaje"]= "Estatus Cambiado";
+$estado["mensaje"]= "Password Actualizada";
 //Convertir los resultados a formato json
 $estadoJson = json_encode($estado);
 

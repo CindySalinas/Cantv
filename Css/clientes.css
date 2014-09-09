@@ -17,14 +17,14 @@
 	font-size: 60px;
 	font-weight: normal;
 }
-.equipoConsultarMasNewDesign1,.equipoConsultarMasNewDesign2,.agregaPosicionIngresarNewDesign,.agregaTransitoIngresarNewDesign,.equipoConsultarMasNewDesign3,.equipoConsultarMasNewDesign4,.modificaEnlaceNewDesign1
+.equipoConsultarMasNewDesign1,.equipoConsultarMasNewDesign2,.agregaPosicionIngresarNewDesign,.agregaTransitoIngresarNewDesign,.equipoConsultarMasNewDesign3,.equipoConsultarMasNewDesign4,.modificaEnlaceNewDesign1, .modificarMasFallaDesign,.modificarMasFallaDesign2
 {
 	font-family: 'icomoon';
 	font-size: 16px;
 	font-weight: normal;
 	margin-top: 8px;
 }
-.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1, .linkMapaCentralesConsultar, .linkMapaCentralesModificar, .linkMapaCentralesModificar2, .linkParaModificarSalas, .linkParaModificarSalas2
+.modificarTransitoModificarNewDesign2, .eliminarTransitoModificarNewDesign1, .agregarTransitoModificarNewDesign1, .linkMapaCentralesConsultar, .linkMapaCentralesModificar, .linkMapaCentralesModificar2, .linkParaModificarSalas, .linkParaModificarSalas2, .consultarMasDesign, .consultarMasDesign2
 {
 	font-family: 'icomoon';
 	font-size: 16px;
@@ -36,6 +36,18 @@
 	font-size: 37px;
 	font-weight: normal;
 	margin-top: 3px;
+}
+.consultarMasDesign:before,.consultarMasDesign2:before
+{
+	content: "\e63b";
+	cursor: pointer;	
+	font-size: 21px;
+}
+.modificarMasFallaDesign:before,.modificarMasFallaDesign2:before
+{
+	content: "\e643";
+	cursor: pointer;	
+	font-size: 21px;
 }
 .linkMapaCentralesModificar:before, .linkMapaCentralesModificar2:before
 {
@@ -232,9 +244,19 @@
 .spanGuardarEquipo:before
 {
 	content: "\f06a";
-	color: #7F120A;
+	color: #7F120A;	
 }
-#aceptarEquipo, #ingresarClientes
+.spanGuardarEquipoFallas:before
+{
+	content: "\e66b";
+	color: #7F120A;
+	font-size: 40px;
+}
+.spanGuardarEquipoFallas
+{
+	font-size: 40px;
+}
+#aceptarEquipo, #ingresarClientes,#guardarFalla1
 {
 	color: #7F120A;
 }
@@ -348,6 +370,14 @@
 {
 	content: "\f0ad";
 }
+.spanModificarEstatus:before 
+{
+	content: "\f035";
+}
+.spanNuevaObservacion:before
+{
+	content: "\e608";
+}
 .spanModificarCentral:before
 {
 	content: "\e623";
@@ -360,7 +390,7 @@
 {
 	content: "\f090";
 }
-.spanModificarEquipo, .spanModificarCentral
+.spanModificarEquipo, .spanModificarCentral, .spanModificarEstatus, .spanNuevaObservacion
 {
 	margin: 0 auto;
 	font-size: 40px;
@@ -395,21 +425,21 @@
 }
 
 /*ROJOOOOOOO*/
-#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar, .colConEnlace .equipoConsultarMasNewDesign2, #botonEliminarTransito,#botonEliminarPosicion,#ingresarCentralAceptar, #eliminaCentral1, #modificarCentralAceptar
+#ulMenuIconos #modificarCliente2, #ulMenuIconos #modificarEquipos2, #ulMenuIconos #linkNewSalaModificar, #ulMenuIconos #camEliCentral, #ulMenuIconos #linkTextoEnlacesModificar, #ulMenuIconos #textoFallasNewEliminar, .colConEnlace .equipoConsultarMasNewDesign2, #botonEliminarTransito,#botonEliminarPosicion,#ingresarCentralAceptar, #eliminaCentral1, #modificarCentralAceptar,#ingresarNuevoEnlace
 {
 	color: #7F120A;
 }
-#ingresarNuevoEnlace
+/*#ingresarNuevoEnlace
 {
 	color: #ab6800;
-}
+}*/
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1, #tablaModificaSalas .linkParaModificarSalas
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1, #tablaModificaSalas .linkParaModificarSalas, #consultaFallas1 .consultarMasDesign, #tablamodificar2 .modificarMasFallaDesign
 {
 	color: #18489A;
 }
 /*NARANJAAAAA*/
-#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2, #ulMenuIconos #linkNewSalaIngresar, #ulMenuIconos #ingCentralLinkAbajo, #ulMenuIconos #linkTextoEnlacesIngresar, #ulMenuIconos #textoFallasNewIngresar
+#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2, #ulMenuIconos #linkNewSalaIngresar, #ulMenuIconos #ingCentralLinkAbajo, #ulMenuIconos #linkTextoEnlacesIngresar, #ulMenuIconos #textoFallasNewIngresar,#nuevaObservacion
 {
 	color: #D1740D;
 }

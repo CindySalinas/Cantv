@@ -9,8 +9,8 @@
 		<link rel="stylesheet" href="../Css/clientes.css" />
 
 		<script src="../Js/jquery.js"></script>
-		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
-    	</script>
+		<script src="../Js/googleMaps.js"></script>
+		
     	<script src="../Js/gmaps.js"></script>
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
@@ -55,8 +55,8 @@
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
-				<li><a href="perfil.html"> Mi Perfil</a></li>
-				<li><a href="#"> Editar</a></li>
+				<li><a href="nuevoPerfil.html"> Mi Perfil</a></li>
+				<li><a href="perfilEditar.html"> Editar</a></li>
 				<li><a href="#"> Salir</a></li>
 			</ul>
 			<input type="hidden" id="oculto1">
@@ -103,10 +103,10 @@
 							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
-
-					<div class="contenidoExtraConsultarEnlace">
-						<table class="tablaEstilo" id="consultaFallas3">
-							<caption>Observaciones De La Falla En El Enlace: <span id="numEnla"></span></caption> 
+					<br>
+					<div class="contenidoObservacionesModificar">
+						<span id="spanObservaciones">Observaciones De La Falla En El Enlace: <span id="numEnla"></span></span>
+						<table class="tablaEstilo" id="consultaFallas3">		
 							<thead>
 								<th>Observación</th>
 								<th>Usuario</th>
@@ -114,44 +114,58 @@
 								<th>Hora</th>
 							</thead>
 							<tbody>
-								<!--Contenido Generado Dinamicamente -->
 							</tbody>
 						</table>
-						<br>
-						<div id="contenidoEquipos">
-							<div id="divConsultarEquipoIz">
-								<table id="tablaConsultarEquipos">
-									<!--Contenido Generado Dinamicamente -->
-								</table>
-							</div>
-							<div id="divConsultarEquipoDer">
-								<div id="map2"></div>
-							</div>
+					</div>
+					<br>
+					<div class="contenidoMapaCentralConsultar">
+						<div id="divConEquipoArriba" class="contact-form-widget">
+							<label>Nombre de la Central: </label>
+							<span id="spanConsultarCentralNombre"></span>
+							<hr>		
+							<label>Dirección: </label>
+							<span id="spanConsultarDirCentral"></span>
+							<hr>	
+							<label>Nombre de la Sala: </label>
+							<span id="spanConsultarSalaNombre"></span>
+							<hr>
+							<label>Descripción de la Sala: </label>
+							<span id="spanConsultarSalaDes"></span>
+							<hr>		
+							<label>Piso: </label>
+							<span id="spanConsultarPisoSala"></span>
+							<hr>		
+							<label>Equipo: </label>
+							<span id="spanConsultarEquipo"></span>
+							<hr>		
+							<label>Marca: </label>
+							<span id="spanConsultarMarcaEquipo"></span>
+							<hr>		
+							<label>Ubicación: </label>
+							<span id="spanConsultarUbiEquipo"></span>
+							<hr>		
+							<label>Función Principal: </label>
+							<span id="spanConsultarFunEquipo"></span>
 						</div>
-
-						<table class="tablaEstilo" id="tablaresuelta">
-							<tr>
-								<td class="left">Falla Resuelta Por: </td>
-								<td class="right">
-									<span>Manuel Abrante</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="left">Fecha: </td>
-								<td class="right">
-									<span>22/06/2014</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="left">Hora: </td>
-								<td class="right">
-									<span>4:00pm</span>
-								</td>
-							</tr>
-						</table>
+						<div id="mapaCentral2">
+							<div id="map2"></div>
+						</div>
+					</div>
+					<br>
+					<div class="contenidoFallaResueltaConsultar">
+						<div id="divConEquipoArriba" class="contact-form-widget">
+							<label>Falla Resuelta Por: </label>
+							<span id="spanConsultarFallaResueltaPor"></span>
+							<hr>		
+							<label>Fecha: </label>
+							<span id="spanConsultarFechaSolucion"></span>
+							<hr>	
+							<label>Hora: </label>
+							<span id="spanConsultarHoraSolucion"></span>
+						</div>
 					</div>
 					
-					<div id="tamaClien" class="atras" class="atras">
+					<div id="tamaClien" class="atras">
 						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
 				</div>				
@@ -161,11 +175,10 @@
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Cambiar o Eliminar Falla</h2>
 					<hr>
-					<form id="formConsultarClientes">
-						<label id="labelBuscarClientes">Buscar</label>
-						<input type="text" id="textoBusqueda1" class="textoBusqueda1" placeholder="Buscar por Numeor de Enlace">
-						<span id="dibujoConsultar"></span>
-					</form>
+					<div id="searchform">
+				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar2">Buscar</button>
+				    </div>	
 					<table class="tablaEstilo" id="tablamodificar2">
 						<thead>
 							<th>Número De Enlace</th>
@@ -181,9 +194,44 @@
 							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
-					<div class="contenidoExtraEliminarFalla">
-						<table class="tablaEstilo" id="consultarEliminar">
-							<caption>Observaciones De La Falla En El Enlace: <span class="numEnla"></span></caption> 
+					<br>
+					<div class="divFallaResueltaModificar">
+						<div id="divConEquipoArriba5" class="contact-form-widget">
+							<label>Falla Resuelta Por: </label>
+							<span id="spanModificarFallaResueltaPor"></span>
+							<hr>		
+							<label>Fecha: </label>
+							<span id="spanModificarFechaSolucion"></span>
+							<hr>	
+							<label>Hora: </label>
+							<span id="spanModificarHoraSolucion"></span>
+						</div>
+					</div>
+					<div class="divBotonesModificar">
+						<div class="centrar aGuardarCliente displayInline3 divEspRig">
+							<a id="nuevaObservacion"><span class="paraIconos spanNuevaObservacion"></span>Observación</a>
+						</div>
+						<div class="centrar aGuardarCliente displayInline3 divEspRig">
+							<a id="modificarEquipo2"><span class="paraIconos spanModificarEstatus"></span>Cambiar Estatus</a>
+						</div>
+						<div class="centrar aGuardarCliente displayInline3">
+							<a id="eliminarEquipo1" class="linkAtrasClientes"><span class="paraIconos spanEliminarEquipo"></span>Eliminar</a>
+						</div>	
+					</div>
+					
+					<div id="tamaClien" class="atras" class="atras">
+						<a class="linkAtrasClientes linkAtrasEliminar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
+					</div>
+				</div>				
+			</div>
+
+			<div class="displayNone contenedorAfuera menuIngresarObservaciones">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Ingresar Observación</h2>
+					<hr>
+					<div class="contenidoObservacionesAgregar">
+						
+						<table class="tablaEstilo" id="consultaFallas4">		
 							<thead>
 								<th>Observación</th>
 								<th>Usuario</th>
@@ -191,81 +239,38 @@
 								<th>Hora</th>
 							</thead>
 							<tbody>
-								<!--Contenido Generado Dinamicamente -->
 							</tbody>
 						</table>
-
-						<div id="contenidoEquipos">
-							<div id="divConsultarEquipoIz">
-								<table id="tablaConsultarEquipos" class="tablaConsultarEquipos">
-									<!--Contenido Generado Dinamicamente -->
-								</table>
-							</div>
-							<div id="divConsultarEquipoDer">
-								<div id="map3"></div>
-							</div>
-						</div>
-
-						<table class="tablaEstilo" id="tablaresuelta">
-							<tr>
-								<td class="left">Falla Resuelta Por: </td>
-								<td class="right">
-									<span>Manuel Abrante</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="left">Fecha: </td>
-								<td class="right">
-									<span>22/06/2014</span>
-								</td>
-							</tr>
-							<tr>
-								<td class="left">Hora: </td>
-								<td class="right">
-									<span>4:00pm</span>
-								</td>
-							</tr>
-						</table>
-						<div class="displayInline2">
-							<input type="button" value="Cambiar Estatus" id="btnCambiar">
-
-							<!--button class="botonEnlace">Cambiar Estatus</button-->
-						</div>
-						<div class="displayInline2 espacioLeft">
-							<input type="button" value="Eliminar" id="btnEliminar">
-							<!--button class="botonEnlace">Eliminar</button-->
+						<br>
+						<div id="divConEquipoArriba2" class="contact-form-widget">
+							<label>Agregar Nueva Observación: </label>
+							<textarea id="textareaObservacion" class="contact-form-name"></textarea>
+							<hr>		
+							<div class="centrar">
+								<a id="agregarTransitoModificar"><span class="agregarTransitoModificarNewDesign1 displayInline5"><span class="fontSize16 displayInline5">&nbspAgregar</span></span></a>
+							</div>							
 						</div>
 					</div>
-					<div id="tamaClien" class="atras" class="atras">
-						<a class="linkAtrasClientes linkAtrasEliminar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
+					<div id="tamaClien">
+						<a class="linkAtrasClientes linkAtrasObservacion"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>
-				</div>				
+				</div>
 			</div>
 
 			<div class="contenedorAfuera menuIngresarFallas">
 				<div class="contenedorAdentro">
 					<h2 class="h2Clientes">Ingresar Falla</h2>
 					<hr>
-					<form>
-						<table id="tablaModificarEquipo">
-							<tr>
-								<td class="leftModificarEnlace">Numero De Enlace: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="idEn">
-									<input type="hidden" id="enIsz">
-								</td>
-							</tr>
-							<tr>
-								<td class="leftModificarEnlace">Descripción: </td>
-								<td id="rightModifiarEquipo">
-									<input type="text" id="descFalla">
-								</td>
-							</tr>
-							
-						</table>		
-						<input type="button" class="botonEnlace" id="guardarFalla1" value="Ingresar"> 
-						<!--button class="botonEnlace">Ingresar</button-->
-					</form>
+					<div id="divConEquipoArriba" class="contact-form-widget">
+						<label>Número De Enlace: </label>
+						<input type="text" class="contact-form-name" id="idEn">
+						<hr>		
+						<label>Descripción: </label>
+						<input type="text" class="contact-form-name" id="descFalla">
+						<div id="divColEqui" class="centrar aGuardarCliente">
+							<a id="guardarFalla1" class="linkAtrasClientes"><span class="paraIconos spanGuardarEquipoFallas"></span>Guardar</a>
+						</div>
+					</div>
 					<div id="tamaClien">
 						<a class="linkAtrasClientes linkAtrasIngresar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
 					</div>

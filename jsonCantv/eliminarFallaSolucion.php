@@ -4,18 +4,14 @@ include("conex.php");
 //formato JSON
 //header('Content-type: application/json');
 
-$id = $_GET["idFalla"];
-$estatus =  $_GET["estatus"];
+$ids= $_GET["id"];
+
+$sql = "DELETE FROM fallas_solucion WHERE Id_falla='$ids'";
+
+$result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 
 
-$sql2 = "UPDATE fallas SET Id_Estatus='$estatus' WHERE Id_Falla='$id'";
-
-
-$result2 = mysql_query($sql2) or die("Error de Consulta". mysql_error());
-
-
-
-$estado["mensaje"]= "Estatus Cambiado";
+$estado["mensaje"]= "Falla Eliminada";
 //Convertir los resultados a formato json
 $estadoJson = json_encode($estado);
 

@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Crear Central</title>
 		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../css/clndr.css">
 		<link rel="stylesheet" href="../Css/style2.css" />
 
 		<script src="../Js/jquery.js"></script>
@@ -13,6 +14,7 @@
     	<script src="../Js/gmaps.js"></script>*/ -->
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/mensajes.js"></script>
 
 	</head>
 	<body>
@@ -61,10 +63,44 @@
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
-			<div class="titulo">
-				<h1>Titulo</h1>
-			</div>
-			
+			<div class="contenedorAfuera">
+				<div <div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Mensajes</h1>
+					</div>
+					<hr>
+					<ul id="ulMensajes">
+						<li class="misMensajes" title="tab1">Mis Mensajes</li>
+						<li class="nuevoMensaje" title="tab2">Nuevo Mensaje</li>
+						<li class="mensajesEnviados" title="tab4">Mensajes Enviados</li>
+					</ul>
+					<div id="content3">
+						<div id="tab1">
+							<div id="noTieneMesajes">
+								<h3 id="noTiene">No Tiene Ningún Mensaje</h3>
+							</div>
+							<table id="tablaMisMensajes">	
+							</table>
+						</div>
+						<div id="tab2">
+							<input type="text" class="contact-form-name" placeholder="Ingrese Correo" id="correo1">
+							<hr>
+							<input type="text" class="contact-form-name" placeholder="Ingrese Asunto" id="asunto1">
+							<hr>
+							<textarea type="text" class="contact-form-name" placeholder="Ingrese el Mensaje" id="mensaje1"></textarea>
+							<a id="linkEnviarMensaje">Enviar Mensaje</a>
+						</div>
+						<div id="tab4">
+							<div id="noTieneMesajesEnviado">
+								<h3 id="noTiene">No Ha Enviado Ningún Mensaje</h3>
+							</div>
+							<table id="tablaMisMensajesEnviados">	
+							</table>
+						</div>
+						<div id="tab5">d</div>
+					</div>
+				</div>
+			</div>			
 		</section>	
 
 		<!-- Footer -->

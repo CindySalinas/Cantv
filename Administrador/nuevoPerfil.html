@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Crear Central</title>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../css/clndr.css">
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<!-- /*<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>*/ -->
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/nuevoPerfil.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasNuevo.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="#">Fallas Sin Resolver</a></li>
+				<li><a href="#">Estadisticas</a></li>
+				<li><a href="#">Control De Usuarios</a></li>
+				<li><a href="#">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil.html"> Mi Perfil</a></li>
+				<li><a href="perfilEditar.html"> Editar</a></li>
+				<li><a href="#"> Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div class="contenedorAfuera">
+				<div <div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Perfil</h1>
+					</div>
+					<hr>
+					<ul id="pestaTab">
+					    <li><a href="#" title="tab1">Información Personal</a></li>
+					    <li><a href="#" title="tab2">Actividad</a></li>
+					</ul>
+					<div id="calendarioPerfil" class="floatRight cal1">			
+					</div>	
+					<div id="content"> 
+					    <div id="tab1">
+					    	<section class="aLaIzquierda">
+					    		<section id="widDiv30otro" class="displayInline6">
+					    			<figure id="fotoPerfil2">
+					    				<section class="captionFigurePerfil">Foto De Perfil</section>
+									</figure>
+					    		</section>
+								<section id="widDiv70otro" class="displayInline6">
+									<label>Nombre: </label>
+									<span id="nombreConsultaPerfil"></span>
+									<hr>
+									<label>Apellido: </label>
+									<span id="apellodpConsultaPerfil"></span>
+									<hr>
+									<label>Email: </label>
+									<span id="emailConsultaPerfil"></span>
+									<hr>
+									<label>Fecha Nacimiento: </label>
+									<span id="fechaConsultaPerfil"></span>
+									<hr>
+									<label>Edad: </label>
+									<span id="edadConsultaPerfil"></span>
+									<hr>
+									<label>Telefono: </label>
+									<span id="telConsultaPerfil"></span>
+									<hr>
+									<label>Cargo: </label>
+									<span id="cargoConsultaPerfil"></span>
+									<hr>
+									<label>Central: </label>
+									<span id="centralConsultaPerfil"></span>
+									<hr>
+								</section>  
+					    	</section>					        
+					    </div>
+					    <div id="tab2">
+					        <section id="searchform2">
+						        <input MAXLENGTH="150" id="textoBusqueda1" type="text" placeholder="¿En que estas trabajando?" required>
+						        <button id="dibujoConsultar">Enviar</button>
+						    </section>	
+						    <section id="trabajando" class="right">		
+							    
+						    </section>	
+					    </div>					    
+					</div>									
+				</div>
+			</div>			
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+  <script src= "../js/moment-2.5.1.js"></script>
+  <script src="../js/clndr.js"></script>
+  <script src="../js/site.js"></script>
+	</body>
+</html>
+

@@ -4,7 +4,7 @@ include("conex.php");
 //formato JSON
 //header('Content-type: application/json');
 $busc = $_GET['buscar'];
-$sql = "SELECT F.Id_Enlace,E.Numero_Enlace,U.nombre_usuario,F.Id_Estatus,S.Estatus,F.Descripcion,F.Fecha,F.Hora,F.Id_Falla, U.Nombre, U.Apellido FROM fallas F INNER JOIN enlaces E ON F.Id_Enlace = E.Id_Enlace INNER JOIN estatus S ON F.Id_Estatus = S.Id_Estatus INNER JOIN usuarios U ON F.Id_Usuario_Falla = U.Id_Usuario WHERE E.Numero_Enlace LIKE '%$busc%'";
+$sql = "SELECT F.Id_Enlace,E.Numero_Enlace,U.nombre_usuario,F.Id_Estatus,S.Estatus,F.Descripcion,F.Fecha,F.Hora,F.Id_Falla, U.Nombre, U.Apellido FROM fallas F INNER JOIN enlaces E ON F.Id_Enlace = E.Id_Enlace INNER JOIN estatus S ON F.Id_Estatus = S.Id_Estatus INNER JOIN usuarios U ON F.Id_Usuario_Falla = U.Id_Usuario WHERE E.Numero_Enlace LIKE '%$busc%' ORDER BY F.Id_Falla DESC";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;

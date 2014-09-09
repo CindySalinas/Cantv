@@ -5,7 +5,7 @@ include("conex.php");
 header('Content-type: application/json');
 
 $usr = $_GET["namePerf"];
-$sql = "SELECT u.Nombre, u.Apellido,u.Fecha_Nacimiento,u.Telefono,u.Email,u.Foto_Perfil, t.Rol,u.Id_Usuario FROM usuarios u INNER JOIN tipo_usuario t ON u.Id_Tipo_Usuario = t.Id_Tipo_Usuario WHERE u.nombre_usuario ='$usr'";
+$sql = "SELECT u.Nombre, u.Apellido,u.Fecha_Nacimiento,u.Telefono,u.Email,u.Foto_Perfil, t.Rol,u.Id_Usuario, C.Nombre, A.Cargo,C.Id_Central,u.nombre_usuario FROM usuarios u INNER JOIN tipo_usuario t ON u.Id_Tipo_Usuario = t.Id_Tipo_Usuario INNER JOIN centrales C ON C.Id_Central=u.Id_Central INNER JOIN cargos A ON u.Id_Cargo=A.Id_Cargo WHERE u.id_usuario ='$usr'";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;
@@ -21,6 +21,10 @@ while($row = mysql_fetch_row($result)){
 	$dat[$i]["ftPerfil"]= $row[5];
 	$dat[$i]["rol"]= $row[6];
 	$dat[$i]["idPer"]= $row[7];
+	$dat[$i]["central"]= $row[8];
+	$dat[$i]["cargo"]= $row[9];
+	$dat[$i]["idCentral"]= $row[10];
+	$dat[$i]["nomUser"]= $row[11];
 	$i++;	
 }
 if($cantidad == 0){

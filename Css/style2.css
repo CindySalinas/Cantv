@@ -108,6 +108,12 @@ nav ul li:hover
 	vertical-align: top;
 	color: white;
 }
+/* Contenedor Derecho*/ 
+#derechoContenedor{
+	display: inline-block;
+	width:79.3%;
+	height: 500px;
+}
 #izquierdoPerfil
 {
 	border-bottom: 2px solid #797b76;
@@ -115,9 +121,8 @@ nav ul li:hover
 	display: inline-block;
 	vertical-align: top;
 	background-color: #e5e5e5;
-	bottom: 0;
 	width: 20%;
-	margin-bottom: 25px
+	margin-bottom: 25px;
 }
 
 /* Foto de Perfil*/
@@ -159,15 +164,6 @@ nav ul li:hover
 
 #lista3 li:hover{
 	background-color: #6b6b6b;
-}
-/* Contenedor Derecho*/ 
-#derechoContenedor{
-	display: inline-block;
-	position: relative;
-	width:79.3%;
-	height: 500px;
-	bottom: 0;
-	left: 0;
 }
 .titulo, .titulo2{
 	margin-top: 10px;
@@ -2240,4 +2236,20 @@ label{
 #linkImprimirInforme,.fallasConsultarMas
 {
 	cursor: pointer;
+}
+
+/*RESPONSIVEEE*/
+@media (max-width: 908px){
+
+	#derechoContenedor
+	{
+		width: 79%;
+	}
+}
+@media (max-width: 839){
+
+	#derechoContenedor
+	{
+		width: 79%;
+	}
 }

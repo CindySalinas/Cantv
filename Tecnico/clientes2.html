@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Clientes</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/clientes.css" />
+
+		<script src="../Js/jquery.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfilTecnico.js"></script>
+		<script src="../Js/clientesTecnico.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="tecnico.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas2.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces2.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo2.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasss.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos2.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes2.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="misFallas.html">Mis Fallas</a></li>
+				<li><a href="informe.html">Informe</a></li>
+				<li><a href="estadisticas2.html">Estadisticas</a></li>
+				<li><a href="mensajes2.html">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil2.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar2.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor" class="derechoContCliente">
+			
+
+			<div class="contenedorAfuera" id="consClientes">
+				<div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Clientes</h1>
+					</div>
+					<hr>
+
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
+
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nombre Del Cliente</th>
+							<th>Descripción</th>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+
+			</div>
+
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>

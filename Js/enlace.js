@@ -226,7 +226,9 @@ function agregarEnlace()
 					$('.nuevosEquipos').remove();
 					$('.nuevosTransitos').remove();
 					$('.nuevasPosiciones').remove();
+					$('#ubicacionEnlaceIngresar').text("");
 					$("#centralEnlaceIngresar option[value='sinSelCentral']").attr("selected", "selected");	
+					$("#clienteEnlaceIngresar option[value='sinSelCliente']").attr("selected", "selected");	
 				});						
 			});
 	}
@@ -266,17 +268,21 @@ function llenarDatosModificar()
 	var contar=0;
 	$.getJSON(url).done(function(data){
 		$.each(data,function(i,item){
-			contar++;
-			if(contar%2==0)
+			if(data.num!=0)
 			{
-				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign3"></a></td></tr>');
-				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+				contar++;
+				if(contar%2==0)
+				{
+					tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign3"></a></td></tr>');
+					$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+				}
+				else
+				{
+					tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign4"></a></td></tr>');
+					$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
+				}
 			}
-			else
-			{
-				tabla.append('<tr class="colConEnlace2"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="m'+item.numeroEnlace+'" class="equipoConsultarMasNewDesign4"></a></td></tr>');
-				$('#m'+item.numeroEnlace).on("click",function(){marcaConsultarMapa2(item.numeroEnlace,item.idEquipo,item.idEnlace);}); 
-			}
+			
 		});
 	});
 }
@@ -602,7 +608,7 @@ function modificarEnlaceFinal()
 		var url = "http://127.0.0.1/Cantv/jsonCantv/modificarEnlace.php?jsoncallback=?";
 		$.getJSON(url,{idEnlace: idEnlaceSel, IdEquipo: equipo, idCliente: cliente,numero: numeroEnla, ruta: rut}
 			).done(function(data){
-				alert(data.mensaje);
+				alert("Enlace Actualizado");
 				llenarDatosModificar();
 				$('.contenidoExtraModificar1').hide();	
 			});
@@ -692,18 +698,20 @@ function llenarDatosConsultar()
 	var contar=0;
 	$.getJSON(url).done(function(data){
 		$.each(data,function(i,item){
-			contar++;
-			if(contar%2==0)
+			if (data.num!=0)
 			{
-				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign1"></a></td></tr>');
-				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
-			}
-			else
-			{
-				tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign2"></a></td></tr>');
-				$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
-			}
-			
+				contar++;
+				if(contar%2==0)
+				{
+					tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign1"></a></td></tr>');
+					$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+				}
+				else
+				{
+					tabla.append('<tr class="colConEnlace"><td>'+item.numeroEnlace+'</td><td>'+item.ruta+'</td><td>'+item.cliente+'</td><td>'+item.equipo+'</td><td><a id="c'+item.numeroEnlace+'" class="paraIconos equipoConsultarMasNewDesign2"></a></td></tr>');
+					$('#c'+item.numeroEnlace).on("click",function(){marcaConsultarMapa(item.numeroEnlace,item.idEquipo);}); 
+				}
+			}					
 		});
 	});
 }

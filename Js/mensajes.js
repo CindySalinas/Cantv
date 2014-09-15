@@ -128,6 +128,7 @@ function verMisMensajes()
 			if(data.num != 0){
 				$.each(data,function(i,item){
 					var email=item.mails;
+					emailUsuario=email;
 					var url = "http://127.0.0.1/Cantv/jsonCantv/consultarMisMensajes.php?jsoncallback=?";
 					$.getJSON(url,{mail:email
 					}).done(function(data)
@@ -247,8 +248,8 @@ function fecha()
 
   var f=new Date();
   var fecha;
-
+  var mes=f.getMonth()+1;
  // fecha = (diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
- 	fecha = (f.getDate()+ "/"+ f.getMonth()+ "/" + f.getFullYear());
+ 	fecha = (f.getDate()+ "/"+ mes+ "/" + f.getFullYear());
   return fecha;
 }

@@ -29,16 +29,17 @@ function verify(){
 					$('#apellodpConsultaPerfil').text(item.apll);
 					$('#emailConsultaPerfil').text(item.mails);
 					$('#fechaConsultaPerfil').text(item.fechaNac);
+					$('#cedulaConsultaPerfil').text(item.cedula);
 					
 					var numeroLetras = item.fechaNac.length;
 					var porcion;
 					if(numeroLetras==8)
 					{
-						porcion = ho.substring(4);
+						porcion = item.fechaNac.substring(4);
 					}
 					else if(numeroLetras==9)
 					{
-						porcion = ho.substring(5);
+						porcion = item.fechaNac.substring(5);
 					}
 					else if(numeroLetras==10)
 					{	
@@ -55,7 +56,7 @@ function verify(){
 			}
 			else{
 				alert(data.mensaje);
-				location.href = "index.html";
+				location.href = "../index.html";
 			}
 		});
 	}

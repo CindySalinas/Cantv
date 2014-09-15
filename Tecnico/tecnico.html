@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>Fallas Actuales</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
 		<script src="../Js/jquery.js"></script>
@@ -25,13 +26,15 @@
 				Perfil
 			</div>
 			<!-- sub-menu -->
-			<nav>
+			<nav id="submenu">
 				<ul>
-					<li><a href="#" id="navClientes">Clientes</a></li>
-					<li><a href="#" id="navUsuarios">Control De Usuarios</a></li>
-					<li><a href="#" id="navEstadisticas">Estadisticas</a></li>
-					<li><a href="#" id="navFallas">Seguimiento De Fallas</a></li>
-					<li><a href="#" id="navReportes">Reportes</a></li>
+					<li><a href="tecnico.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas2.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces2.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo2.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasss.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos2.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes2.html" id="navClientesAdmin">Clientes</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -43,31 +46,41 @@
 			</figure>
 			<!-- Segunda lista - Menu de Fallas -->
 			<ul id="lista2">
-				<li><a href="#"> Mis Fallas</a></li>
-				<li><a href="#"> Fallas Resueltas</a></li>
-				<li><a href="#"> Fallas Sin Corregir</a></li>
+				<li><a href="misFallas.html">Mis Fallas</a></li>
+				<li><a href="informe.html">Informe</a></li>
+				<li><a href="estadisticas2.html">Estadisticas</a></li>
+				<li><a href="mensajes2.html">Mensajes</a></li>
 			</ul>
 			<!-- Tercera Lista - Perfil -->
 			<ul id="lista3">
-				<li><a href="#"> Mi Perfil</a></li>
-				<li><a href="#"> Editar</a></li>
-				<li><a href="#"> Salir</a></li>
+				<li><a href="nuevoPerfil2.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar2.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
 			</ul>
-			
 		</section>
 
 		<!--Contenedor Derecho -->
 		<section id="derechoContenedor">
-			<div class="titulo">
-				<h1 >Centrales CANTV</h1>
+			<div id="contenedorMenuClientes">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Fallas Recientes</h1>
+					</div>
+					<hr>
+					<div class="centrar">
+						<div id="mapaCentral33">
+						<div id="map"></div>
+					</div>
+					<div id="vvvvvv" class="displayInline6">
+						<div id="arribaFallas">Fallas</div>
+						<div id="mamamama">
+							
+						</div>
+					</div>
+					</div>					
+				</div>				
 			</div>
-			<div id="contenedorFallas">
-				&nbsp;
-				<!--div id="graficaFallas">
-					&nbsp;
-				</div-->
-				<div id="map"></div>
-			</div>
+
 		</section>	
 
 		<!-- Footer -->

@@ -9,7 +9,7 @@
 	font-style: normal;
 }
 
-#consultarClienteNewDesign, #ingresarClienteNewDesign, #modificarClienteNewDesign, .spanAtrasClientesNewDesign, .spanGuardarCliente, .spanModificarCliente, .spanEliminarCliente, .spanEditarCliente, .spanEditarCliente2, .paraIconos
+#consultarClienteNewDesign, #ingresarClienteNewDesign, #modificarClienteNewDesign, .spanAtrasClientesNewDesign, .spanGuardarCliente, .spanModificarCliente, .spanEliminarCliente, .spanEditarCliente, .spanEditarCliente2, .paraIconos,#ingresarUsuario,#consultarUsuario,#modificarUsuario
 {
 	display: block;
 	margin-bottom: 8px;
@@ -17,7 +17,7 @@
 	font-size: 60px;
 	font-weight: normal;
 }
-.equipoConsultarMasNewDesign1,.equipoConsultarMasNewDesign2,.agregaPosicionIngresarNewDesign,.agregaTransitoIngresarNewDesign,.equipoConsultarMasNewDesign3,.equipoConsultarMasNewDesign4,.modificaEnlaceNewDesign1, .modificarMasFallaDesign,.modificarMasFallaDesign2
+.equipoConsultarMasNewDesign1,.equipoConsultarMasNewDesign2,.agregaPosicionIngresarNewDesign,.agregaTransitoIngresarNewDesign,.equipoConsultarMasNewDesign3,.equipoConsultarMasNewDesign4,.modificaEnlaceNewDesign1, .modificarMasFallaDesign,.modificarMasFallaDesign2,.fallasConsultarMas
 {
 	font-family: 'icomoon';
 	font-size: 16px;
@@ -49,6 +49,10 @@
 	cursor: pointer;	
 	font-size: 21px;
 }
+.fallasConsultarMas:before
+{
+	content: "\e64a";
+}
 .linkMapaCentralesModificar:before, .linkMapaCentralesModificar2:before
 {
 	content: "\f00b";
@@ -71,6 +75,21 @@
 {
 	content: "\f085";
 	font-size: 30px;
+}
+#ingresarUsuario:before
+{
+	content: "\f0c0";
+	color: #18489A;
+}
+#consultarUsuario:before
+{
+	content: "\e60c";
+	color: #D1740D;
+}
+#modificarUsuario:before
+{
+	content: "\e61c";
+	color: #7F120A;
 }
 .eliminandoEnlaceNewDesign1:before
 {
@@ -282,7 +301,7 @@
 }
 #linkEquiposNewDesignId2
 {
-	color: #531031;
+	color: #356710;
 }
 #linkEquiposNewDesignId3
 {
@@ -290,7 +309,7 @@
 }
 #linkEquiposNewDesignId4
 {
-	color: #444;
+	color: #356710;
 }
 #linkEquiposNewDesignId1:hover, #linkEquiposNewDesignId2:hover, #linkEquiposNewDesignId3, #linkEquiposNewDesignId4
 {
@@ -305,7 +324,7 @@
 .spanEditarCliente2
 {
 	font-size: 16px;
-	color: #4b4b4b;
+	color: #18489A;
 }
 .spanEliminarCliente:before
 {
@@ -434,12 +453,12 @@
 	color: #ab6800;
 }*/
 /*AZULLLLL*/
-#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1, #tablaModificaSalas .linkParaModificarSalas, #consultaFallas1 .consultarMasDesign, #tablamodificar2 .modificarMasFallaDesign
+#ulMenuIconos #ingresarCliente2, #ulMenuIconos #consultarEquipos2, #ulMenuIconos #linkNewSalaConsultar, #ulMenuIconos #conCentralLink, #ulMenuIconos #linkTextoEnlacesConsultar, #ulMenuIconos #textoFallasNewConsultar, .colConEnlace .equipoConsultarMasNewDesign1,#agregarPosicionIngresarEnlace,#modificaEnlace, #tablaModificarCentrales .linkMapaCentralesModificar,#modificaCentral1, #tablaModificaSalas .linkParaModificarSalas, #consultaFallas1 .consultarMasDesign, #tablamodificar2 .modificarMasFallaDesign,#nuevaObservacion
 {
 	color: #18489A;
 }
 /*NARANJAAAAA*/
-#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2, #ulMenuIconos #linkNewSalaIngresar, #ulMenuIconos #ingCentralLinkAbajo, #ulMenuIconos #linkTextoEnlacesIngresar, #ulMenuIconos #textoFallasNewIngresar,#nuevaObservacion
+#ulMenuIconos #consultarCliente2, #ulMenuIconos #ingresarEquipos2, #ulMenuIconos #linkNewSalaIngresar, #ulMenuIconos #ingCentralLinkAbajo, #ulMenuIconos #linkTextoEnlacesIngresar, #ulMenuIconos #textoFallasNewIngresar
 {
 	color: #D1740D;
 }

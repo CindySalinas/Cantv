@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Control De Usuarios</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/clientes.css" />
+
+		<script src="../Js/jquery.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/controlUsuarios.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasNuevo.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="fallasSinResolver.html">Fallas Sin Resolver</a></li>
+				<li><a href="estadisticas.html">Estadisticas</a></li>
+				<li><a href="controlDeUsuarios.html">Control De Usuarios</a></li>
+				<li><a href="mensajes.html">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor" class="derechoContCliente">
+			
+			<div id="contenedorMenuClientes">
+				<div id="divMenuIconos">
+					<div class="titulo" id="tituloCliente">
+						<h1>Control De Usuarios</h1>
+					</div>
+					<hr>
+					<ul id="ulMenuIconos">
+						<li><a  id="ingresarUsuario" ></a><a  id="ingresarCliente2"class="textoAbajo">Nuevo Usuario</a></li>
+						<li><a  id="consultarUsuario" ></a><a id="consultarCliente2" class="textoAbajo">Consultar Usuario</a></li>
+						<li><a  id="modificarUsuario" ></a><a id="modificarCliente2" class="textoAbajo">Modificar / Eliminar</a>
+						</li>
+					</ul>		
+				</div>
+			</div>
+
+			<div class="contenedorAfuera" id="consClientes">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Consultar Usuarios</h2>
+					<hr>
+					<div id="searchform">
+				        <input id="consultaInputUsuario" type="text" placeholder="Cedula Del Usuario" required>
+				        <button id="botonConsultaUsuario">Buscar</button>
+				    </div>	<br>
+				    <span class="noSeUsuario">No se encontró ningun usuario</span>
+					<div id="divConEquipoArriba" class="contact-form-widget datosConsultarUsuario">
+						<img class="fotoUsuarioConsultar displayInline6" src="">
+						<div class="displayInline6 dididi">
+							<label>Nombre: </label>
+							<span class="separarTexto" id="spanConsultarNombreUsuario"></span>
+							<hr>		
+							<label>Apellido: </label>
+							<span class="separarTexto" id="spanConsultarApellidoUsuario"></span>
+							<hr>
+						</div>
+						<label>Cedula: </label>
+						<span class="separarTexto" id="spanConsultarCedulaUsuario"></span>
+						<hr>
+						<label>Email: </label>
+						<span class="separarTexto" id="spanConsultarEmailUsuario"></span>
+						<hr>	
+						<label>Nombre De Usuario: </label>
+						<span class="separarTexto" id="spanConsultarUserUsuario"></span>
+						<hr>		
+						<label>Fecha De Nacimiento: </label>
+						<span class="separarTexto" id="spanConsultarFechaNacUsuario"></span>
+						<hr>
+						<label>Genero: </label>
+						<span class="separarTexto" id="spanConsultarGeneroUsuario"></span>
+						<hr>		
+						<label>Telefono: </label>
+						<span class="separarTexto" id="spanConsultarTelefonoUsuario"></span>
+						<hr>		
+						<label>Cargo: </label>
+						<span class="separarTexto" id="spanConsultarCargoUsuario"></span>
+						<hr>		
+						<label>Central: </label>
+						<span class="separarTexto" id="spanConsultarCentralUsuario"></span>
+						<hr>		
+						<label>Fallas Resueltas: </label>
+						<span class="separarTexto" id="spanConsultarFallasUsuario"></span>
+						<hr>
+						<label>Rol: </label>
+						<span class="separarTexto" id="spanConsultarRolUsuario"></span>					
+					</div>
+					
+					<div id="tamaClien" class="atras" >
+						<a id="atras1" class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="contenedorAfuera" id="ingClientes">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Nuevo Usuario</h2>
+					<hr>
+					<div id="divConEquipoArriba" class="contact-form-widget datosIngresarUsuario">
+						<label>Nombre: </label>
+						<input placeholder="Ingrese Nombre Del Usuario" type="text" class="contact-form-name" id="nombreIngresarUsuario">
+						<hr>		
+						<label>Apellido: </label>
+						<input placeholder="Ingrese Apellido Del Usuario" type="text" class="contact-form-name" id="apellidoIngresarUsuario">
+						<hr>
+						<label>Cedula: </label>
+						<input placeholder="Ingrese Cedula Del Usuario"  type="text" class="contact-form-name" id="cedulaIngresarUsuario">
+						<hr>
+						<label>Email: </label>
+						<input placeholder="Ingrese Correo Del Usuario" type="text" class="contact-form-name" id="emailIngresarUsuario">
+						<hr>		
+						<label>Fecha De Nacimiento: </label>
+						<input placeholder="DD/MM/YYYY" type="text" class="contact-form-name" id="fechaIngresarUsuario">
+						<hr>		
+						<label>Telefono: </label>
+						<input maxlength="12" placeholder="Ingrese Telefono Del Usuario" type="text" class="contact-form-name" id="telefonoIngresarUsuario">
+						<hr>		
+						<label>Genero: </label>
+						<select class="contact-form-name" id="generoUsuarioSelect">
+						</select>
+						<hr>		
+						<label>Cargo: </label>
+						<input placeholder="Ingrese Cargo Del Usuario" type="text" class="contact-form-name" id="cargoIngresarUsuario">
+						<hr>		
+						<label>Central: </label>
+						<select class="contact-form-name" id="ingresarUsuarioSelect">
+						</select>
+						<hr>		
+						<label>Rol: </label>
+						<select class="contact-form-name" id="rolUsuarioSelect">
+						</select>	
+							
+						<div class="centrar marginTop">
+							<a id="linkAceptarUsuario">Aceptar Usuario</a>
+						</div>
+					</div>
+					<div id="tamaClien" class="atras">
+						<a id="atras2" class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
+					</div>					
+				</div>
+			</div>
+
+			<div class="contenedorAfuera" id="mdClientes">
+				<div class="contenedorAdentro">
+					<h2 class="h2Clientes">Modificar Usuarios</h2>
+					<hr>
+					
+					<div id="searchform">
+				        <input id="consultaInputUsuarioModifica" type="text" placeholder="Cedula Del Usuario" required>
+				        <button id="botonModificaUsuario">Buscar</button>
+				    </div>	<br>
+				    <span class="noSeUsuario2">No se encontró ningun usuario</span>
+					<div id="divConEquipoArriba" class="contact-form-widget datosModificarUsuario">
+						<label>Nombre: </label>
+						<input type="text" class="contact-form-name" id="nombreModificarUsuario">
+						<hr>		
+						<label>Apellido: </label>
+						<input type="text" class="contact-form-name" id="apellidoModificarUsuario">
+						<hr>
+						<label>Cedula: </label>
+						<input type="text" class="contact-form-name" id="cedulaModificarUsuario">
+						<hr>
+						<label>Email: </label>
+						<input type="text" class="contact-form-name" id="emailModificarUsuario">
+						<hr>	
+						<label>Nombre De Usuario: </label>
+						<input type="text" class="contact-form-name" id="userModificarUsuario">
+						<hr>		
+						<label>Fecha De Nacimiento: </label>
+						<input type="text" class="contact-form-name" id="fechaNacModificarUsuario">
+						<hr>		
+						<label>Telefono: </label>
+						<input maxlength="12" type="text" class="contact-form-name" id="telefonoModificarUsuario">
+						<hr>		
+						<label>Genero: </label>
+						<select class="contact-form-name" id="generoUsuarioSelectModificar">
+						</select>
+						<hr>
+						<label>Cargo: </label>
+						<input type="text" class="contact-form-name" id="cargoModificarUsuario">
+						<hr>		
+						<label>Central: </label>
+						<select class="contact-form-name" id="centralModificarUsuario">
+						</select>
+						<hr>		
+						<label>Rol Del Usuario: </label>
+						<select class="contact-form-name" id="rolModificarUsuario">
+						</select>
+						<div class="centrar marginTop">
+							<a id="linkGuardarCambios">Modificar</a>
+							<a id="linkEliminar">Eliminar</a>
+						</div>
+						<div class="centrar marginOtroTop">
+							<a id="linkEstablecer">Restablecer Contraseña</a>
+						</div>
+					</div>
+					<div id="tamaClien" class="atras otroAtrasModificarCliente">
+						<a id="atras3" class="linkAtrasClientes"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
+					</div>
+				</div>
+
+			</div>
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

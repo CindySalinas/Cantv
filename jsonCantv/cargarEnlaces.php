@@ -5,7 +5,7 @@ include("conex.php");
 //header('Content-type: application/json');
 
 
-$sql = "SELECT E.Id_Enlace, E.Numero_Enlace, E.Ruta, C.Cliente, T.Tipo_Equipo, Q.Id_Equipo FROM enlaces E INNER JOIN equipos Q ON E.Id_Equipo=Q.Id_Equipo INNER JOIN  tipo_equipos T ON Q.Id_Tipo_Equipo=T.Id_Tipo_Equipo INNER JOIN clientes C ON E.Id_Cliente=C.Id_Cliente";
+$sql = "SELECT E.Id_Enlace, E.Numero_Enlace, E.Ruta, C.Cliente, T.Tipo_Equipo, Q.Id_Equipo FROM enlaces E INNER JOIN equipos Q ON E.Id_Equipo=Q.Id_Equipo INNER JOIN  tipo_equipos T ON Q.Id_Tipo_Equipo=T.Id_Tipo_Equipo INNER JOIN clientes C ON E.Id_Cliente=C.Id_Cliente ORDER BY E.Id_Enlace ASC";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;

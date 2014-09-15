@@ -63,7 +63,7 @@ function ingresarActividad()
 				}
 				else{
 					alert(data.mensaje);
-					location.href = "index.html";
+					location.href = "../index.html";
 				}
 			});
 		}
@@ -107,8 +107,8 @@ function fecha()
 
   var f=new Date();
   var fecha;
-
+  var mes=f.getMonth()+1;
  // fecha = (diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
- 	fecha = (f.getDate()+ "/"+ f.getMonth()+ "/" + f.getFullYear());
+ 	fecha = (f.getDate()+ "/"+ mes+ "/" + f.getFullYear());
   return fecha;
 }

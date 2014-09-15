@@ -4,7 +4,7 @@ include("conex.php");
 //formato JSON
 //header('Content-type: application/json');
 $id = $_GET['numero'];
-$sql = "SELECT T.Id_Transito, T.Transito FROM transitos T INNER JOIN enlaces E ON T.Id_Enlace=E.Id_Enlace WHERE E.Numero_Enlace = '$id'";
+$sql = "SELECT T.Id_Transito, T.Transito FROM transitos T INNER JOIN enlaces E ON T.Id_Enlace=E.Id_Enlace WHERE E.Numero_Enlace = '$id' ORDER BY T.Id_Transito ASC";
 
 $result = mysql_query($sql) or die("Error de Consulta". mysql_error());
 $i =0;

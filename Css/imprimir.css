@@ -1,0 +1,18 @@
+#izquierdoPerfil, header, #barra 
+{
+
+  display: none !important;
+
+}
+#derechoContenedor
+{
+	width: 100%;
+}
+#searchform,#tablaConsultarDatos,#divImprimirInforme
+{
+	display: none !important;
+}
+.divMarginWidth
+{
+	margin-top: 0;
+}

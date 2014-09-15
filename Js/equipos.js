@@ -39,6 +39,9 @@ function menuPrin(){
     	hideAndShow('modEquipos','consEquipo ,#ingEquip,#contenedorMenuClientes');
     });
     $('#modificarEquiposNewDesign , #modificarEquipos2').on('click',llenarTablaEquipos2);
+    $('#modificarEquiposNewDesign , #modificarEquipos2').on('click',function(){
+    	$('#contMapa3').hide();
+    });
 	
 	$('#ingresarEquiposNewDesign, #ingresarEquipos2').on('click',function(){
 		hideAndShow('ingEquipo','modEquipos,#consEquipo,#contenedorMenuClientes');
@@ -63,6 +66,7 @@ function noDisplay(){
 	$('#consEquipo ,#modEquipos,#modEquipos2,#ingEquipo').hide();
 	// tabla de ingreso
 	$('#tipoNM,#marcaNM,#salaCen,#salaCen2,#contMapa2').hide();
+	$('#contMapa3').hide();
 }
 function limSelectIngresar()
 {
@@ -235,14 +239,14 @@ function llenarTablaEquipos1(){
 function llenarTablaEquipos2(){
 	var tabla = $('#tablaConsultarDatos2');
 	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarEquipos.php?jsoncallback=?";
-	$('#contMapa3').hide("slide");
 	$('.newTr').remove();
 	var contar=0;
+	tabla.css({'display':'inline-table','margin':'10px auto'});
 	$.getJSON(url).done(function(data){
 		if(data.num != 0){
 
 			$.each(data,function(i,item){
-				tabla.css({'display':'inline-table','margin':'10px auto'});
+				
 				contar++;
 				if(contar%2==0)
 				{
@@ -411,7 +415,7 @@ function llenarSelects(){
 			})
 		}
 		else{
-			alert(data.mensaje)
+			
 		}
 	});
 }
@@ -642,30 +646,6 @@ function ingresarEquipo(){
 			}
 		);
 	}
-	
-
-	/*var func = $('#func1').val();
-	var ubi = $('#ubi1').val();
-	var piso = $('#piso1').val();
-	var sala = $('#salaCentral option:selected').val();
-	var condi = $('#idCondi option:selected').val();
-	var tipo, marca;
-	var url = "http://127.0.0.1/Cantv/jsonCantv/agregarEquipo.php?jsoncallback=?";
-
-	
-	if($('#listaE').is(":visible") && $('#listaM').is(":visible")){
-		tipo = $('#tipoN').val();
-		marca = $('#marcaN').val();
-	}
-	else{
-		tipo = $('#tiposEquipo option:selected').val();
-		marca = $('#marcaEquipo option:selected').val();
-	}
-
-	$.getJSON(url,{idSala:sala,tipoE:tipo,condi:condi,fun:func,Ubi:ubi}).done(function(data){
-		alert(data.mensaje);
-		resets();
-	});*/
 }
 
 function modificar(){
@@ -684,7 +664,8 @@ function modificar(){
 			{
 				var url = "http://127.0.0.1/Cantv/jsonCantv/modificarEquipo.php?jsoncallback=?";
 				$.getJSON(url,{idTp: tipoSelect,idSal:salaSelect,idCn:condicionSelect,funcP:funciones,ubic:ubicacion,idE:idConElEquipo, mar:marcaSelect}).done(function(data){
-					llenarTablaEquipos2();
+					llenarTablaEquipos2();		
+					alert("Se ha modificado el equipo correctamente");			
 				});
 			}
 			else
@@ -705,6 +686,8 @@ function modificar(){
 function eliminar(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/eliminarEquipo.php?jsoncallback=?";
 	$.getJSON(url,{id:idConElEquipo}).done(function(data){
+		$('#contMapa3').hide("slide");
 		llenarTablaEquipos2();		
+		alert("Se ha eliminado el equipo");
 	});
 }

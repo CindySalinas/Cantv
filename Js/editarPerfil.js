@@ -236,7 +236,7 @@ function verify2(){
 			}
 			else{
 				alert(data.mensaje);
-				location.href = "index.html";
+				location.href = "../index.html";
 			}
 		});
 	}

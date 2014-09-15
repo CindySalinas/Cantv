@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Mensajes</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../css/clndr.css">
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<!-- /*<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCmGAuRaQ0I9j-AMqu1uZ5qzXp_-Xu-woM&sensor=true">
+    	</script>
+    	<script src="../Js/gmaps.js"></script>*/ -->
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfilTecnico.js"></script>
+		<script src="../Js/mensajesTecnico.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="tecnico.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas2.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces2.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo2.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasss.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos2.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes2.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="misFallas.html">Mis Fallas</a></li>
+				<li><a href="informe.html">Informe</a></li>
+				<li><a href="estadisticas2.html">Estadisticas</a></li>
+				<li><a href="mensajes2.html">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil2.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar2.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div class="contenedorAfuera">
+				<div <div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Mensajes</h1>
+					</div>
+					<hr>
+					<ul id="ulMensajes">
+						<li class="misMensajes" title="tab1">Mis Mensajes</li>
+						<li class="nuevoMensaje" title="tab2">Nuevo Mensaje</li>
+						<li class="mensajesEnviados" title="tab4">Mensajes Enviados</li>
+					</ul>
+					<div id="content3">						
+						<div id="tab1">
+							<div id="noTieneMesajes">
+								<h3 id="noTiene">No Tiene Ningún Mensaje</h3>
+							</div>
+							<table id="tablaMisMensajes">	
+							</table>
+						</div>
+						<div id="tab2">
+							<input type="text" class="contact-form-name" placeholder="Ingrese Correo" id="correo1">
+							<hr>
+							<input type="text" class="contact-form-name" placeholder="Ingrese Asunto" id="asunto1">
+							<hr>
+							<textarea type="text" class="contact-form-name" placeholder="Ingrese el Mensaje" id="mensaje1"></textarea>
+							<a id="linkEnviarMensaje">Enviar Mensaje</a>
+						</div>
+						<div id="tab4">
+							<div id="noTieneMesajesEnviado">
+								<h3 id="noTiene">No Ha Enviado Ningún Mensaje</h3>
+							</div>
+							<table id="tablaMisMensajesEnviados">	
+							</table>
+						</div>
+						<div id="tab5">
+							<table id="tablaVerMas">
+								<tr>
+									<td><label>Correo: </label><span id="verMasSpanCorreo"></span></td>
+								</tr>
+								<tr>
+									<td><label>Asunto: </label><span id="verMasSpanAsunto"></span></td>
+								</tr>
+								<tr>
+									<td><label>Fecha: </label><span id="verMasSpanFecha"></span><label> Hora: </label><span id="verMasSpanHora"></span></td>
+								</tr>
+								<tr>
+									<td><label>Mensaje: </label><span id="verMasSpanMensaje"></span></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>
+

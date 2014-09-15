@@ -136,9 +136,9 @@ function fecha()
 
   var f=new Date();
   var fecha;
-
+  var mes=f.getMonth()+1;
  // fecha = (diasSemana[f.getDay()] + ", " + f.getDate() + " de " + meses[f.getMonth()] + " de " + f.getFullYear());
- 	fecha = (f.getDate()+ "/"+ f.getMonth()+ "/" + f.getFullYear());
+ 	fecha = (f.getDate()+ "/"+ mes+ "/" + f.getFullYear());
   return fecha;
 }
 var idPerfil;
@@ -535,6 +535,7 @@ function cambiarStatus()
 
 	$.getJSON(url3,{idFalla:ids,estatus:estatusSolucion}).done(function(data)
 	{
+		alert("Se ha modificado el estatus de la falla");
 		consultarModificarFallas();
 	});
 }
@@ -556,6 +557,7 @@ function eliminarFalla(){
 	var url = "http://127.0.0.1/Cantv/jsonCantv/eliminarFalla.php?jsoncallback=?";
 	$.getJSON(url,{id:ids}).done(function(data)
 	{
+		alert("Falla Eliminada");
 		consultarModificarFallas();
 	});
 }

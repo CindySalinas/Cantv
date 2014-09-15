@@ -58,7 +58,7 @@ function ingresarCliente(){
 		$.getJSON(url,{nomC:nom,desC:desc}).done(function(data){
 			alert(data.mensaje);
 			resets();
-		})
+		});
 	}
 	else{
 		alert("Ingrese Un nombre y una Descripcion")
@@ -88,15 +88,15 @@ function llenarClientes(){
 
 	$('.newTr').remove();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarClientes.php?jsoncallback=?";
+	tabla.css({'display':'inline-table','margin':'10px auto'});
 	$.getJSON(url).done(function(data){
 		if(data.num !=0){
 			$.each(data,function(i,item){
-				tabla.css({'display':'inline-table','margin':'10px auto'});
+				
 				tabla.append('<tr class="newTr"><td id='+item.idCtl+'>'+item.nomCtl+'</td><td>'+item.dirCtl+'</td></tr>')
 			});
 		}
 		else{
-			alert(data.mensaje);
 		}
 	})
 }
@@ -140,13 +140,14 @@ function llenarClientes2(){
 	$('.newTr').remove();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/cargarClientes.php?jsoncallback=?";
 	var contar=0;
+	tabla.css({'display':'inline-table','margin':'10px auto'});
 	$.getJSON(url).done(function(data){
 		if(data.num !=0){
 			$.each(data,function(i,item){
 				contar++;
 				if(contar%2==0)
 				{
-					tabla.css({'display':'inline-table','margin':'10px auto'});
+					
 					tabla.append('<tr class="newTr"><td>'+item.nomCtl+'</td> <td> '+item.dirCtl+'</td> <td><a href="#" id='+item.idCtl+'><span class="spanEditarCliente"></span></a></td></tr>');
 					$('.newTr').on('click','a',function(data){
 						llenarMod($(this).attr('id'));
@@ -164,7 +165,7 @@ function llenarClientes2(){
 			});
 		}
 		else{
-			alert(data.mensaje);
+			
 		}
 	})
 }
@@ -183,7 +184,7 @@ function llenarMod(id){
 			})
 		}
 		else{
-			alert(data.mensaje);
+			
 		}
 	});
 }	
@@ -198,9 +199,8 @@ function modificar(){
 
 	$.getJSON(url,{nom:nom,dir:dir,id:id}).done(function(data)
 	{
+		alert("Cliente Actualizado");
 		llenarClientes2();
-		form.hide();
-		resets();
 	});
 }
 function eliminar(){
@@ -210,6 +210,7 @@ function eliminar(){
 	var form = $('#formIngresarClientesNew');
 	$.getJSON(url,{id:id}).done(function(data)
 	{
+		alert("Cliente Eliminado");
 		llenarClientes2();
 		form.hide();
 		resets();

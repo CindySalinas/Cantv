@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Clientes</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/clientes.css" />
+		<link rel="stylesheet" type="text/css" href="../Css/imprimir.css" media="print" />
+
+		<script src="../Js/jquery.js"></script>
+    	<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfilTecnico.js"></script>
+		<script src="../Js/informeTecnico.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="tecnico.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas2.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces2.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo2.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasss.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos2.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes2.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="misFallas.html">Mis Fallas</a></li>
+				<li><a href="informe.html">Informe</a></li>
+				<li><a href="estadisticas2.html">Estadisticas</a></li>
+				<li><a href="mensajes2.html">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil2.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar2.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</section>
+
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor" class="derechoContCliente">		
+			<div class="contenedorAfuera" >
+				<div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Informe</h1>
+					</div>
+					<hr>
+
+					<div id="searchform">
+				        <input id="textoBusqueda1" type="text" placeholder="Número De Enlace" required>
+				        <button id="dibujoConsultar">Buscar</button>
+				    </div>	
+					<table id="tablaConsultarDatos">
+						<thead>
+							<th>Nro</th>
+							<th>Descripción de la Falla</th>
+							<th>Fecha</th>
+							<th>Hora</th>
+							<th></th>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+					<h4 class="noSeUsuario">No se encontró ninguna falla para el enlace.</h4>
+					<div class="divMarginWidth">
+						<label>Número De Enlace: </label><span class="separarTexto" id="numEnlace"></span>
+						<hr>
+						<label>Descripción De La Falla: </label><span class="separarTexto" id="descFalla"></span>
+						<hr>
+						<label>Fecha: </label><span class="separarTexto" id="fechaFalla"></span>
+						<hr>
+						<label>Hora: </label><span class="separarTexto" id="horaFalla"></span>
+						<hr>
+						<label>Ruta Del Enlace: </label><span class="separarTexto" id="rutaFalla"></span>
+						<hr>
+						<label>Cliente: </label><span class="separarTexto" id="clienteFalla"></span>
+						<hr>
+						<label>Descripción Del Cliente: </label><span class="separarTexto" id="desClienteFalla"></span>
+						<hr>
+						<label>Tipo De Equipo: </label><span class="separarTexto" id="tipoEquipoFalla"></span>
+						<hr>
+						<label>Marca: </label><span class="separarTexto" id="marcaEquipoFalla"></span>
+						<hr>
+						<label>Función Del Equipo: </label><span class="separarTexto" id="funEquipoFalla"></span>
+						<hr>
+						<label>Ubicación: </label><span class="separarTexto" id="ubicEquipoFalla"></span>
+						<hr>
+						<label>Condición: </label><span class="separarTexto" id="condiEquipoFalla"></span>
+						<hr>
+						<label>Sala En La Que Se Encuentra El Equipo: </label><span class="separarTexto" id="salaEquipoFalla"></span>
+						<hr>
+						<label>Descripción De La Sala: </label><span class="separarTexto" id="descriSalaEquipoFalla"></span>
+						<hr>
+						<label>Piso: </label><span class="separarTexto" id="pisoSalaEquipoFalla"></span>
+						<hr>
+						<label>Central: </label><span class="separarTexto" id="centralEquipoFalla"></span>
+						<hr>
+						<label>Dirección: </label><span class="separarTexto" id="direccionCentralEquipoFalla"></span>
+						<hr>
+						<label>Latitud de la Central: </label><span class="separarTexto" id="latitudCentralEquipoFalla"></span>
+						<hr>
+						<label>Longitud: </label><span class="separarTexto" id="longitudCentralEquipoFalla"></span>
+						<div id="divPosiciones">
+							<hr>
+							<label>Posiciones: </label>
+						</div>
+						<div id="divTransitos">
+							<hr>
+							<label>Transitos: </label>		
+						</div>
+						<hr>
+						<label>Estado De La Falla: </label><span class="separarTexto" id="estadoFalla"></span>
+					</div>
+					<div id="divImprimirInforme" class="centrar">
+						<a id="linkImprimirInforme">Imprimir</a>
+					</div>
+				</div>
+
+			</div>
+
+		</section>	
+
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+	</body>
+</html>

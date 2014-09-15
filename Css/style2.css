@@ -20,6 +20,7 @@ body
 	background-image: url(../Img/Otras/Fondo2.png);
 	background-size: 100% 100%; 
 	background-attachment: fixed;
+	font-family: 'PT Sans', sans-serif;
 	font-size: 16px;
 }
 footer
@@ -888,7 +889,7 @@ label{
 	display: inline-block;
 	border-radius: 5px;
 	padding: 5px;
-	background: #ab6800;
+	background: #356710;
 }
 #mapaCentral
 {
@@ -905,6 +906,15 @@ label{
 	padding: 5px;
 	background: #356710;
 	margin-left: 0.5em;
+}
+#mapaCentral33
+{
+	border-radius: 5px;
+	display: inline-block;
+	padding: 5px;
+	background: #356710;
+	width: 70%;
+	margin: 0 auto;
 }
 #map2, #map3
 {
@@ -1455,7 +1465,7 @@ label{
 	min-width: 300px;
 }
 
-#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar,#centralEnlaceIngresar:focus,#salaEnlaceIngresar:focus, #equipoEnlaceIngresar:focus,#clienteEnlaceIngresar:focus,#clientesEnlaceModificar:focus, #equiposEnlaceModificar:focus,#salaModificarEnlace:focus,#modificarCentralEnlace:focus,#ingresarCentralSalas:focus,#ingresarDesSalas:focus,#consultarSalasSalas:focus,#modificarSalasSalas:focus,#modificarCentralSalas:focus,#modificarDesSalas:focus,#centralEditar
+#tiposEquipo:focus, #marcaEquipo:focus, #idCondi, #centrales, #salaCentral, #centralParaModificar, #salaCentrarModificar, #tipoEquipoParaModificar, #marcaParaModificar,#centralEnlaceIngresar:focus,#salaEnlaceIngresar:focus, #equipoEnlaceIngresar:focus,#clienteEnlaceIngresar:focus,#clientesEnlaceModificar:focus, #equiposEnlaceModificar:focus,#salaModificarEnlace:focus,#modificarCentralEnlace:focus,#ingresarCentralSalas:focus,#ingresarDesSalas:focus,#consultarSalasSalas:focus,#modificarSalasSalas:focus,#modificarCentralSalas:focus,#modificarDesSalas:focus,#centralEditar,#ingresarUsuarioSelect,#centralModificarUsuario,#rolModificarUsuario,#rolUsuarioSelect,#generoUsuarioSelect,#generoUsuarioSelectModificar
 {
 	height:auto;
 }
@@ -1508,7 +1518,6 @@ label{
 	margin: 0 auto;
 	width: 100%;
 	background-color: #fff;
-    border: 2px solid #356710;
     border-left: 4px solid #18489A;
 }
 #inputTransitoModificar, #inputTransitoAgregarModificar, #inputPosicionAgregarModificar,#inputPosicionModificar
@@ -1680,7 +1689,6 @@ label{
 }
 #widDiv70
 {
-	border: 1px solid red;
 	width: 70%;
 }
 
@@ -2118,4 +2126,118 @@ label{
 {
 	padding: 8px;
 
+}
+.fotoUsuarioConsultar
+{
+	background-color: #e3e3e3;	
+	width: 20%;
+}
+.dididi
+{
+	width: 78%;
+}
+.separarTexto
+{
+	word-break: break-all;	
+}
+#linkGuardarCambios:hover,#linkAceptarUsuario:hover,#linkEliminar:hover,#linkEstablecer:hover
+{
+	cursor: pointer;
+}
+#linkGuardarCambios
+{
+	color: #7B2F9A;
+	margin-right: 1em;
+}
+#linkEliminar
+{
+	color: #7F120A;
+}
+.marginTop
+{
+	margin-top: 2em;
+}
+.noSeUsuario,.noSeUsuario2
+{
+	font-size: 18px;
+	font-weight: bold;
+	color: #7F120A;
+}
+.marginOtroTop
+{
+	margin-top: 1.3em;
+}
+#yearGraficoSelect,#yearGraficoSelect3
+{
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+	width: 50%;
+}
+#yearGraficoSelect2
+{
+	height: auto;
+	margin: 0 auto;
+	width: 70%;
+}
+#vvvvvv
+{
+	background: #356710;
+	border-radius: 3px;
+	min-height: 230px;
+	margin-left: 5px;
+	width: 25%;
+}
+#arribaFallas
+{
+	border-radius: 3px;
+	color: #fff;
+	font-weight: bold;
+	background-color: #18489A;
+	padding: 4px 2px;
+}
+#mamamama
+{
+	background-color: #eee;
+	margin-right: 3px;
+	margin-left: 3px;
+	border-radius: 0 0 3px 3px;
+	height: 192px;
+	overflow: auto;
+	padding-top: 7px;
+	padding-left: 4px;
+	padding-right: 4px;
+	text-align: left;
+}
+.linkVer
+{
+	color: #356710;
+	cursor: pointer;
+	font-size: 12px;
+}
+#mmArrmm,#mmArrmm2
+{
+	margin-top: 0;
+}
+#iframeInforme
+{
+	width: 80%;
+}
+#h1Falla
+{
+	color: red;
+}
+.divMarginWidth
+{
+	border-bottom: 3px solid #356710;
+	margin: 1em auto;
+	padding: 9px;
+	padding-bottom: 1.2em;
+	margin-bottom: 2em;
+	text-align: left;	
+	width: 90%;
+}
+#linkImprimirInforme,.fallasConsultarMas
+{
+	cursor: pointer;
 }

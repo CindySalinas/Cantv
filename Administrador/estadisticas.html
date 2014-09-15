@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Estadisticas</title>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="../Css/normalize.css" />
+		<link rel="stylesheet" href="../css/clndr.css">
+		<link rel="stylesheet" href="../Css/style2.css" />
+
+		<script src="../Js/jquery.js"></script>
+		<script src="../js/highcharts.js"></script>
+		<script src="../js/exporting.js"></script>
+		<script src="../Js/estadisticas.js"></script>
+		
+		<script src="../Js/cookie.js"></script>
+		<script src="../Js/iniciarPerfil.js"></script>
+	</head>
+	<body>
+		<header>
+			<img src="../Img/Otras/Header.jpg">
+		</header>
+		<!-- Sub-Header -->
+		<div id="barra">
+			<!--Parte de perfil (titulo) -->
+			<div id="otroDiv">
+				Perfil
+			</div>
+			<!-- sub-menu -->
+			<nav id="submenu">
+				<ul>
+					<li><a href="admin.html" id="navClientes">Inicio</a></li>
+					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
+					<li><a href="salasNuevo.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
+					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
+				</ul>
+			</nav>
+		</div>
+		<!-- Menu Izquierdo -->
+		<section id="izquierdoPerfil">
+			<!-- Foto de Perfil -->
+			<figure id="fotoPerfil">
+				<!--img src="Img/Inicio/usr.png"-->
+			</figure>
+			<!-- Segunda lista - Menu de Fallas -->
+			<ul id="lista2">
+				<li><a href="fallasSinResolver.html">Fallas Sin Resolver</a></li>
+				<li><a href="estadisticas.html">Estadisticas</a></li>
+				<li><a href="controlDeUsuarios.html">Control De Usuarios</a></li>
+				<li><a href="mensajes.html">Mensajes</a></li>
+			</ul>
+			<!-- Tercera Lista - Perfil -->
+			<ul id="lista3">
+				<li><a href="nuevoPerfil.html">Mi Perfil</a></li>
+				<li><a href="perfilEditar.html">Editar</a></li>
+				<li><a href="../index.html">Salir</a></li>
+			</ul>
+		</section>
+		<!--Contenedor Derecho -->
+		<section id="derechoContenedor">
+			<div class="contenedorAfuera">
+				<div <div class="contenedorAdentro">
+					<div class="titulo" id="tituloCliente">
+						<h1>Estadisticas</h1>
+					</div>
+					<hr>
+					<ul id="pestaTab">
+					    <li><a href="#" title="tab1">Todas Las Fallas</a></li>
+					    <li><a href="#" title="tab2">Fallas Por Central</a></li>
+					</ul>
+					<div id="content2"> 
+					    <div id="tab1">	
+					    	<section id="container" style="max-width: 100%; height: 400px; margin: 0 auto"></section>	<br>
+					    	<select id="yearGraficoSelect" class="contact-form-name">
+					    	</select>        
+					    </div>
+					    
+					    <div id="tab2">
+					    	<select id="yearGraficoSelect2" class="contact-form-name">
+					    		<option value="0">Seleccione Central</option>
+					    	</select> 
+					    	<br>
+					    		<section id="container2" style="max-width: 100%; height: 400px; margin: 0 auto"></section>
+					    		<br>
+					    		<select id="yearGraficoSelect3" class="contact-form-name">
+					    	</select>  
+					    </div>					    
+					</div>									
+				</div>
+			</div>			
+		</section>	
+		<!-- Footer -->
+		<footer>
+			&nbsp;
+		</footer>
+
+	</body>
+</html>

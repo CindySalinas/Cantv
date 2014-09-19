@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fallas Sin Resolver</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -13,6 +14,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfilTecnico.js"></script>
 		<script src="../Js/misFallasTecnico.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -23,8 +25,13 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
+			<span id="divMenu">Menú</span>
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
@@ -70,7 +77,8 @@
 						<h1>Mis Fallas</h1>
 					</div>
 					<hr>
-					<h4>Total Fallas Resueltas: <span id="totalFallas"></span></h4>
+					<h4 id="cortandoh4">Total Fallas Resueltas: <span id="totalFallas"></span></h4>
+					<div id="tbodyEquipos1">
 					<table class="tablaEstilo displayNone" id="consultaFallas1">
 						<thead>
 							<th></th>
@@ -83,6 +91,7 @@
 							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
+					</div>
 					<br>								
 			</div>
 

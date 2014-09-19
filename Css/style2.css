@@ -39,7 +39,8 @@ nav
 {
 	display: inline-block;
 	padding: 0;
-	margin: 0;margin-left: -4px;
+	margin: 0;
+	margin-left: -4px;
 	vertical-align: top;
 }
 nav ul ,#lista2 ,#lista3,#menuFallas, #tabs
@@ -64,6 +65,10 @@ a{
 	text-decoration: none;
 	color:black;
 	font-weight: bold;
+}
+#divMenu
+{
+	display: none;
 }
 /* Sub menu*/
 #barra
@@ -112,7 +117,7 @@ nav ul li:hover
 #derechoContenedor{
 	display: inline-block;
 	width:79.3%;
-	height: 500px;
+	min-height: 230px;
 }
 #izquierdoPerfil
 {
@@ -123,6 +128,7 @@ nav ul li:hover
 	background-color: #e5e5e5;
 	width: 20%;
 	margin-bottom: 25px;
+	position: relative;
 }
 
 /* Foto de Perfil*/
@@ -167,7 +173,6 @@ nav ul li:hover
 }
 .titulo, .titulo2{
 	margin-top: 10px;
-	margin-left: 2%;
 }
 /* contenedor fallas pagina 1*/
 #contenedorFallas{
@@ -588,6 +593,7 @@ label{
 {
 	list-style: none;
 	text-align: center;
+	padding: 0;
 }
 #ulMenuIconos a
 {	
@@ -675,8 +681,6 @@ label{
 {
 	margin-top: 1.5em;
 }
-
-/*#tablaConsultarDatos,#tablaConsultarDatos1,  #tablaConsultarDatos2*/
 
 #tablaConsultarDatos, #tablaConsultarDatos2, .tablaEstilo
 
@@ -895,13 +899,17 @@ label{
 	background: #ab6800;
 	margin-left: 0.5em;
 }
-#mapaCentral2
+#mapaCentral2, #mapaCentralResponsive,#mapaCentralCentrales2
 {
 	display: inline-block;
 	border-radius: 5px;
 	padding: 5px;
 	background: #356710;
 	margin-left: 0.5em;
+}
+#mapaCentralResponsive,#mapaCentralCentrales2
+{
+	margin-left: 0;
 }
 #mapaCentral33
 {
@@ -1214,8 +1222,6 @@ label{
 	display: inline-block;
 	vertical-align: middle;
 	width: auto;
-	margin-top: 0;
-	margin-left: 2%;
 }
 
 #tablaConsultaSalas thead th
@@ -2019,7 +2025,6 @@ label{
     margin-left: -3px;
     min-height: 200px;
     max-height: 500px;
-    overflow: auto;
 }
 .imagenMensajeMisMen
 {
@@ -2237,7 +2242,15 @@ label{
 {
 	cursor: pointer;
 }
-
+.perfilMas
+{
+	display: inline-block;
+	vertical-align: sub;
+}
+#perfilResponsive
+{
+	display: none;
+}
 /*RESPONSIVEEE*/
 @media (max-width: 908px){
 
@@ -2245,11 +2258,937 @@ label{
 	{
 		width: 79%;
 	}
-}
-@media (max-width: 839){
-
+	#lista2 li
+	{
+		line-height: 16px;
+		padding: 7px;
+	}
+	#lista2
+	{
+		margin: 0;
+		padding: 0;
+	}
+	#izquierdoPerfil
+	{
+		display: none;
+	}
+	#contenedorMenuClientes
+	{
+	}
 	#derechoContenedor
+	{
+		display: block;
+		width: 100%;
+	}	
+}
+@media (max-width: 744px){
+
+	nav ul li 
+	{
+		margin: 0;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+@media (max-width: 660px){
+
+	#contenedorMenuClientes
+	{
+		border-radius: 0;
+		padding-left: 16px;
+		padding-right: 16px; 
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#divMenuIconos
+	{
+		padding-top: 10px;
+	}
+	.titulo
+	{
+		margin-top: 0;
+	}
+	.titulo h1
+	{
+		margin-top: 6px;
+		margin-bottom: 0;
+	}
+}
+@media (max-width: 527px){
+
+	#mapaCentral33
+	{
+		width: 97%;
+	}
+	#vvvvvv
+	{
+		display: block;
+		margin: 1em auto;
+		width: 70%;
+	}
+
+}
+@media (max-width: 438px){
+
+	#divMenuIconos
+	{
+		padding: 0;
+		padding-top: 5px;
+	}
+	#map
+	{
+		width: 100%;
+	}
+	#mapaCentral33
+	{
+		border-radius: 0;
+	}
+	#vvvvvv
+	{
+		border-radius: 0;
+		width: 100%;
+	}
+	#ulMenuIconos li a:before
+	{
+		font-size: 50px;
+	}
+	#ulMenuIconos li
+	{
+		margin-top: 0;
+	}
+
+}
+@media (max-width: 370px){
+
+	#divConEquipoArriba
+	{
+		min-width: 250px;
+	}
+
+}
+@media (max-width: 467px){
+
+	#widDiv70
+	{
+		width: 80%;
+		text-align: left;
+		padding: 0;
+		margin-left: -17px;
+	}
+	#inputTransitoIngresarEnlace
+	{
+		width: 100% !important; 
+	}
+	.ddInline
+	{
+		margin: 0;
+		padding: 0;
+	}
+	#widDiv25
+	{
+		display: block;
+		margin-left: 0;
+	}
+
+}
+@media (max-width: 557px){
+
+	#consultarTransitos, #consultarPosiciones,.classModTraPos, .espacioArribaModificar2
+	{
+		width: 49%;
+	}
+	.ddInline
+	{
+		width: 48%;
+	}
+
+}
+.tablaEstilo
+{
+	width: 100%;
+}
+@media (max-width: 360px){
+
+	#consultarTransitos fieldset legend, #consultarPosiciones fieldset legend
+	{
+		width: 70%;
+	}
+
+}
+#tbodyEquipos1
+{
+	overflow: auto;
+}
+@media (max-width: 1077px){
+	#mapaCentral2
+	{
+		width: 435px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#map2
+	{
+		width: 435px;
+	}
+}
+@media (max-width: 1058px){
+	#mapaCentral2
+	{
+		width: 400px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 400px;
+	}
+}
+@media (max-width: 1015px){
+	#mapaCentral2
+	{
+		width: 350px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 350px;
+	}
+	#mapCentral2
+	{
+		width: 550px;	
+	}
+}
+@media (max-width: 951px){
+	#mapaCentral2
+	{
+		width: 300px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 300px;
+	}
+}
+@media (max-width: 908px){
+	#mapaCentral2
+	{
+		width: 410px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 410px;
+	}
+}
+@media (max-width: 834px){
+
+	#mapaCentral2
+	{
+		width: 340px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 340px;
+	}
+}
+@media (max-width: 800px){
+
+	#content
+	{
+		width: 58%;
+	}
+}
+@media (max-width: 760px){
+	#mapCentral2
+	{
+		width: 500px;	
+	}
+	/*#content2
+	{
+		width: 80%;
+	}*/
+
+}
+@media (max-width: 748px){
+	#mapaCentral2
+	{
+		width: 300px;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 300px;
+	}
+	#calendarioPerfil
+	{
+		display: none;
+	}
+	#content
+	{
+		width: 90%;
+	}
+}
+@media (max-width: 730px){
+	#mapCentral2
+	{
+		width: 450px;	
+	}
+	#content2
+	{
+		width: 88%;
+	}
+}
+@media (max-width: 708px){
+	#mapaCentral2
+	{
+		border-radius: 0;
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 560px;
+	}
+	#divCentralIngresarDesign
+	{
+		width: 100%;	
+	}
+	#content
+	{
+		width: 88%;
+	}
+}
+@media (max-width: 703px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 550px;
+	}
+}
+@media (max-width: 693px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 540px;
+	}
+}
+@media (max-width: 683px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 530px;
+	}
+	#mapCentral2
+	{
+		height: 300px;
+		width: 400px;	
+	}
+}
+@media (max-width: 673px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 520px;
+	}
+}
+@media (max-width: 663px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 510px;
+	}
+}
+@media (max-width: 653px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 500px;
+	}	
+}
+@media (max-width: 643px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 490px;
+	}
+	#mapCentral2
+	{
+		width: 350px;	
+	}
+}
+@media (max-width: 633px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 480px;
+	}
+}
+@media (max-width: 623px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 470px;
+	}
+}
+@media (max-width: 613px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 460px;
+	}
+}
+@media (max-width: 603px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 450px;
+	}
+}
+@media (max-width: 593px){
+	#mapaCentral2
+	{
+		border-radius: 0;
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 520px;
+	}
+	#tablaConsultarDatos,#tablaConsultarDatos2
+	{
+		width: 100%;
+	}
+	#mapaCentralResponsive,#divConsultarEquipoDer
+	{
+		border-radius: 0;
+	}
+	#mapCentral2
+	{
+		width: 450px;	
+	}
+	#mapaCentralCentrales2
+	{
+		border-radius: 0;
+	}
+}
+@media (max-width: 580px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 510px;
+	}
+	#mapCentral2
+	{
+		width: 420px;	
+	}
+}
+@media (max-width: 570px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 500px;
+	}
+}
+@media (max-width: 560px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 490px;
+	}
+	#mapCentral6,#mapCentral3
+	{
+		height: 300px;
+	}
+}
+@media (max-width: 550px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 480px;
+	}
+	#mapCentral2
+	{
+		width: 380px;	
+	}
+	#mapCentral3
+	{
+		height: 260px;
+	}
+}
+@media (max-width: 540px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 470px;
+	}
+}
+@media (max-width: 530px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 460px;
+	}
+	#content2
+	{
+		width: 86%;
+	}
+}
+@media (max-width: 520px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 450px;
+	}
+	#mapCentral2
+	{
+		height: 280px;
+		width: 330px;	
+	}
+}
+@media (max-width: 510px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 440px;
+	}
+	#content
+	{
+		width: 86%;
+	}
+}
+@media (max-width: 500px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 430px;
+	}
+	#tbodyEquipos1
+	{
+		overflow: auto;
+	}
+}
+@media (max-width: 490px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 420px;
+	}
+	#mapCentralll
+	{
+		height: 300px;
+	}	
+	
+}
+@media (max-width: 480px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 410px;
+	}
+}
+@media (max-width: 470px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 400px;
+	}
+}
+@media (max-width: 460px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 390px;
+	}	
+	#map2consultar, #map3consultar,#map2,#map3
+	{
+		width: 350px;
+	}
+	#content2
+	{
+		width: 84%;
+	}
+}
+@media (max-width: 450px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 380px;
+	}
+	#searchform2 input
 	{
 		width: 79%;
 	}
+}
+@media (max-width: 440px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 370px;
+	}
+	#divIngresarEquipo
+	{
+		min-width: 100px;
+		width: 90%;
+	}
+	#mapCentral1, #mapCentral5
+	{
+		width: 330px;
+	}
+	.classModTraPos a span
+	{
+		
+	}
+	.classModTraPos #modificaTransito span:before
+	{
+		font-size: 30px;
+	}
+	.classModTraPos #modificaPosicion span:before
+	{
+		font-size: 25px;
+	}
+	#content
+	{
+		width: 84%;
+	}
+	
+}
+@media (max-width: 432px){
+	.divEspRig
+	{
+		margin-right: 1em;
+	}
+}
+@media (max-width: 430px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 98%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 360px;
+	}
+}
+@media (max-width: 420px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 92%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 363px;
+	}
+	#tipoN,#marcaN
+	{
+		width: 100%;
+	}
+	.contenedorAdentro
+	{
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#mapCentral2
+	{
+		height: 260px;
+		width: 300px;	
+	}
+}
+@media (max-width: 410px){
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 97%;
+	}
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 374px;
+	}
+	#map2consultar, #map3consultar,#map2,#map3
+	{
+		width: 300px;
+	}
+}
+@media (max-width: 400px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 364px;
+	}
+	#mapCentral1, #mapCentral5
+	{
+		width: 310px;
+	}
+}
+@media (max-width: 390px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 354px;
+	}
+	#mapCentral2
+	{
+		
+	}
+	.espacioArribaModificar2
+	{
+		display: block;
+		margin: 1em auto;
+		width: 100%;
+	}
+	#content2
+	{
+		width: 82%;
+	}
+	#content
+	{
+		width: 82%;
+	}
+	#searchform2 input
+	{
+		width: 76%;
+	}
+	#searchform2 button
+	{
+		width: 19%;
+	}
+	
+}
+@media (max-width: 380px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 344px;
+	}
+	#divCentralIngresarDesign
+	{
+		width: 90%;
+	}
+	#ingresarCentralCentrales
+	{
+		width: 100%;
+	}
+	#mapCentral1, #mapCentral5
+	{
+		width: 295px;
+	}
+}
+@media (max-width: 370px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 334px;
+	}
+	.divEspRig
+	{
+		margin-right: 0.5em;
+	}
+}
+@media (max-width: 367px){
+
+	.classModTraPos a span
+	{
+		line-height: 16px;
+	}	
+
+}
+@media (max-width: 360px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 324px;
+	}
+	.contact-form-widget 
+	{
+		width: 80%;
+	}
+	#mapCentral1, #mapCentral5
+	{
+		width: 275px;
+	}
+	#divCentralIngresarDesign
+	{
+		width: 87%;
+	}
+	#divConEquipoArriba2
+	{
+		min-width: 70px;
+		width: 90%;
+	}
+}
+@media (max-width: 352px){
+	
+	.divEspRig
+	{
+		margin-right: 0;
+	}
+}
+.arribaButton
+{
+	margin-top: 2px;
+}
+@media (max-width: 350px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 310px;
+	}
+	#map2consultar, #map3consultar,#map2,#map3
+	{
+		width: 280px;
+	}
+	#mapCentral1, #mapCentral5
+	{
+		width: 255px;
+	}
+	#pestaTab li a
+	{
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+	#content2
+	{
+		width: 80%;
+	}
+	#content
+	{
+		width: 80%;
+	}
+
+}
+@media (max-width: 340px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 304px;
+	}
+	#map2consultar, #map3consultar
+	{
+		width: 270px;
+	}
+}
+@media (max-width: 336px){
+	
+	.aGuardarCliente a span
+	{ 
+		font-size: 30px;
+	}
+	.aGuardarCliente a
+	{
+		font-size: 15px;
+	}
+}
+@media (max-width: 333px){
+	#mapCentral, #mapCentralll,#mapCentral6,#mapCentral3,#mapCentral4
+	{
+		width: 294px;
+	}
+	#map2consultar, #map3consultar
+	{
+		width: 270px;
+	}
+	#mapaCentral2
+	{
+		margin: 0 auto;
+		width: 94%;
+	}
+	#divConEquipoArriba2
+	{
+		width: 80%;
+	}
+}
+#cortandoh4
+{
+	margin-bottom: 5px;
 }

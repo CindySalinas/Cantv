@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Enlaces</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -16,6 +17,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
  		<script src="../Js/enlace.js"></script>
+ 		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -26,16 +28,21 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
-					<li><a href="salasNuevo.html" id="navEnlacesAdmin">Enlaces</a></li>
+					<li><a href="gestionEnlaces.html" id="navEnlacesAdmin">Enlaces</a></li>
 					<li><a href="centralesNuevo.html" id="navCentralesAdmin">Centrales</a></li>
-					<li><a href="ingresarSala.html" id="navSalasAdmin">Salas</a></li>
+					<li><a href="salasNuevo.html" id="navSalasAdmin">Salas</a></li>
 					<li><a href="equipos.html" id="navEquiposAdmin">Equipos</a></li>
 					<li><a href="clientes.html" id="navClientesAdmin">Clientes</a></li>
 				</ul>
@@ -86,6 +93,7 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
+				    <div id="tbodyEquipos1">
 					<table id="tablaConsultar" class="tablaEstilo">
 						<thead>
 							<th>Número De Enlace</th>
@@ -99,6 +107,7 @@
 						</tbody>
 					
 					</table>
+					</div>
 					<br>
 					<div class="consultarContenidoExtra">
 						<div id="contenidoEquipos">
@@ -153,6 +162,7 @@
 				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar2">Buscar</button>
 				    </div>	
+				    <div id="tbodyEquipos1">
 					<table class="tablaEstilo">
 						<thead>
 							<th>Número De Enlace</th>
@@ -164,6 +174,7 @@
 						<tbody id="tbodyModificar">
 						</tbody>
 					</table>
+					</div>
 					<br>
 					<div class="contenidoExtraModificar1">
 						<div id="divConEquipoArriba" class="contact-form-widget">
@@ -200,10 +211,10 @@
 									</ul>
 							</fieldset>	
 						</div>
-						<div id="idParaAnimacion" class="displayInline">	
+						<div id="idParaAnimacion" class="displayInline classModTraPos">	
 							<a id="modificaTransito"><span class="modificarTransitoModificarNewDesign1 displayBlock"><span class="fontSize16">Modificar Transito</span></span></a>		
 						</div>					
-						<div class="displayInline">
+						<div class="displayInline classModTraPos">
 							<a id="modificaPosicion" class="animacionGrande"><span class="modificarPosicionModificarNewDesign1 displayBlock"><span class="fontSize16">&nbspModificar Posición</span></span></a>	
 						</div>
 						<div id="arrDivEnNew">
@@ -408,7 +419,7 @@
 							</div>
 						</div>
 						<div>
-							<div class="displayInline">
+							<div class="displayInline ddInline">
 								<div id="widDiv70" class="displayInline3">
 									<input id="inputTransitoIngresarEnlace" placeholder="Ingrese un Transito" class=" colorPlace contact-form-name" type="text">
 								</div>
@@ -417,7 +428,7 @@
 								</div>
 								
 							</div>	
-							<div class="displayInline">
+							<div class="displayInline ddInline">
 								<div id="widDiv70" class="displayInline3">
 									<input id="inputPosicionIngresarEnlace" placeholder="Ingrese una Posición" class="colorPlace contact-form-name" type="text">
 								</div>

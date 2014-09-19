@@ -16,7 +16,14 @@ function inicio ()
 }	
 function imprimir () 
 {
-	window.print();
+
+	try {
+	   //intento algo que puede producir un error
+	   window.print();
+	}catch(mierror){
+	   alert("No se puede imprimir desde el dispositivo actual");
+	}
+	
 }
 function buscarEnlacesFallas()
 {

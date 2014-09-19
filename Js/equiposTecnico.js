@@ -160,6 +160,7 @@ function consultarEquipos(){
 	var tabla = $('#tablaConsultarDatos1');
 	$('.newTr').remove();
 	var contar=0;
+	$(".contenidoEquipos").hide("slide");
 	$.getJSON(url,{buscar:busc}).done(function(data){
 		if(data.num != 0){
 			$.each(data,function(i,item){

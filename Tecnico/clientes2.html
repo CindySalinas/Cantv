@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Clientes</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -13,6 +14,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfilTecnico.js"></script>
 		<script src="../Js/clientesTecnico.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -23,8 +25,13 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
+			<span id="divMenu">Menú</span>
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
@@ -74,7 +81,7 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
-
+				    <div id="tbodyEquipos1">
 					<table id="tablaConsultarDatos">
 						<thead>
 							<th>Nombre Del Cliente</th>
@@ -83,6 +90,7 @@
 						<tbody>
 						</tbody>
 					</table>
+					</div>
 				</div>
 
 			</div>

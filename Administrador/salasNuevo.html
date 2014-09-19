@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Salas</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -16,6 +17,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
 		<script src="../Js/salas.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -26,10 +28,15 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
@@ -73,7 +80,7 @@
 					<ul id="ulMenuIconos">
 						<li><a class="consultarIconoSalasNewDesign paraIconos" ></a><a id="linkNewSalaConsultar" class="textoAbajo linkAbajoConsultar">Consultar</a></li>
 						<li><a class="ingresarIconoSalasNewDesign paraIconos" ></a><a id="linkNewSalaIngresar" class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
-						<li><a href="#" class="modificarIconoSalasNewDesign paraIconos" ></a><a id="linkNewSalaModificar" class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
+						<li><a href="#" class="modificarIconoSalasNewDesign paraIconos" ></a><a id="linkNewSalaModificar" class="textoAbajo linkAbajoModificar">Modificar</a></li>
 					</ul>		
 				</div>
 			</div>
@@ -86,16 +93,19 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
-				    <table class="tablaEstilo" id="tablaConsultaSalas">
-						<thead>
-							<th>Nombre</th>
-							<th>Piso</th>
-							<th>Descripción</th>
-							<th>Central</th>
-						</thead>
-						<tbody>
-						</tbody>
-					</table><br><br>
+				    <div id="tbodyEquipos1">
+					    <table class="tablaEstilo" id="tablaConsultaSalas">
+							<thead>
+								<th>Nombre</th>
+								<th>Piso</th>
+								<th>Descripción</th>
+								<th>Central</th>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<br>
 					<div class="espaciosSalasAbajo">
 						<label >Bucar Por Central</label>
 						<select class="contact-form-name displayInline3" id="consultarSalasSalas">
@@ -103,7 +113,7 @@
 						</select>
 					</div>
 					<div class="ocultoSalasConsultar">
-						<div id="mapaCentral2">
+						<div id="mapaCentralResponsive">
 							<div id="mapCentral1"></div>
 						</div>	
 					</div>							
@@ -159,17 +169,20 @@
 				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar2">Buscar</button>
 				    </div>	
-				    <table class="tablaEstilo" id="tablaModificaSalas">
-						<thead>
-							<th>Nombre</th>
-							<th>Piso</th>
-							<th>Descripción</th>
-							<th>Central</th>
-							<th></th>
-						</thead>
-						<tbody>
-						</tbody>
-					</table><br><br>
+				    <div id="tbodyEquipos1">
+					    <table class="tablaEstilo" id="tablaModificaSalas">
+							<thead>
+								<th>Nombre</th>
+								<th>Piso</th>
+								<th>Descripción</th>
+								<th>Central</th>
+								<th></th>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>	
+					<br>
 					<div class="espaciosSalasAbajo">
 						<label >Bucar Por Central</label>
 						<select class="contact-form-name displayInline3" id="modificarSalasSalas">
@@ -177,7 +190,7 @@
 						</select>
 					</div>
 					<div class="ocultoSalasModificar">
-						<div id="mapaCentral2">
+						<div id="mapaCentralResponsive">
 							<div id="mapCentral5"></div>
 						</div>	
 					</div>		

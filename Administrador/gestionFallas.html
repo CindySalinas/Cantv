@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fallas</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -16,6 +17,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
 		<script src="../Js/fallas.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -26,10 +28,15 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
@@ -75,7 +82,7 @@
 					<ul id="ulMenuIconos">
 						<li><a class="consultarIconoFallasNewDesign paraIconos" ></a><a id="textoFallasNewConsultar"class="textoAbajo linkAbajoConsultar">Consultar</a></li>
 						<li><a class="ingresarIconoFallasNewDesign paraIconos" ></a><a id="textoFallasNewIngresar"class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
-						<li><a href="#" class="modificarIconoFallasNewDesign paraIconos" ></a><a id="textoFallasNewEliminar"class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
+						<li><a href="#" class="modificarIconoFallasNewDesign paraIconos" ></a><a id="textoFallasNewEliminar"class="textoAbajo linkAbajoModificar">Modificar</a></li>
 					</ul>		
 				</div>
 			</div>
@@ -90,6 +97,7 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
+				    <div id="tbodyEquipos1">
 					<table class="tablaEstilo" id="consultaFallas1">
 						<thead>
 							<th>Número De Enlace</th>
@@ -104,9 +112,11 @@
 							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
+					</div>
 					<br>
 					<div class="contenidoObservacionesModificar">
 						<span id="spanObservaciones">Observaciones De La Falla En El Enlace: <span id="numEnla"></span></span>
+						<div id="tbodyEquipos1">
 						<table class="tablaEstilo" id="consultaFallas3">		
 							<thead>
 								<th>Observación</th>
@@ -117,6 +127,7 @@
 							<tbody>
 							</tbody>
 						</table>
+						</div>
 					</div>
 					<br>
 					<div class="contenidoMapaCentralConsultar">
@@ -148,7 +159,7 @@
 							<label>Función Principal: </label>
 							<span id="spanConsultarFunEquipo"></span>
 						</div>
-						<div id="mapaCentral2">
+						<div id="divConsultarEquipoDer">
 							<div id="map2"></div>
 						</div>
 					</div>
@@ -180,21 +191,23 @@
 				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar2">Buscar</button>
 				    </div>	
-					<table class="tablaEstilo" id="tablamodificar2">
-						<thead>
-							<th>Número De Enlace</th>
-							<th>Descripción</th>
-							<th>Fecha</th>
-							<th>Hora</th>
-							<th>Reporte Falla</th>
-							<th>Estatus</th>
-							<th></th>
-						</thead>
-						<tbody>
-							<input type="hidden"  id="idHide">
-							<!--Contenido Generado Dinamicamente -->
-						</tbody>
-					</table>
+				    <div id="tbodyEquipos1">
+						<table class="tablaEstilo" id="tablamodificar2">
+							<thead>
+								<th>Número De Enlace</th>
+								<th>Descripción</th>
+								<th>Fecha</th>
+								<th>Hora</th>
+								<th>Reporte Falla</th>
+								<th>Estatus</th>
+								<th></th>
+							</thead>
+							<tbody>
+								<input type="hidden"  id="idHide">
+								<!--Contenido Generado Dinamicamente -->
+							</tbody>
+						</table>
+					</div>
 					<br>
 					<div class="divFallaResueltaModificar">
 						<div id="divConEquipoArriba5" class="contact-form-widget">
@@ -231,7 +244,7 @@
 					<h2 class="h2Clientes">Ingresar Observación</h2>
 					<hr>
 					<div class="contenidoObservacionesAgregar">
-						
+						<div id="tbodyEquipos1">	
 						<table class="tablaEstilo" id="consultaFallas4">		
 							<thead>
 								<th>Observación</th>
@@ -242,6 +255,7 @@
 							<tbody>
 							</tbody>
 						</table>
+						</div>
 						<br>
 						<div id="divConEquipoArriba2" class="contact-form-widget">
 							<label>Agregar Nueva Observación: </label>

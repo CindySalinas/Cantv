@@ -1,0 +1,62 @@
+$(document).on("ready",inicio);
+function inicio ()
+{
+	$("#perfilResponsive").on("click",eventoPerfil);
+	$("#divMenu").on("click",eventoMenu);
+}	
+function eventoPerfil()
+{
+	$("#izquierdoPerfil").slideToggle();
+	$("#izquierdoPerfil").css({
+			"display":"inline-block",
+			"position":"absolute",
+			"z-index":"2"
+		});
+		$("#map").css({
+			"z-index":"0"
+		});
+	/*if($("#izquierdoPerfil").css("display")=="none")
+	{
+		$("#izquierdoPerfil").css({
+			"display":"inline-block",
+			"position":"absolute",
+			"z-index":"1"
+		});
+		$("#map").css({
+			"z-index":"0"
+		});
+	}
+	else
+	{
+		$("#izquierdoPerfil").css("display","none");
+	}*/
+}
+function eventoMenu()
+{
+	$("nav").slideToggle();
+}
+$(window).resize(function() 
+{	
+	
+	if($("#divMenu").css("display")=="none")
+	{
+		if($("nav").css("display")=="none" || $("nav").css("display")=="block")
+		{
+			$("nav").css("display","inline-block");
+		}
+	}
+	else
+	{	
+		$("nav").css("display","none");
+	}
+	if($("#derechoContenedor").css("display")=="inline-block")
+	{
+		$("#izquierdoPerfil").css("display","inline-block");
+		$("#izquierdoPerfil").css("position","relative");
+	}
+	else
+	{
+		$("#izquierdoPerfil").css("display","none");
+		$("#izquierdoPerfil").css("position","absolute");
+	}
+});

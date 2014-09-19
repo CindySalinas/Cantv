@@ -3,11 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Estadisticas</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../css/clndr.css">
 		<link rel="stylesheet" href="../Css/style2.css" />
+		<link rel="stylesheet" href="../Css/clientes.css" />
 
 		<script src="../Js/jquery.js"></script>
 		<script src="../js/highcharts.js"></script>
@@ -16,6 +18,7 @@
 		
 		<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 	</head>
 	<body>
 		<header>
@@ -25,10 +28,15 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Centrales</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -16,6 +17,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfilTecnico.js"></script>
 		<script src="../Js/centralesTecnico.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -26,8 +28,13 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
+			<span id="divMenu">Menú</span>
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
@@ -71,9 +78,10 @@
 					<h2 class="h2Clientes">Consultar Centrales</h2>
 					<hr>
 
-					<div id="mapaCentral2">
+					<div id="mapaCentralCentrales2">
 						<div id="mapCentral2"></div>
 					</div>
+					<div id="tbodyEquipos1">
 					<table id="tablaConsultarCentrales" class="tablaEstilo">
 						<thead>
 							<th>Nombre De La Central</th>
@@ -85,13 +93,11 @@
 						</tbody>
 					
 					</table>
+					</div>
 					<div id="searchform">
 				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar2">Buscar</button>
 				    </div>	
-					<div id="tamaClien" class="atras" class="atras">
-						<a class="linkAtrasClientes linkAtrasConsultar"><span class="spanAtrasClientesNewDesign"></span>Atras</a>
-					</div>
 				</div>
 
 			</div>

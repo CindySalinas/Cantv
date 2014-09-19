@@ -499,3 +499,126 @@
 	-moz-transition: all 0.5s ease;
  }
 
+@media (max-width: 908px){
+
+	.perfilMas
+	{
+		font-family: 'icomoon';
+		font-size: 20px;
+		font-weight: normal;
+	}
+	.perfilMas:before
+	{
+		content: "\f0a0";
+	}
+	#otroDiv 
+	{
+		display: inline-block;
+		padding: 0 10px;
+		width: auto;
+	}
+	#perfilResponsive
+	{
+		display: inline-block;
+	}
+	#perPerfil
+	{
+		display: none;
+	}
+	#perfilResponsive:hover
+	{
+		cursor: pointer;
+	}
+	#izquierdoPerfil
+	{
+		/*transition: all 0.5s ease;
+		-webkit-transition: all 0.5s ease;
+		-moz-transition: all 0.5s ease;*/
+	}
+	#izquierdoPerfil
+	{
+		min-width: 160px;
+	}
+}
+@media (max-width: 593px){
+	nav
+	{
+		background-color: #e7b752;
+		display: block;
+		position: relative;
+		z-index: 1;
+		display: none;
+		border-bottom: 4px solid #ab6800;
+	}
+	nav ul
+	{
+
+	}
+	nav ul li
+	{
+		background: #f7f7f7; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e7bf52 0%, #e7b752 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ab6800), color-stop(100%,#e7bf52)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e7bf52 0%,#e7b752 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e7bf52 0%,#e7b752 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e7bf52 0%,#e7b752 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e7bf52 0%,#e7b752 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ab6800', endColorstr='#ab6809',GradientType=0 ); /* IE6-9 */
+		display: block;
+	}
+	nav ul li:hover
+	{
+		background-color: #e7bf52;
+		border-bottom: 1px solid #e09509;
+	}
+	#divMenu
+	{
+		display: inline-block;
+		margin-top: 7px;
+		font-weight: bold;
+		color: #7F120A;
+		position: absolute;
+		right: 10px;
+		cursor: pointer;
+	}
+	#otroDiv
+	{
+		background-color: #18489A;
+		height: 35px;
+	}
+	/*#izquierdoPerfil
+	{
+		background-color: #fff;
+	}*/
+	/*#lista3 li, #lista3
+	{
+		background-color: #fff;
+	}*/
+	#barra
+	{
+		background-color: #e7bf52;
+		border-bottom: 2px solid #fff;
+	}
+	#contenedorMenuClientes, .contenedorAfuera
+	{
+		border-radius: 0;
+		margin: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	#divMenuIconos,.contenedorAdentro
+	{
+		border-radius: 0;
+	}
+}
+@media (max-width: 823px){
+	header img
+	{
+		min-height: 95px;
+	}
+}
+@media (max-width: 593px){
+
+
+
+}

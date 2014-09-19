@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fallas Sin Resolver</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -17,6 +18,7 @@
 		<script src="../Js/iniciarPerfil.js"></script>
 		<script src="../Js/fallas.js"></script>
 		<script src="../Js/fallasSinResolver.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -27,10 +29,15 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
@@ -75,7 +82,7 @@
 						<h1>Fallas Sin Resolver</h1>
 					</div>
 					<hr>
-
+					<div id="tbodyEquipos1">
 					<table class="tablaEstilo" id="consultaFallas1">
 						<thead>
 							<th>Número De Enlace</th>
@@ -90,9 +97,11 @@
 							<!--Contenido Generado Dinamicamente -->
 						</tbody>
 					</table>
+					</div>
 					<br>
 					<div class="contenidoObservacionesModificar">
 						<span id="spanObservaciones">Observaciones De La Falla En El Enlace: <span id="numEnla"></span></span>
+						<div id="tbodyEquipos1">
 						<table class="tablaEstilo" id="consultaFallas3">		
 							<thead>
 								<th>Observación</th>
@@ -103,6 +112,7 @@
 							<tbody>
 							</tbody>
 						</table>
+						</div>
 					</div>
 					<br>
 					<div class="contenidoMapaCentralConsultar">
@@ -134,7 +144,7 @@
 							<label>Función Principal: </label>
 							<span id="spanConsultarFunEquipo"></span>
 						</div>
-						<div id="mapaCentral2">
+						<div id="divConsultarEquipoDer">
 							<div id="map2"></div>
 						</div>
 					</div>

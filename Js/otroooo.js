@@ -1,20 +1,17 @@
 $(document).on("ready",inicio);
 
-function inicio ()
-{
+function inicio () {
+	
 	$('.btn_login').on("click",doLogin);
 	escucharEnter();
-	$.removeCookie('adminSis', { path: '/' });
-	$.removeCookie('tecSis', { path: '/' });
 }
-
-
-function doLogin(){
+function doLogin()
+{
 	$('.carro').css({'text-align':'left'});
 	$('.carro').attr('id','moverCarro');	
 	setTimeout(login, 4000);	
-}
 
+}
 function login(){
 	var values = $('.login_form').serialize();
 	var url = "http://127.0.0.1/Cantv/jsonCantv/access.php?jsoncallback=?";
@@ -39,7 +36,6 @@ function login(){
 	});
 
 }
-
 function escucharEnter(){
     $(document).keypress(function(e) {
     if(e.which == 13) {

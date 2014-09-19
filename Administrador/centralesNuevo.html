@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Centrales</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
@@ -16,6 +17,7 @@
     	<script src="../Js/cookie.js"></script>
 		<script src="../Js/iniciarPerfil.js"></script>
 		<script src="../Js/centrales.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -26,10 +28,15 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
 			<!-- sub-menu -->
-			<nav id="submenu">
+			<span id="divMenu">Menú</span>
+			<nav>
 				<ul>
 					<li><a href="admin.html" id="navClientes">Inicio</a></li>
 					<li><a href="gestionFallas.html" id="navFallasAdmin">Fallas</a></li>
@@ -73,7 +80,7 @@
 					<ul id="ulMenuIconos">
 						<li><a class="paraIconos consultarIconoCentralesNewDesign" ></a><a id="conCentralLink" class="textoAbajo linkAbajoConsultar">Consultar</a></li>
 						<li><a class="paraIconos ingresarIconoCentralesNewDesign" ></a><a id="ingCentralLinkAbajo" class="textoAbajo linkAbajoIngresar">Ingresar</a></li>
-						<li><a href="#" class="paraIconos modificarIconoCentralesNewDesign" ></a><a id="camEliCentral" class="textoAbajo linkAbajoModificar">Cambiar/Eliminar</a></li>
+						<li><a href="#" class="paraIconos modificarIconoCentralesNewDesign" ></a><a id="camEliCentral" class="textoAbajo linkAbajoModificar">Modificar</a></li>
 					</ul>		
 				</div>
 			</div>
@@ -83,9 +90,10 @@
 					<h2 class="h2Clientes">Consultar Centrales</h2>
 					<hr>
 
-					<div id="mapaCentral2">
+					<div id="mapaCentralCentrales2">
 						<div id="mapCentral2"></div>
 					</div>
+					<div id="tbodyEquipos1">
 					<table id="tablaConsultarCentrales" class="tablaEstilo">
 						<thead>
 							<th>Nombre De La Central</th>
@@ -97,6 +105,7 @@
 						</tbody>
 					
 					</table>
+					</div>
 					<div id="searchform">
 				        <input id="textoBusqueda2" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar2">Buscar</button>
@@ -149,17 +158,20 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Buscar aqu&iacute;..." required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
-					<table id="tablaModificarCentrales" class="tablaEstilo">
-						<thead>
-							<th>Nombre De La Central</th>
-							<th>Dirección</th>
-							<th></th>
-						</thead> 
-						<tbody id="tbodyConsultar">
-							
-						</tbody>
-					
-					</table>
+				    <div id="tbodyEquipos1">
+						<table id="tablaModificarCentrales" class="tablaEstilo">
+							<thead>
+								<th>Nombre De La Central</th>
+								<th>Dirección</th>
+								<th></th>
+							</thead> 
+							<tbody id="tbodyConsultar">
+								
+							</tbody>
+						
+						</table>
+					</div>
+					<br>
 					<div id="mapaCentral2" class="mapCentralOculto">
 						<div id="mapCentral3"></div>
 					</div>

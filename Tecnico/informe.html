@@ -2,8 +2,9 @@
 <html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Clientes</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Informe</title>
 		<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" href="../Css/normalize.css" />
 		<link rel="stylesheet" href="../Css/style2.css" />
@@ -11,9 +12,8 @@
 		<link rel="stylesheet" type="text/css" href="../Css/imprimir.css" media="print" />
 
 		<script src="../Js/jquery.js"></script>
-    	<script src="../Js/cookie.js"></script>
-		<script src="../Js/iniciarPerfilTecnico.js"></script>
 		<script src="../Js/informeTecnico.js"></script>
+		<script src="../Js/eventosResolucion.js"></script>
 
 	</head>
 	<body>
@@ -24,8 +24,13 @@
 		<div id="barra">
 			<!--Parte de perfil (titulo) -->
 			<div id="otroDiv">
-				Perfil
+				<div id="perfilResponsive">
+					<span class="perfilMas"></span>
+					 Perfil
+				</div>				
+				<span id="perPerfil">Perfil</span>
 			</div>
+			<span id="divMenu">Menú</span>
 			<!-- sub-menu -->
 			<nav id="submenu">
 				<ul>
@@ -73,6 +78,7 @@
 				        <input id="textoBusqueda1" type="text" placeholder="Número De Enlace" required>
 				        <button id="dibujoConsultar">Buscar</button>
 				    </div>	
+				    <div id="tbodyEquipos1">
 					<table id="tablaConsultarDatos">
 						<thead>
 							<th>Nro</th>
@@ -84,6 +90,7 @@
 						<tbody>
 						</tbody>
 					</table>
+					</div>
 					<h4 class="noSeUsuario">No se encontró ninguna falla para el enlace.</h4>
 					<div class="divMarginWidth">
 						<label>Número De Enlace: </label><span class="separarTexto" id="numEnlace"></span>
